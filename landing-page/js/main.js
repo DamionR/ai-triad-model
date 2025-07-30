@@ -390,10 +390,10 @@ function initializeModal() {
 function simulateDemoAgentResponses() {
     const agentResponses = document.querySelectorAll('.agent-response');
     const responses = [
-        { agent: 'legislative', response: 'Planning phase complete. Policy framework established for optimal resource allocation.', delay: 1000 },
-        { agent: 'executive', response: 'Implementation approved. Executing planned operations with constitutional oversight.', delay: 2500 },
-        { agent: 'judicial', response: 'Constitutional review passed. All operations comply with framework principles.', delay: 4000 },
-        { agent: 'crown', response: 'Final oversight complete. System integrity maintained. Request approved.', delay: 5500 }
+        { agent: 'planner', response: 'Planning phase complete. Strategic framework established for optimal resource allocation.', delay: 1000 },
+        { agent: 'executor', response: 'Implementation approved. Executing planned operations with systematic oversight.', delay: 2500 },
+        { agent: 'evaluator', response: 'Quality review passed. All operations comply with framework principles.', delay: 4000 },
+        { agent: 'overwatch', response: 'Final oversight complete. System integrity maintained. Request approved.', delay: 5500 }
     ];
     
     responses.forEach(({ agent, response, delay }) => {
@@ -550,7 +550,7 @@ function enhanceAccessibility() {
         top: -40px;
         left: 6px;
         z-index: 1000;
-        background: var(--constitutional-purple);
+        background: var(--framework-purple);
         color: white;
         padding: 8px;
         text-decoration: none;

@@ -1,18 +1,18 @@
-/* AI Triad Constitutional - Landing Page Styles */
-/* Modern 2025 Design with Westminster Parliamentary Theme */
+/* AI Triad Model - Landing Page Styles */
+/* Modern 2025 Design with Multi-Agent Framework Theme */
 
 /* CSS Custom Properties (Variables) */
 :root {
-  /* Westminster Parliamentary Colors */
+  /* AI Framework Colors */
   --royal-blue: #1E40AF;
   --royal-blue-light: #3B82F6;
   --royal-blue-dark: #1E3A8A;
-  --parliamentary-gold: #F59E0B;
-  --parliamentary-gold-light: #FCD34D;
-  --parliamentary-gold-dark: #D97706;
-  --constitutional-purple: #8B5CF6;
-  --constitutional-purple-light: #A78BFA;
-  --constitutional-purple-dark: #7C3AED;
+  --system-gold: #F59E0B;
+  --system-gold-light: #FCD34D;
+  --system-gold-dark: #D97706;
+  --framework-purple: #8B5CF6;
+  --framework-purple-light: #A78BFA;
+  --framework-purple-dark: #7C3AED;
   
   /* Neutral Colors */
   --white: #FFFFFF;
@@ -120,13 +120,13 @@ p {
 }
 
 a {
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--constitutional-purple);
+  color: var(--framework-purple);
 }
 
 /* Container */
@@ -192,7 +192,7 @@ a:hover {
 .nav-logo-icon {
   width: 32px;
   height: 32px;
-  color: var(--constitutional-purple);
+  color: var(--framework-purple);
 }
 
 .nav-menu {
@@ -226,7 +226,7 @@ a:hover {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--constitutional-purple), var(--parliamentary-gold));
+  background: linear-gradient(90deg, var(--framework-purple), var(--system-gold));
   transition: width var(--transition-base);
 }
 
@@ -329,7 +329,7 @@ a:hover {
 }
 
 .btn--primary {
-  background: linear-gradient(135deg, var(--constitutional-purple), var(--constitutional-purple-dark));
+  background: linear-gradient(135deg, var(--framework-purple), var(--framework-purple-dark));
   color: var(--white);
   box-shadow: var(--shadow-base);
 }
@@ -347,18 +347,18 @@ a:hover {
 
 .btn--secondary:hover {
   background: var(--bg-tertiary);
-  border-color: var(--constitutional-purple);
+  border-color: var(--framework-purple);
   transform: translateY(-2px);
 }
 
 .btn--ghost {
   background: transparent;
-  color: var(--constitutional-purple-light);
-  border: 1px solid var(--constitutional-purple);
+  color: var(--framework-purple-light);
+  border: 1px solid var(--framework-purple);
 }
 
 .btn--ghost:hover {
-  background: var(--constitutional-purple);
+  background: var(--framework-purple);
   color: var(--white);
 }
 
@@ -380,18 +380,18 @@ a:hover {
 }
 
 .badge--featured {
-  background: linear-gradient(135deg, var(--constitutional-purple), var(--parliamentary-gold));
+  background: linear-gradient(135deg, var(--framework-purple), var(--system-gold));
   color: var(--white);
 }
 
 .badge--secondary {
   background: var(--bg-secondary);
-  color: var(--constitutional-purple-light);
-  border: 1px solid var(--constitutional-purple);
+  color: var(--framework-purple-light);
+  border: 1px solid var(--framework-purple);
 }
 
 .badge--primary {
-  background: var(--constitutional-purple);
+  background: var(--framework-purple);
   color: var(--white);
 }
 
@@ -401,14 +401,14 @@ a:hover {
 }
 
 .badge--warning {
-  background: var(--parliamentary-gold);
+  background: var(--system-gold);
   color: var(--gray-900);
 }
 
 .badge--outline {
   background: transparent;
-  color: var(--constitutional-purple-light);
-  border: 1px solid var(--constitutional-purple);
+  color: var(--framework-purple-light);
+  border: 1px solid var(--framework-purple);
 }
 
 /* Hero Section */
@@ -507,7 +507,7 @@ a:hover {
 }
 
 .hero-title-highlight {
-  background: linear-gradient(135deg, var(--constitutional-purple), var(--parliamentary-gold));
+  background: linear-gradient(135deg, var(--framework-purple), var(--system-gold));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -577,7 +577,7 @@ a:hover {
   font-family: var(--font-display);
   font-size: 2rem;
   font-weight: 700;
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
   margin-bottom: var(--space-xs);
 }
 
@@ -603,7 +603,7 @@ a:hover {
   }
 }
 
-.constitutional-agents {
+.ai-agents {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-lg);
@@ -658,7 +658,7 @@ a:hover {
 
 .agent-card:hover {
   transform: translateY(-5px);
-  border-color: var(--constitutional-purple);
+  border-color: var(--framework-purple);
   box-shadow: var(--shadow-xl), var(--shadow-glow);
 }
 
@@ -666,12 +666,12 @@ a:hover {
   width: 48px;
   height: 48px;
   margin-bottom: var(--space-md);
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
   transition: all var(--transition-base);
 }
 
 .agent-card:hover .agent-icon {
-  color: var(--constitutional-purple);
+  color: var(--framework-purple);
   transform: scale(1.1);
 }
 
@@ -693,7 +693,7 @@ a:hover {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--constitutional-purple);
+  background: var(--framework-purple);
   animation: status-pulse 2s ease-in-out infinite;
 }
 
@@ -709,21 +709,21 @@ a:hover {
 }
 
 /* Agent-specific colors */
-.agent-card--legislative .agent-icon { color: var(--parliamentary-gold); }
-.agent-card--legislative:hover .agent-icon { color: var(--parliamentary-gold-light); }
-.agent-card--legislative .agent-status { background: var(--parliamentary-gold); }
+.agent-card--planner .agent-icon { color: var(--system-gold); }
+.agent-card--planner:hover .agent-icon { color: var(--system-gold-light); }
+.agent-card--planner .agent-status { background: var(--system-gold); }
 
-.agent-card--executive .agent-icon { color: var(--royal-blue-light); }
-.agent-card--executive:hover .agent-icon { color: var(--royal-blue); }
-.agent-card--executive .agent-status { background: var(--royal-blue-light); }
+.agent-card--executor .agent-icon { color: var(--royal-blue-light); }
+.agent-card--executor:hover .agent-icon { color: var(--royal-blue); }
+.agent-card--executor .agent-status { background: var(--royal-blue-light); }
 
-.agent-card--judicial .agent-icon { color: #10B981; }
-.agent-card--judicial:hover .agent-icon { color: #059669; }
-.agent-card--judicial .agent-status { background: #10B981; }
+.agent-card--evaluator .agent-icon { color: #10B981; }
+.agent-card--evaluator:hover .agent-icon { color: #059669; }
+.agent-card--evaluator .agent-status { background: #10B981; }
 
-.agent-card--crown .agent-icon { color: var(--constitutional-purple-light); }
-.agent-card--crown:hover .agent-icon { color: var(--constitutional-purple); }
-.agent-card--crown .agent-status { background: var(--constitutional-purple); }
+.agent-card--overwatch .agent-icon { color: var(--framework-purple-light); }
+.agent-card--overwatch:hover .agent-icon { color: var(--framework-purple); }
+.agent-card--overwatch .agent-status { background: var(--framework-purple); }
 
 /* Agent Connections */
 .agent-connections {
@@ -808,7 +808,7 @@ section {
 
 .framework-card:hover {
   transform: translateY(-5px);
-  border-color: var(--constitutional-purple);
+  border-color: var(--framework-purple);
   box-shadow: var(--shadow-xl);
 }
 
@@ -822,7 +822,7 @@ section {
 .framework-icon {
   width: 48px;
   height: 48px;
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
   flex-shrink: 0;
 }
 
@@ -852,15 +852,15 @@ section {
 
 .framework-features li::before {
   content: '✓';
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
   font-weight: bold;
 }
 
 /* Framework card specific colors */
-.framework-card--legislative .framework-icon { color: var(--parliamentary-gold); }
-.framework-card--executive .framework-icon { color: var(--royal-blue-light); }
-.framework-card--judicial .framework-icon { color: #10B981; }
-.framework-card--crown .framework-icon { color: var(--constitutional-purple-light); }
+.framework-card--planner .framework-icon { color: var(--system-gold); }
+.framework-card--executor .framework-icon { color: var(--royal-blue-light); }
+.framework-card--evaluator .framework-icon { color: #10B981; }
+.framework-card--overwatch .framework-icon { color: var(--framework-purple-light); }
 
 /* Architecture Section */
 .architecture-visualization {
@@ -893,7 +893,7 @@ section {
 
 .flow-node:hover {
   transform: translateY(-3px);
-  border-color: var(--constitutional-purple);
+  border-color: var(--framework-purple);
   box-shadow: var(--shadow-lg);
 }
 
@@ -901,7 +901,7 @@ section {
   width: 40px;
   height: 40px;
   margin: 0 auto var(--space-md);
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
 }
 
 .flow-node-content h4 {
@@ -917,11 +917,11 @@ section {
 
 /* Flow node specific colors */
 .flow-node--input .flow-node-icon { color: var(--gray-400); }
-.flow-node--legislative .flow-node-icon { color: var(--parliamentary-gold); }
-.flow-node--executive .flow-node-icon { color: var(--royal-blue-light); }
-.flow-node--judicial .flow-node-icon { color: #10B981; }
-.flow-node--crown .flow-node-icon { color: var(--constitutional-purple-light); }
-.flow-node--output .flow-node-icon { color: var(--constitutional-purple); }
+.flow-node--planner .flow-node-icon { color: var(--system-gold); }
+.flow-node--executor .flow-node-icon { color: var(--royal-blue-light); }
+.flow-node--evaluator .flow-node-icon { color: #10B981; }
+.flow-node--overwatch .flow-node-icon { color: var(--framework-purple-light); }
+.flow-node--output .flow-node-icon { color: var(--framework-purple); }
 
 .flow-connections {
   position: absolute;
@@ -971,7 +971,7 @@ section {
 .feature-icon {
   width: 40px;
   height: 40px;
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
   flex-shrink: 0;
 }
 
@@ -1031,7 +1031,7 @@ section {
 .code-tab.code-tab--active,
 .code-tab:hover {
   color: var(--white);
-  border-bottom-color: var(--constitutional-purple);
+  border-bottom-color: var(--framework-purple);
 }
 
 .code-panel {
@@ -1061,10 +1061,10 @@ section {
 }
 
 /* Syntax highlighting */
-.language-python .token.keyword { color: var(--constitutional-purple-light); }
+.language-python .token.keyword { color: var(--framework-purple-light); }
 .language-python .token.string { color: #10B981; }
 .language-python .token.comment { color: var(--gray-500); }
-.language-python .token.function { color: var(--parliamentary-gold); }
+.language-python .token.function { color: var(--system-gold); }
 .language-python .token.number { color: var(--royal-blue-light); }
 
 .integration-features {
@@ -1099,14 +1099,14 @@ section {
 
 .feature-card:hover {
   transform: translateY(-3px);
-  border-color: var(--constitutional-purple);
+  border-color: var(--framework-purple);
   box-shadow: var(--shadow-lg);
 }
 
 .feature-card-icon {
   width: 40px;
   height: 40px;
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
   margin-bottom: var(--space-md);
 }
 
@@ -1150,7 +1150,7 @@ section {
 
 .principle-card:hover {
   transform: translateY(-5px);
-  border-color: var(--constitutional-purple);
+  border-color: var(--framework-purple);
   box-shadow: var(--shadow-xl);
 }
 
@@ -1158,7 +1158,7 @@ section {
   width: 64px;
   height: 64px;
   margin: 0 auto var(--space-lg);
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
 }
 
 .principle-card h3 {
@@ -1189,7 +1189,7 @@ section {
   font-family: var(--font-display);
   font-size: 3rem;
   font-weight: 700;
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
   margin-bottom: var(--space-xs);
 }
 
@@ -1202,7 +1202,7 @@ section {
 
 /* CTA Section */
 .cta {
-  background: linear-gradient(135deg, var(--constitutional-purple-dark), var(--royal-blue-dark));
+  background: linear-gradient(135deg, var(--framework-purple-dark), var(--royal-blue-dark));
   text-align: center;
 }
 
@@ -1270,7 +1270,7 @@ section {
 .footer-logo-icon {
   width: 32px;
   height: 32px;
-  color: var(--constitutional-purple);
+  color: var(--framework-purple);
 }
 
 .footer-description {
@@ -1297,8 +1297,8 @@ section {
 }
 
 .social-link:hover {
-  background: var(--constitutional-purple);
-  border-color: var(--constitutional-purple);
+  background: var(--framework-purple);
+  border-color: var(--framework-purple);
   color: var(--white);
   transform: translateY(-2px);
 }
@@ -1334,7 +1334,7 @@ section {
 }
 
 .footer-column a:hover {
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
 }
 
 .footer-bottom {
@@ -1371,7 +1371,7 @@ section {
 }
 
 .footer-legal-links a:hover {
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
 }
 
 /* Modal */
@@ -1489,7 +1489,7 @@ section {
 
 .demo-input textarea:focus {
   outline: none;
-  border-color: var(--constitutional-purple);
+  border-color: var(--framework-purple);
   box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
 }
 
@@ -1509,7 +1509,7 @@ section {
 .agent-response h4 {
   font-size: 0.875rem;
   margin-bottom: var(--space-sm);
-  color: var(--constitutional-purple-light);
+  color: var(--framework-purple-light);
 }
 
 .response-content {
@@ -1541,11 +1541,11 @@ section {
   text-align: center;
 }
 
-.spinner-crown {
+.spinner-framework {
   width: 64px;
   height: 64px;
   margin: 0 auto var(--space-lg);
-  color: var(--constitutional-purple);
+  color: var(--framework-purple);
   animation: spinner-rotate 2s linear infinite;
 }
 
@@ -1583,7 +1583,7 @@ section {
     grid-template-columns: 1fr;
   }
   
-  .constitutional-agents {
+  .ai-agents {
     grid-template-columns: 1fr;
   }
   
@@ -1617,7 +1617,7 @@ button:focus,
 a:focus,
 input:focus,
 textarea:focus {
-  outline: 2px solid var(--constitutional-purple);
+  outline: 2px solid var(--framework-purple);
   outline-offset: 2px;
 }
 
