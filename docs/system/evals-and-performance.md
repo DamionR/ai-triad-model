@@ -427,7 +427,7 @@ class TriadEvaluationPipeline:
             recommendations = await self._generate_improvement_recommendations(evaluation_results)
             
             return {
-                "timestamp": datetime.utcnow(),
+                "timestamp": datetime.now(timezone.utc),
                 "results": evaluation_results,
                 "recommendations": recommendations
             }
@@ -439,7 +439,7 @@ class TriadEvaluationPipeline:
         for agent_name, agent_results in results.items():
             eval_record = EvaluationResult(
                 agent_name=agent_name,
-                evaluation_date=datetime.utcnow(),
+                evaluation_date=datetime.now(timezone.utc),
                 results=agent_results,
                 overall_score=self._calculate_overall_score(agent_results)
             )
@@ -509,7 +509,7 @@ class EvaluationLogfireIntegration:
         # Log performance trends
         with logfire.span(f"{agent_name}_performance_trend") as span:
             span.set_attribute("agent", agent_name)
-            span.set_attribute("evaluation_timestamp", datetime.utcnow().isoformat())
+            span.set_attribute("evaluation_timestamp", datetime.now(timezone.utc).isoformat())
             
             for metric_name, metric_value in results.items():
                 if isinstance(metric_value, (int, float)):

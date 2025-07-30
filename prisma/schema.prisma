@@ -1,0 +1,356 @@
+// Triad Model Database Schema
+// Governance AI System with Compliance Oversight
+
+generator client {
+  provider             = "prisma-client-py"
+  recursive_type_depth = 5
+  interface            = "asyncio"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+// Agent Models
+model Agent {
+  id                      String   @id @default(cuid())
+  name                    String   @unique
+  authorityLevel         String   // policy_maker, executor, reviewer, overseer
+  model                   String   @default("claude-3-5-sonnet-20241022")
+  active                  Boolean  @default(true)
+  createdAt               DateTime @default(now())
+  updatedAt               DateTime @updatedAt
+
+  // Relations
+  sentTasks      Task[]           @relation("SentTasks")
+  receivedTasks  Task[]           @relation("ReceivedTasks")
+  messages       AgentMessage[]
+  sessions       MessageSession[]
+  auditLogs         AuditLog[]
+  governanceActions GovernanceAction[]
+
+  @@index([authorityLevel])
+}
+
+// Task Management
+model Task {
+  id                 String   @id @default(cuid())
+  type               String
+  description        String
+  status             String   @default("pending") // pending, in_progress, completed, failed
+  priority           String   @default("medium") // low, medium, high, urgent
+  
+  // Agent relations
+  requestingAgentId  String
+  assignedAgentId    String
+  requestingAgent    Agent    @relation("SentTasks", fields: [requestingAgentId], references: [id])
+  assignedAgent      Agent    @relation("ReceivedTasks", fields: [assignedAgentId], references: [id])
+  
+  // Compliance oversight
+  complianceCheck         Boolean @default(true)
+  approvalRequired        Boolean @default(true)
+  
+  // Metadata (stored as JSON strings for SQLite compatibility)
+  parameters         String? // JSON string
+  result             String? // JSON string
+  createdAt          DateTime @default(now())
+  updatedAt          DateTime @updatedAt
+  completedAt        DateTime?
+  
+  // Relations
+  workflow           Workflow? @relation(fields: [workflowId], references: [id])
+  workflowId         String?
+  auditLogs          AuditLog[]
+  complianceReviews ComplianceReview[]
+
+  @@index([status, priority])
+  @@index([requestingAgentId, assignedAgentId])
+}
+
+// Workflow Management
+model Workflow {
+  id                String   @id @default(cuid())
+  name              String
+  description       String
+  status            String   @default("draft") // draft, approved, executing, completed
+  
+  // Planning metadata (stored as JSON strings for SQLite compatibility)
+  objective         String
+  requirements      String   @default("[]") // JSON string
+  constraints       String   @default("{}") // JSON string
+  stakeholders      String   @default("[]") // JSON string
+  
+  // Compliance validation
+  policyCompliance    Boolean  @default(true)
+  managementApproval  Boolean @default(false)
+  
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  approvedAt        DateTime?
+  completedAt       DateTime?
+  
+  // Relations
+  tasks             Task[]
+  validations       ValidationReport[]
+  auditLogs         AuditLog[]
+
+  @@index([status])
+}
+
+// Message History
+model MessageSession {
+  id                      String   @id @default(cuid())
+  sessionId               String   @unique
+  agentId                 String
+  agent                   Agent    @relation(fields: [agentId], references: [id])
+  
+  authorityLevel         String
+  governanceSessionId    String?
+  
+  startedAt               DateTime @default(now())
+  lastActivity            DateTime @default(now())
+  active                  Boolean  @default(true)
+  metadata                String   @default("{}") // JSON string
+  
+  // Relations
+  messages                AgentMessage[]
+  
+  @@index([agentId, active])
+}
+
+// Agent Messages
+model AgentMessage {
+  id                  String   @id @default(cuid())
+  sessionId           String
+  session             MessageSession @relation(fields: [sessionId], references: [id])
+  
+  agentId             String
+  agent               Agent    @relation(fields: [agentId], references: [id])
+  
+  messageType         String   // user, assistant, system, tool
+  content             String?
+  toolName            String?
+  toolArgs            String? // JSON string
+  
+  complianceValidated    Boolean @default(true)
+  governanceContext      String? // JSON string
+  
+  timestamp           DateTime @default(now())
+  
+  @@index([sessionId, timestamp])
+}
+
+// Governance Records
+model GovernanceSession {
+  id                 String   @id @default(cuid())
+  sessionType        String   // regular, emergency, review_period
+  status             String   @default("active") // active, paused, closed
+  
+  startTime          DateTime @default(now())
+  endTime            DateTime?
+  
+  agenda             String   @default("[]") // JSON string
+  participants       String   @default("[]") // JSON string
+  
+  authorityLevel     String
+  
+  // Relations
+  actions            GovernanceAction[]
+  questions          ReviewPeriod[]
+  proposals          Proposal[]
+  
+  @@index([status, sessionType])
+}
+
+// Governance Actions
+model GovernanceAction {
+  id                 String   @id @default(cuid())
+  sessionId          String
+  session            GovernanceSession @relation(fields: [sessionId], references: [id])
+  
+  agentId            String
+  agent              Agent    @relation(fields: [agentId], references: [id])
+  
+  actionType         String   // question, answer, proposal, decision, review
+  content            String
+  
+  policyBasis        String?
+  governancePrivilege Boolean @default(true)
+  
+  timestamp          DateTime @default(now())
+  
+  @@index([sessionId, actionType])
+}
+
+// Review Period
+model ReviewPeriod {
+  id                 String   @id @default(cuid())
+  sessionId          String
+  session            GovernanceSession @relation(fields: [sessionId], references: [id])
+  
+  question           String
+  questioningAgent   String
+  respondingAgent    String
+  
+  answer             String?
+  answeredAt         DateTime?
+  
+  questionType       String   // policy, operational, compliance
+  governancePrivilege Boolean @default(true)
+  
+  createdAt          DateTime @default(now())
+  
+  @@index([sessionId, questioningAgent, respondingAgent])
+}
+
+// Proposals
+model Proposal {
+  id                 String   @id @default(cuid())
+  sessionId          String
+  session            GovernanceSession @relation(fields: [sessionId], references: [id])
+  
+  proposalType       String   // procedural, strategic, policy
+  proposalText       String
+  proposingAgent     String
+  
+  requiresApproval   Boolean  @default(true)
+  policyImplication  Boolean @default(false)
+  
+  status             String   @default("proposed") // proposed, seconded, debating, voting, passed, failed
+  
+  createdAt          DateTime @default(now())
+  votedAt            DateTime?
+  
+  // Relations
+  votes              Vote[]
+  
+  @@index([sessionId, status])
+}
+
+// Voting Records
+model Vote {
+  id                 String   @id @default(cuid())
+  proposalId         String
+  proposal           Proposal @relation(fields: [proposalId], references: [id])
+  
+  votingAgent        String
+  vote               String   // for, against, abstain
+  
+  complianceValid    Boolean @default(true)
+  
+  timestamp          DateTime @default(now())
+  
+  @@unique([proposalId, votingAgent])
+}
+
+// Compliance Reviews
+model ComplianceReview {
+  id                 String   @id @default(cuid())
+  
+  reviewType         String   // task, workflow, action, decision
+  targetId           String
+  targetType         String
+  
+  // Link to specific entity being reviewed
+  task               Task?    @relation(fields: [targetId], references: [id])
+  
+  complianceValid    Boolean
+  violations         String   @default("[]") // JSON string
+  recommendations    String   @default("[]") // JSON string
+  
+  reviewingAgent     String
+  authorityLevel     String
+  
+  createdAt          DateTime @default(now())
+  
+  @@index([targetType, targetId])
+}
+
+// Validation Reports
+model ValidationReport {
+  id                 String   @id @default(cuid())
+  
+  validationType     String   // data, configuration, compliance, quality
+  targetId           String
+  targetType         String
+  
+  workflow           Workflow? @relation(fields: [targetId], references: [id])
+  
+  valid              Boolean
+  score              Float?
+  errors             String   @default("[]") // JSON string
+  warnings           String   @default("[]") // JSON string
+  
+  validatedBy        String
+  
+  createdAt          DateTime @default(now())
+  
+  @@index([targetType, targetId])
+}
+
+// Audit Trail
+model AuditLog {
+  id                 String   @id @default(cuid())
+  
+  eventType          String
+  eventData          String // JSON string
+  
+  agentId            String?
+  agent              Agent?   @relation(fields: [agentId], references: [id])
+  
+  taskId             String?
+  task               Task?    @relation(fields: [taskId], references: [id])
+  
+  workflowId         String?
+  workflow           Workflow? @relation(fields: [workflowId], references: [id])
+  
+  complianceOversight     Boolean @default(true)
+  organizationalAccountability Boolean @default(true)
+  
+  timestamp          DateTime @default(now())
+  
+  @@index([eventType, timestamp])
+  @@index([agentId])
+}
+
+// System Health Metrics
+model SystemMetric {
+  id                 String   @id @default(cuid())
+  
+  metricType         String   // cpu, memory, response_time, error_rate
+  metricName         String
+  value              Float
+  unit               String
+  
+  agentName          String?
+  componentName      String?
+  
+  timestamp          DateTime @default(now())
+  
+  @@index([metricType, timestamp])
+  @@index([agentName, metricType])
+}
+
+// Crisis Management
+model CrisisEvent {
+  id                 String   @id @default(cuid())
+  
+  crisisType         String   // system_failure, policy_violation, security_breach
+  severity           String   // low, medium, high, critical
+  status             String   @default("active") // active, contained, resolved
+  
+  description        String
+  affectedComponents String   @default("[]") // JSON string
+  
+  oversightIntervention Boolean @default(false)
+  emergencyPowers       Boolean @default(false)
+  
+  detectedAt         DateTime @default(now())
+  containedAt        DateTime?
+  resolvedAt         DateTime?
+  
+  resolutionActions  String   @default("[]") // JSON string
+  
+  @@index([status, severity])
+}

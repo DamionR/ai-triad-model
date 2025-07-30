@@ -8,7 +8,7 @@ based on the Canadian Westminster Parliamentary System.
 from enum import Enum
 from typing import Dict, List, Optional, Any
 from pydantic import BaseModel
-from datetime import datetime
+from datetime import datetime, timezone
 import uuid
 
 
@@ -48,7 +48,7 @@ class ConstitutionalDecision(BaseModel):
         if "decision_id" not in data:
             data["decision_id"] = f"const_dec_{uuid.uuid4().hex[:8]}"
         if "timestamp" not in data:
-            data["timestamp"] = datetime.utcnow()
+            data["timestamp"] = datetime.now(timezone.utc)
         super().__init__(**data)
 
 
@@ -67,7 +67,7 @@ class ParliamentarySession(BaseModel):
         if "session_id" not in data:
             data["session_id"] = f"parl_session_{uuid.uuid4().hex[:8]}"
         if "start_date" not in data:
-            data["start_date"] = datetime.utcnow()
+            data["start_date"] = datetime.now(timezone.utc)
         super().__init__(**data)
 
 
@@ -87,7 +87,7 @@ class ConstitutionalViolation(BaseModel):
         if "violation_id" not in data:
             data["violation_id"] = f"const_viol_{uuid.uuid4().hex[:8]}"
         if "timestamp" not in data:
-            data["timestamp"] = datetime.utcnow()
+            data["timestamp"] = datetime.now(timezone.utc)
         super().__init__(**data)
 
 
@@ -264,7 +264,7 @@ class ConstitutionalFramework:
     ):
         """Record decision in constitutional record (Hansard equivalent)."""
         record_entry = {
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "decision_id": decision.decision_id,
             "constitutional_authority": decision.constitutional_authority.value,
             "agent_responsible": decision.agent_responsible,

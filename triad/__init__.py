@@ -11,13 +11,17 @@ __version__ = "2.0.0"
 __author__ = "AI Triad Constitutional Team"
 __email__ = "contact@ai-triad-constitutional.org"
 
+# Initialize Logfire for observability before importing components
+from .core.logging.logfire_config import initialize_logfire
+_logfire_initialized = initialize_logfire()
+
 from .core.constitutional import ConstitutionalFramework
 from .core.dependencies import TriadDeps
-from .agents.planner import PlannerAgent
-from .agents.executor import ExecutorAgent
-from .agents.evaluator import EvaluatorAgent
-from .agents.overwatch import OverwatchAgent
-from .parliamentary.procedures import ParliamentaryProcedure
+from .agents.roles.planner import PlannerAgent
+from .agents.roles.executor import ExecutorAgent
+from .agents.roles.evaluator import EvaluatorAgent
+from .agents.roles.overwatch import OverwatchAgent
+from .parliamentary.procedures import ParliamentaryProcedures
 from .parliamentary.crisis import ConstitutionalCrisisManager
 from .parliamentary.crown import CrownPrerogative
 
@@ -29,7 +33,7 @@ __all__ = [
     "ExecutorAgent",
     "EvaluatorAgent",
     "OverwatchAgent",
-    "ParliamentaryProcedure",
+    "ParliamentaryProcedures",
     "ConstitutionalCrisisManager",
     "CrownPrerogative",
 ]

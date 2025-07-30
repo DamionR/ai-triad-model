@@ -78,8 +78,8 @@ async def estimate_resources(ctx: RunContext[TriadDeps], workflow: WorkflowPlan)
         insert(ResourceEstimateTable).values(
             workflow_id=workflow.id,
             estimate_data=estimate.model_dump_json(),
-            created_at=datetime.utcnow(),
-            expires_at=datetime.utcnow() + timedelta(hours=24)
+            created_at=datetime.now(timezone.utc),
+            expires_at=datetime.now(timezone.utc) + timedelta(hours=24)
         )
     )
     await ctx.deps.db_session.commit()
@@ -226,10 +226,10 @@ async def update_task_status(ctx: RunContext[TriadDeps], task_id: str, status: E
         insert(TaskStatusTable).values(
             task_id=task_id,
             status=status.value,
-            updated_at=datetime.utcnow()
+            updated_at=datetime.now(timezone.utc)
         ).on_conflict_do_update(
             index_elements=['task_id'],
-            set_={'status': status.value, 'updated_at': datetime.utcnow()}
+            set_={'status': status.value, 'updated_at': datetime.now(timezone.utc)}
         )
     )
     await ctx.deps.db_session.commit()
@@ -238,7 +238,7 @@ async def update_task_status(ctx: RunContext[TriadDeps], task_id: str, status: E
     await ctx.deps.a2a_broker.broadcast_status_update({
         "task_id": task_id,
         "status": status.value,
-        "timestamp": datetime.utcnow().isoformat(),
+        "timestamp": datetime.now(timezone.utc).isoformat(),
         "constitutional_branch": "executive"
     })
     
@@ -485,8 +485,8 @@ async def generate_performance_report(ctx: RunContext[TriadDeps], time_range: st
         insert(PerformanceReportTable).values(
             time_range_id=time_range,
             report_data=report.model_dump_json(),
-            created_at=datetime.utcnow(),
-            expires_at=datetime.utcnow() + timedelta(days=7),  # 7 days retention
+            created_at=datetime.now(timezone.utc),
+            expires_at=datetime.now(timezone.utc) + timedelta(days=7),  # 7 days retention
             constitutional_branch="crown"  # Overwatch authority
         )
     )

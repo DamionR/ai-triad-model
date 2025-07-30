@@ -9,7 +9,7 @@ from dataclasses import dataclass
 from typing import Protocol, Optional, Dict, Any, List
 import asyncio
 import logfire
-from datetime import datetime
+from datetime import datetime, timezone
 from sqlalchemy.ext.asyncio import AsyncSession
 from httpx import AsyncClient
 
@@ -70,7 +70,7 @@ class TriadDeps:
     db_session: AsyncSession
     mcp_client: MCPClient
     a2a_broker: A2ABroker
-    logfire_logger: logfire.Logger
+    logfire_logger: logfire
     parliamentary_procedure: ParliamentaryProcedure
     constitutional_crisis_manager: ConstitutionalCrisisManager
     crown_prerogative: CrownPrerogative
@@ -94,7 +94,7 @@ class TriadDeps:
         await self.a2a_broker.broadcast_event({
             "event_type": event_type,
             "data": data,
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "constitutional_branch": data.get("agent", "unknown")
         })
     
@@ -103,14 +103,14 @@ class TriadDeps:
         constitutional_record = {
             "event_type": event_type,
             "data": data,
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "constitutional_authority": data.get("agent", "system"),
             "parliamentary_session": await self.get_current_parliamentary_session(),
             "recorded_by": "constitutional_clerk"
         }
         
         # Store in constitutional record database
-        from ..database.models import ConstitutionalRecordTable
+        from triad.database.models import ConstitutionalRecordTable
         from sqlalchemy import insert
         
         await self.db_session.execute(
@@ -141,7 +141,7 @@ class TriadDeps:
             "justification": justification,
             "affected_agents": affected_agents,
             "exercised_by": "overwatch_agent",
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "constitutional_authority": "crown"
         }
         
@@ -197,7 +197,7 @@ class TriadDeps:
             "questioning_agent": questioning_agent,
             "target_agent": target_agent,
             "questions": questions,
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "parliamentary_session": await self.get_current_parliamentary_session()
         }
         
@@ -349,3 +349,17 @@ class TriadConfig:
             )
         
         return config
+
+# Dependency injection
+_deps_instance: Optional[TriadDeps] = None
+
+async def get_triad_deps() -> TriadDeps:
+    """Get or create Triad dependencies for FastAPI dependency injection."""
+    global _deps_instance
+    
+    if _deps_instance is None:
+        config = TriadConfig.from_environment()
+        _deps_instance = TriadDeps(config)
+        await _deps_instance.initialize()
+    
+    return _deps_instance

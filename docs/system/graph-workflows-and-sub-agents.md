@@ -106,7 +106,7 @@ class ConstitutionalValidationNode(Node[TriadGraphState, Dict[str, Any], Dict[st
             
             # Validate constitutional chain
             validation_entry = {
-                "timestamp": datetime.utcnow().isoformat(),
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "sub_agent_type": sub_agent_result.get("sub_agent_type"),
                 "constitutional_phase": sub_agent_result.get("constitutional_phase"),
                 "validated_by": "constitutional_validator",
@@ -760,7 +760,7 @@ class TriadGraphOrchestrator:
                 main_agent=main_agent,
                 task_context=workflow_request.get("context", {}),
                 execution_metadata={
-                    "start_time": datetime.utcnow().isoformat(),
+                    "start_time": datetime.now(timezone.utc).isoformat(),
                     "complexity_level": workflow_request.get("complexity", "medium"),
                     "priority": workflow_request.get("priority", 1)
                 }

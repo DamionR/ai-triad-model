@@ -102,7 +102,7 @@ class AgentSecurityManager:
                 constitutional_branch=requested_branch,
                 permissions=await self._get_user_permissions(credentials.user_id),
                 mfa_verified=True,
-                token_expires_at=datetime.utcnow() + timedelta(hours=8)
+                token_expires_at=datetime.now(timezone.utc) + timedelta(hours=8)
             )
             
             # Step 5: Log successful authentication with constitutional oversight
@@ -120,7 +120,7 @@ class AgentSecurityManager:
                 "event_type": "authentication_success",
                 "user_id": credentials.user_id,
                 "constitutional_branch": requested_branch,
-                "timestamp": datetime.utcnow().isoformat(),
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "session_id": security_context.session_id
             })
             
@@ -242,7 +242,7 @@ class ConstitutionalDataProtection:
                 "data": data,
                 "classification": classification.value,
                 "encrypted_by": constitutional_authority,
-                "encrypted_at": datetime.utcnow().isoformat(),
+                "encrypted_at": datetime.now(timezone.utc).isoformat(),
                 "constitutional_oversight": True
             }
             
@@ -457,7 +457,7 @@ class SecureMCPIntegration:
                     "user_id": security_context.user_id,
                     "session_id": security_context.session_id,
                     "constitutional_branch": security_context.constitutional_branch,
-                    "timestamp": datetime.utcnow().isoformat()
+                    "timestamp": datetime.now(timezone.utc).isoformat()
                 },
                 "constitutional_validation": True
             }

@@ -167,7 +167,7 @@ class ConstitutionalScaler:
         """Execute individual scaling step with monitoring."""
         
         step_type = step.get("type")
-        step_start = datetime.utcnow()
+        step_start = datetime.now(timezone.utc)
         
         try:
             if step_type == "create_instance":
@@ -181,7 +181,7 @@ class ConstitutionalScaler:
             else:
                 raise ValueError(f"Unknown scaling step type: {step_type}")
             
-            execution_time = (datetime.utcnow() - step_start).total_seconds()
+            execution_time = (datetime.now(timezone.utc) - step_start).total_seconds()
             
             return {
                 "step_type": step_type,
@@ -191,7 +191,7 @@ class ConstitutionalScaler:
             }
             
         except Exception as e:
-            execution_time = (datetime.utcnow() - step_start).total_seconds()
+            execution_time = (datetime.now(timezone.utc) - step_start).total_seconds()
             
             await self.deps.logfire_logger.error(
                 "Scaling step failed",

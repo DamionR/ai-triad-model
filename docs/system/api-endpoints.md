@@ -323,7 +323,7 @@ async def create_workflow(
             success=True,
             message="Workflow plan created successfully",
             request_id=request.request_id,
-            timestamp=datetime.utcnow(),
+            timestamp=datetime.now(timezone.utc),
             execution_time=execution_time,
             workflow_plan=workflow_plan,
             estimated_duration=workflow_plan.estimated_duration,
@@ -374,7 +374,7 @@ async def optimize_workflow(
             success=True,
             message="Workflow optimized successfully",
             request_id=request.request_id,
-            timestamp=datetime.utcnow(),
+            timestamp=datetime.now(timezone.utc),
             execution_time=execution_time,
             original_plan=workflow,
             optimized_plan=optimized_plan,
@@ -446,13 +446,13 @@ async def execute_workflow(
                 deps
             )
             
-            estimated_completion = datetime.utcnow() + timedelta(seconds=workflow.estimated_duration)
+            estimated_completion = datetime.now(timezone.utc) + timedelta(seconds=workflow.estimated_duration)
             
             return ExecuteWorkflowResponse(
                 success=True,
                 message="Workflow execution started",
                 request_id=request.request_id,
-                timestamp=datetime.utcnow(),
+                timestamp=datetime.now(timezone.utc),
                 execution_time=time.time() - start_time,
                 execution_id=execution_id,
                 status=ExecutionStatus.RUNNING,
@@ -474,7 +474,7 @@ async def execute_workflow(
                 success=True,
                 message="Workflow executed successfully",
                 request_id=request.request_id,
-                timestamp=datetime.utcnow(),
+                timestamp=datetime.now(timezone.utc),
                 execution_time=execution_time,
                 execution_id=execution_id,
                 status=ExecutionStatus.COMPLETED
@@ -501,7 +501,7 @@ async def get_execution_status(
         success=True,
         message="Execution status retrieved",
         request_id=str(uuid.uuid4()),
-        timestamp=datetime.utcnow(),
+        timestamp=datetime.now(timezone.utc),
         execution_status=execution_status.status,
         progress_percentage=execution_status.progress,
         current_task=execution_status.current_task,
@@ -554,7 +554,7 @@ async def execute_single_task(
             success=True,
             message="Task executed successfully",
             request_id=request.request_id,
-            timestamp=datetime.utcnow(),
+            timestamp=datetime.now(timezone.utc),
             execution_time=execution_time,
             execution_result=result.output
         )
@@ -606,7 +606,7 @@ async def validate_execution_result(
             success=True,
             message="Validation completed successfully",
             request_id=request.request_id,
-            timestamp=datetime.utcnow(),
+            timestamp=datetime.now(timezone.utc),
             execution_time=execution_time,
             validation_report=validation_report,
             recommendations=validation_report.recommendations,
@@ -651,7 +651,7 @@ async def benchmark_performance(
             success=True,
             message="Benchmarking completed successfully",
             request_id=request.request_id,
-            timestamp=datetime.utcnow(),
+            timestamp=datetime.now(timezone.utc),
             execution_time=execution_time,
             benchmark_report=benchmark_report,
             performance_score=benchmark_report.overall_score,
@@ -714,7 +714,7 @@ async def get_system_health(
             success=True,
             message="System health retrieved successfully",
             request_id=request.request_id,
-            timestamp=datetime.utcnow(),
+            timestamp=datetime.now(timezone.utc),
             execution_time=execution_time,
             system_health=system_health,
             alerts=alerts,
@@ -760,7 +760,7 @@ async def get_performance_report(
             success=True,
             message="Performance report generated successfully",
             request_id=request.request_id,
-            timestamp=datetime.utcnow(),
+            timestamp=datetime.now(timezone.utc),
             execution_time=execution_time,
             performance_report=performance_report,
             trends=trends,
@@ -814,7 +814,7 @@ app.include_router(overwatch_router)
 @app.get("/health")
 async def health_check():
     """Basic health check endpoint."""
-    return {"status": "healthy", "timestamp": datetime.utcnow()}
+    return {"status": "healthy", "timestamp": datetime.now(timezone.utc)}
 
 # Metrics endpoint for Prometheus
 @app.get("/metrics")

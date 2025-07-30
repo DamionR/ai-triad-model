@@ -155,11 +155,11 @@ class VoteOfNoConfidence:
             
             # Formal no confidence motion
             motion = NoConfidenceMotion(
-                motion_id=f"nc_{int(datetime.utcnow().timestamp())}",
+                motion_id=f"nc_{int(datetime.now(timezone.utc).timestamp())}",
                 target_agent=target_agent,
                 initiating_agent=initiating_agent,
                 reasons=reasons,
-                timestamp=datetime.utcnow()
+                timestamp=datetime.now(timezone.utc)
             )
             
             # Allow all agents to vote
@@ -185,7 +185,7 @@ class VoteOfNoConfidence:
                     affected_agents=[target_agent],
                     description=f"No confidence vote passed against {target_agent}",
                     severity="major",
-                    timestamp=datetime.utcnow(),
+                    timestamp=datetime.now(timezone.utc),
                     crown_intervention_required=True
                 )
                 
@@ -398,12 +398,12 @@ class ConstitutionalConventions:
     ) -> Dict[str, Any]:
         """Establish new constitutional convention based on precedent."""
         
-        convention_id = f"conv_{int(datetime.utcnow().timestamp())}"
+        convention_id = f"conv_{int(datetime.now(timezone.utc).timestamp())}"
         
         new_convention = {
             "id": convention_id,
             "description": precedent_decision.get("principle", ""),
-            "established": datetime.utcnow().isoformat(),
+            "established": datetime.now(timezone.utc).isoformat(),
             "situation": situation,
             "precedent_decision": precedent_decision,
             "constitutional_justification": constitutional_justification,
@@ -463,7 +463,7 @@ class ParliamentaryScrutiny:
     ) -> Dict[str, Any]:
         """Establish parliamentary-style scrutiny committee."""
         
-        committee_id = f"committee_{int(datetime.utcnow().timestamp())}"
+        committee_id = f"committee_{int(datetime.now(timezone.utc).timestamp())}"
         
         # Create diverse scrutiny committee
         committee_members = [
@@ -478,7 +478,7 @@ class ParliamentaryScrutiny:
             "purpose": committee_purpose,
             "scope": scrutiny_scope,
             "members": committee_members,
-            "established": datetime.utcnow().isoformat(),
+            "established": datetime.now(timezone.utc).isoformat(),
             "constitutional_authority": "parliamentary_scrutiny"
         }
         
@@ -492,7 +492,7 @@ class ParliamentaryScrutiny:
     ) -> Dict[str, Any]:
         """Conduct formal committee inquiry with evidence gathering."""
         
-        inquiry_id = f"inquiry_{int(datetime.utcnow().timestamp())}"
+        inquiry_id = f"inquiry_{int(datetime.now(timezone.utc).timestamp())}"
         
         with logfire.span("parliamentary_inquiry") as span:
             span.set_attribute("inquiry_id", inquiry_id)

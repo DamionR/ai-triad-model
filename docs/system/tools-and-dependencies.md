@@ -43,7 +43,7 @@ class TriadDeps:
         await self.a2a_broker.broadcast_event({
             "event_type": event_type,
             "data": data,
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "constitutional_branch": data.get("agent", "unknown")
         })
     
@@ -52,7 +52,7 @@ class TriadDeps:
         constitutional_record = {
             "event_type": event_type,
             "data": data,
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "constitutional_authority": data.get("agent", "system"),
             "parliamentary_session": await self.get_current_parliamentary_session(),
             "recorded_by": "constitutional_clerk"
@@ -81,7 +81,7 @@ class TriadDeps:
             "justification": justification,
             "affected_agents": affected_agents,
             "exercised_by": "overwatch_agent",
-            "timestamp": datetime.utcnow().isoformat(),
+            "timestamp": datetime.now(timezone.utc).isoformat(),
             "constitutional_authority": "crown"
         }
         
@@ -610,7 +610,7 @@ class SystemHealthMonitorTool(MonitoringTool):
             performance_analysis=performance_analysis,
             active_alerts=active_alerts,
             recommendations=recommendations,
-            timestamp=datetime.utcnow()
+            timestamp=datetime.now(timezone.utc)
         )
         
         await self.log_execution(ctx, system_health)

@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Triad Model - Multi-Agent AI Framework</title>
+    <meta name="description" content="Advanced multi-agent AI framework with constitutional oversight and transparent decision-making. Built on Westminster Parliamentary architecture for reliable AI governance.">
+    <meta name="keywords" content="AI framework, multi-agent, AI governance, Westminster architecture, AI agents, Pydantic AI, AI coordination">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://damionr.github.io/ai-triad-model/">
+    <meta property="og:title" content="AI Triad Model - Multi-Agent AI Framework">
+    <meta property="og:description" content="Advanced multi-agent AI framework with constitutional oversight and transparent decision-making.">
+    <meta property="og:image" content="./assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://damionr.github.io/ai-triad-model/">
+    <meta property="twitter:title" content="AI Triad Model - Multi-Agent AI Framework">
+    <meta property="twitter:description" content="Advanced multi-agent AI framework with constitutional oversight and transparent decision-making.">
+    <meta property="twitter:image" content="./assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+    
+    <!-- Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="#home" class="nav-logo">
+                    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                    </svg>
+                    <span>AI Triad Model</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#architecture" class="nav-link">Architecture</a>
+                <a href="#docs" class="nav-link">Documentation</a>
+                <a href="#integration" class="nav-link">Integration</a>
+                <a href="https://github.com/DamionR/ai-triad-model" class="nav-link nav-link--external" target="_blank" rel="noopener">
+                    <span>GitHub</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15,3 21,3 21,9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn--secondary btn--sm" data-modal="demo">Live Demo</button>
+                <button class="btn btn--primary btn--sm">Get Started</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <div class="hero-particles" id="heroParticles"></div>
+            <div class="hero-gradient"></div>
+        </div>
+        
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge badge--featured">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"></polygon>
+                        </svg>
+                        Multi-Agent AI Framework
+                    </span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="hero-title-line">Multi-Agent AI Framework</span>
+                    <span class="hero-title-line">with <span class="hero-title-highlight">Constitutional Architecture</span></span>
+                </h1>
+                
+                <p class="hero-description">
+                    Build reliable, transparent AI systems with our structured four-agent framework. 
+                    Specialized agents work together with built-in oversight, clear separation of responsibilities, 
+                    and transparent decision-making for your AI applications.
+                </p>
+                
+                <div class="hero-actions">
+                    <button class="btn btn--primary btn--lg" data-scroll-to="integration">
+                        <span>Deploy AI Framework</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7,7 17,7 17,17"></polyline>
+                        </svg>
+                    </button>
+                    <button class="btn btn--secondary btn--lg" data-scroll-to="architecture">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5,3 19,12 5,21"></polygon>
+                        </svg>
+                        <span>View Architecture</span>
+                    </button>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">4</div>
+                        <div class="hero-stat-label">AI Agents</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">100%</div>
+                        <div class="hero-stat-label">Architectural Integrity</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-number">∞</div>
+                        <div class="hero-stat-label">Transparency</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visualization">
+                <div class="constitutional-agents">
+                    <div class="agent-card agent-card--legislative" data-agent="legislative">
+                        <div class="agent-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7H3Z"/>
+                                <path d="M3 7H21V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V7Z"/>
+                                <path d="M8 11H16M8 15H12"/>
+                            </svg>
+                        </div>
+                        <div class="agent-info">
+                            <h3>Legislative</h3>
+                            <p>Planner Agent</p>
+                        </div>
+                        <div class="agent-status"></div>
+                    </div>
+                    
+                    <div class="agent-card agent-card--executive" data-agent="executive">
+                        <div class="agent-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                            </svg>
+                        </div>
+                        <div class="agent-info">
+                            <h3>Executive</h3>
+                            <p>Executor Agent</p>
+                        </div>
+                        <div class="agent-status"></div>
+                    </div>
+                    
+                    <div class="agent-card agent-card--judicial" data-agent="judicial">
+                        <div class="agent-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12L11 14L15 10"/>
+                                <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/>
+                            </svg>
+                        </div>
+                        <div class="agent-info">
+                            <h3>Judicial</h3>
+                            <p>Evaluator Agent</p>
+                        </div>
+                        <div class="agent-status"></div>
+                    </div>
+                    
+                    <div class="agent-card agent-card--crown" data-agent="crown">
+                        <div class="agent-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 20H22L20 8H4L2 20Z"/>
+                                <path d="M6 8V6C6 3.79086 7.79086 2 10 2H14C16.2091 2 18 3.79086 18 6V8"/>
+                                <circle cx="12" cy="14" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="agent-info">
+                            <h3>Crown</h3>
+                            <p>Overwatch Agent</p>
+                        </div>
+                        <div class="agent-status"></div>
+                    </div>
+                </div>
+                
+                <div class="agent-connections" id="agentConnections">
+                    <svg class="connections-svg" viewBox="0 0 400 400">
+                        <defs>
+                            <linearGradient id="connectionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#8B5CF6;stop-opacity:0"/>
+                                <stop offset="50%" style="stop-color:#8B5CF6;stop-opacity:1"/>
+                                <stop offset="100%" style="stop-color:#8B5CF6;stop-opacity:0"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Constitutional Framework Section -->
+    <section class="framework" id="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span class="badge badge--secondary">Agent Framework</span>
+                </div>
+                <h2 class="section-title">Four Agent Architecture</h2>
+                <p class="section-description">
+                    Our structured agent architecture ensures separation of responsibilities, systematic coordination, 
+                    and built-in oversight in every AI decision.
+                </p>
+            </div>
+            
+            <div class="framework-grid">
+                <div class="framework-card framework-card--legislative">
+                    <div class="framework-card-header">
+                        <div class="framework-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7H3Z"/>
+                                <path d="M3 7H21V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V7Z"/>
+                                <path d="M8 11H16M8 15H12"/>
+                            </svg>
+                        </div>
+                        <div class="framework-title">
+                            <h3>Legislative Authority</h3>
+                            <span class="framework-role">Planner Agent</span>
+                        </div>
+                    </div>
+                    <div class="framework-card-content">
+                        <p>Creates policies, strategic plans, and legislative frameworks. Ensures democratic representation in AI decision-making processes.</p>
+                        <ul class="framework-features">
+                            <li>Policy Creation & Planning</li>
+                            <li>Strategic Workflow Design</li>
+                            <li>Democratic Representation</li>
+                            <li>Parliamentary Procedures</li>
+                        </ul>
+                    </div>
+                    <div class="framework-card-footer">
+                        <button class="btn btn--ghost btn--sm">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="framework-card framework-card--executive">
+                    <div class="framework-card-header">
+                        <div class="framework-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                            </svg>
+                        </div>
+                        <div class="framework-title">
+                            <h3>Executive Authority</h3>
+                            <span class="framework-role">Executor Agent</span>
+                        </div>
+                    </div>
+                    <div class="framework-card-content">
+                        <p>Implements policies and manages operations with accountability to Parliament. Coordinates government functions efficiently.</p>
+                        <ul class="framework-features">
+                            <li>Policy Implementation</li>
+                            <li>Operational Management</li>
+                            <li>Resource Coordination</li>
+                            <li>Performance Monitoring</li>
+                        </ul>
+                    </div>
+                    <div class="framework-card-footer">
+                        <button class="btn btn--ghost btn--sm">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="framework-card framework-card--judicial">
+                    <div class="framework-card-header">
+                        <div class="framework-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12L11 14L15 10"/>
+                                <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/>
+                            </svg>
+                        </div>
+                        <div class="framework-title">
+                            <h3>Judicial Authority</h3>
+                            <span class="framework-role">Evaluator Agent</span>
+                        </div>
+                    </div>
+                    <div class="framework-card-content">
+                        <p>Reviews constitutional compliance and ensures justice. Provides independent evaluation of decisions and actions.</p>
+                        <ul class="framework-features">
+                            <li>Constitutional Review</li>
+                            <li>Compliance Assessment</li>
+                            <li>Legal Precedents</li>
+                            <li>Independent Judgment</li>
+                        </ul>
+                    </div>
+                    <div class="framework-card-footer">
+                        <button class="btn btn--ghost btn--sm">Learn More</button>
+                    </div>
+                </div>
+                
+                <div class="framework-card framework-card--crown">
+                    <div class="framework-card-header">
+                        <div class="framework-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 20H22L20 8H4L2 20Z"/>
+                                <path d="M6 8V6C6 3.79086 7.79086 2 10 2H14C16.2091 2 18 3.79086 18 6V8"/>
+                                <circle cx="12" cy="14" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="framework-title">
+                            <h3>Crown Authority</h3>
+                            <span class="framework-role">Overwatch Agent</span>
+                        </div>
+                    </div>
+                    <div class="framework-card-content">
+                        <p>Provides constitutional oversight and crisis management. Maintains system integrity and democratic stability.</p>
+                        <ul class="framework-features">
+                            <li>Constitutional Oversight</li>
+                            <li>Crisis Management</li>
+                            <li>System Integrity</li>
+                            <li>Democratic Stability</li>
+                        </ul>
+                    </div>
+                    <div class="framework-card-footer">
+                        <button class="btn btn--ghost btn--sm">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Architecture Section -->
+    <section class="architecture" id="architecture">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span class="badge badge--primary">System Architecture</span>
+                </div>
+                <h2 class="section-title">Democratic Decision Flow</h2>
+                <p class="section-description">
+                    Visualize how constitutional agents collaborate through democratic processes 
+                    to ensure transparent, accountable AI governance.
+                </p>
+            </div>
+            
+            <div class="architecture-visualization">
+                <div class="architecture-diagram" id="architectureDiagram">
+                    <div class="flow-node flow-node--input">
+                        <div class="flow-node-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21"/>
+                                <circle cx="12" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <div class="flow-node-content">
+                            <h4>User Request</h4>
+                            <p>Democratic input</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-node flow-node--legislative">
+                        <div class="flow-node-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 7V5C3 3.89543 3.89543 3 5 3H19C20.1046 3 21 3.89543 21 5V7H3Z"/>
+                                <path d="M3 7H21V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V7Z"/>
+                            </svg>
+                        </div>
+                        <div class="flow-node-content">
+                            <h4>Legislative Planning</h4>
+                            <p>Policy & strategy creation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-node flow-node--executive">
+                        <div class="flow-node-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"/>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83"/>
+                            </svg>
+                        </div>
+                        <div class="flow-node-content">
+                            <h4>Executive Implementation</h4>
+                            <p>Operational execution</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-node flow-node--judicial">
+                        <div class="flow-node-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12L11 14L15 10"/>
+                                <circle cx="12" cy="12" r="9"/>
+                            </svg>
+                        </div>
+                        <div class="flow-node-content">
+                            <h4>Judicial Review</h4>
+                            <p>Constitutional compliance</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-node flow-node--crown">
+                        <div class="flow-node-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 20H22L20 8H4L2 20Z"/>
+                                <circle cx="12" cy="14" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="flow-node-content">
+                            <h4>Crown Oversight</h4>
+                            <p>Constitutional guardian</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flow-node flow-node--output">
+                        <div class="flow-node-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11L12 14L22 4"/>
+                                <path d="M21 12V19C21 20.1046 20.1046 21 19 21H5C3.89543 21 3 20.1046 3 19V5C3.89543 3 5 3 5 3H16"/>
+                            </svg>
+                        </div>
+                        <div class="flow-node-content">
+                            <h4>Democratic Output</h4>
+                            <p>Transparent response</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Flow connections -->
+                    <svg class="flow-connections" viewBox="0 0 800 600">
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                                <polygon points="0 0, 10 3.5, 0 7" fill="#8B5CF6"/>
+                            </marker>
+                        </defs>
+                        <path class="flow-path" d="M100,100 Q200,100 300,150" stroke="#8B5CF6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <path class="flow-path" d="M300,150 Q400,150 500,200" stroke="#8B5CF6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <path class="flow-path" d="M500,200 Q600,200 700,250" stroke="#8B5CF6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <path class="flow-path" d="M700,250 Q650,300 600,350" stroke="#8B5CF6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                        <path class="flow-path" d="M600,350 Q500,400 400,400" stroke="#8B5CF6" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="architecture-features">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Constitutional Compliance</h4>
+                        <p>Every decision is reviewed for constitutional compliance and democratic principles.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M2 3H8C9.1 3 10 3.9 10 5V19C10 20.1 9.1 21 8 21H2V3Z"/>
+                            <path d="M22 3H16C14.9 3 14 3.9 14 5V19C14 20.1 14.9 21 16 21H22V3Z"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Separation of Powers</h4>
+                        <p>Clear separation ensures no single agent has unchecked authority over decisions.</p>
+                    </div>
+                </div>
+                
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <circle cx="12" cy="12" r="6"/>
+                            <circle cx="12" cy="12" r="2"/>
+                        </svg>
+                    </div>
+                    <div class="feature-content">
+                        <h4>Transparent Process</h4>
+                        <p>All agent interactions and decisions are logged for complete transparency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Integration Section -->
+    <section class="integration" id="integration">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span class="badge badge--success">Developer Experience</span>
+                </div>
+                <h2 class="section-title">Simple Integration, Powerful Governance</h2>
+                <p class="section-description">
+                    Get started in minutes with our Python SDK. Democratic AI governance 
+                    is just a few lines of code away.
+                </p>
+            </div>
+            
+            <div class="integration-content">
+                <div class="integration-demo">
+                    <div class="code-tabs">
+                        <button class="code-tab code-tab--active" data-tab="quickstart">Quick Start</button>
+                        <button class="code-tab" data-tab="agents">Agent Setup</button>
+                        <button class="code-tab" data-tab="democratic">Democratic Flow</button>
+                    </div>
+                    
+                    <div class="code-panel code-panel--active" data-panel="quickstart">
+                        <pre><code class="language-python"># Install the AI Triad Constitutional package
+pip install ai-triad-constitutional
+
+# Initialize the Westminster Parliamentary system
+from triad import ConstitutionalFramework, TriadDeps
+
+# Create constitutional framework
+framework = ConstitutionalFramework()
+deps = TriadDeps.from_environment()
+
+# Your AI now operates under democratic governance
+async def democratic_ai_decision(user_request: str):
+    """Process requests through constitutional oversight"""
+    
+    # Request goes through all four constitutional agents
+    result = await framework.process_democratic_request(
+        request=user_request,
+        deps=deps,
+        require_consensus=True
+    )
+    
+    return result</code></pre>
+                    </div>
+                    
+                    <div class="code-panel" data-panel="agents">
+                        <pre><code class="language-python"># Configure the four constitutional agents
+from triad.agents import (
+    PlannerAgent,    # Legislative Authority
+    ExecutorAgent,   # Executive Authority  
+    EvaluatorAgent,  # Judicial Authority
+    OverwatchAgent   # Crown Authority
+)
+
+# Initialize agents with constitutional roles
+planner = PlannerAgent(
+    constitutional_authority="legislative",
+    democratic_accountability=True
+)
+
+executor = ExecutorAgent(
+    constitutional_authority="executive", 
+    parliamentary_oversight=True
+)
+
+evaluator = EvaluatorAgent(
+    constitutional_authority="judicial",
+    constitutional_review=True
+)
+
+overwatch = OverwatchAgent(
+    constitutional_authority="crown",
+    crisis_management=True
+)</code></pre>
+                    </div>
+                    
+                    <div class="code-panel" data-panel="democratic">
+                        <pre><code class="language-python"># Democratic decision-making process
+async def parliamentary_procedure(request: str):
+    """Full Westminster parliamentary process"""
+    
+    # 1. Legislative: Create policy/plan
+    plan = await planner.draft_policy(request)
+    
+    # 2. Executive: Implement the plan  
+    execution = await executor.implement_policy(plan)
+    
+    # 3. Judicial: Review for compliance
+    review = await evaluator.constitutional_review(execution)
+    
+    # 4. Crown: Final oversight
+    oversight = await overwatch.final_approval(review)
+    
+    # Return democratically validated result
+    return {
+        "result": oversight.approved_result,
+        "constitutional_compliance": True,
+        "transparency_log": oversight.audit_trail,
+        "democratic_legitimacy": "Westminster Parliamentary"
+    }</code></pre>
+                    </div>
+                </div>
+                
+                <div class="integration-features">
+                    <h3>Enterprise-Ready Features</h3>
+                    
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"/>
+                                    <path d="M8 12L10.5 14.5L16 9"/>
+                                </svg>
+                            </div>
+                            <h4>Constitutional Compliance</h4>
+                            <p>Built-in checks ensure every AI decision follows democratic principles.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                </svg>
+                            </div>
+                            <h4>Multi-Agent Coordination</h4>
+                            <p>Sophisticated patterns for agent collaboration and consensus building.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                    <path d="M9 9H15V15H9V9Z"/>
+                                </svg>
+                            </div>
+                            <h4>Audit Trail</h4>
+                            <p>Complete transparency with detailed logging of all agent decisions.</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-card-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8C21 5.79086 19.2091 4 17 4H7C4.79086 4 3 5.79086 3 8V16C3 18.2091 4.79086 20 7 20H17C19.2091 20 21 18.2091 21 16Z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                            </div>
+                            <h4>Crisis Management</h4>
+                            <p>Automatic constitutional crisis detection and resolution procedures.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="integration-actions">
+                        <button class="btn btn--primary btn--lg">
+                            <span>Start Building</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="7" y1="17" x2="17" y2="7"></line>
+                                <polyline points="7,7 17,7 17,17"></polyline>
+                            </svg>
+                        </button>
+                        <button class="btn btn--secondary btn--lg">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z"/>
+                                <polyline points="14,2 14,8 20,8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10,9 9,9 8,9"></polyline>
+                            </svg>
+                            <span>View Documentation</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust" id="trust">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <span class="badge badge--warning">Democratic Legitimacy</span>
+                </div>
+                <h2 class="section-title">Built on Constitutional Principles</h2>
+                <p class="section-description">
+                    Our system implements centuries-proven Westminster Parliamentary principles 
+                    adapted for the AI age.
+                </p>
+            </div>
+            
+            <div class="trust-content">
+                <div class="trust-principles">
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Rule of Law</h3>
+                        <p>All AI agents operate under constitutional constraints with no exceptions.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21V19C23 16.7909 21.2091 15 19 15C18.0346 15 17.1496 15.3059 16.4442 15.8294"/>
+                                <circle cx="19" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <h3>Democratic Accountability</h3>
+                        <p>Every decision can be traced back through democratic processes.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>Transparency</h3>
+                        <p>Complete visibility into agent reasoning and decision-making processes.</p>
+                    </div>
+                    
+                    <div class="principle-card">
+                        <div class="principle-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M2 3H8C9.1 3 10 3.9 10 5V19C10 20.1 9.1 21 8 21H2V3Z"/>
+                                <path d="M22 3H16C14.9 3 14 3.9 14 5V19C14 20.1 14.9 21 16 21H22V3Z"/>
+                            </svg>
+                        </div>
+                        <h3>Separation of Powers</h3>
+                        <p>Constitutional checks and balances prevent concentration of authority.</p>
+                    </div>
+                </div>
+                
+                <div class="trust-metrics">
+                    <div class="metric-item">
+                        <div class="metric-number">100%</div>
+                        <div class="metric-label">Constitutional Compliance</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">4</div>
+                        <div class="metric-label">Separation Branches</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">∞</div>
+                        <div class="metric-label">Audit Transparency</div>
+                    </div>
+                    <div class="metric-item">
+                        <div class="metric-number">150+</div>
+                        <div class="metric-label">Years of Parliamentary Wisdom</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-text">
+                    <h2>Ready to Build Democratic AI?</h2>
+                    <p>Join the future of constitutional AI governance. Start building transparent, accountable AI systems today.</p>
+                </div>
+                <div class="cta-actions">
+                    <button class="btn btn--primary btn--xl">
+                        <span>Get Started Free</span>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7,7 17,7 17,17"></polyline>
+                        </svg>
+                    </button>
+                    <button class="btn btn--secondary btn--xl">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19C6.33579 19 4.17157 16.8358 4.02331 14.2003L4 14V10C4 7.23858 6.23858 5 9 5H15C17.7614 5 20 7.23858 20 10V14C20 16.7614 17.7614 19 15 19H9Z"/>
+                            <path d="M9 9H15"/>
+                            <path d="M9 13H12"/>
+                        </svg>
+                        <span>Schedule Demo</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="#home" class="footer-logo">
+                            <svg class="footer-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                            </svg>
+                            <span>AI Triad Model</span>
+                        </a>
+                        <p class="footer-description">
+                            Westminster Parliamentary AI System with constitutional governance, 
+                            democratic accountability, and transparent decision-making.
+                        </p>
+                        <div class="footer-social">
+                            <a href="https://github.com/DamionR/ai-triad-model" class="social-link" aria-label="GitHub">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2C6.477 2 2 6.484 2 12.017C2 16.624 5.865 20.426 10.839 21.447C11.339 21.527 11.521 21.235 11.521 20.982C11.521 20.756 11.514 20.127 11.51 19.304C7.78 20.005 7.166 17.957 7.166 17.957C6.708 16.781 6.032 16.49 6.032 16.49C5.12 15.767 6.1 15.78 6.1 15.78C7.108 15.847 7.663 16.896 7.663 16.896C8.544 18.444 9.999 18.018 10.543 17.772C10.621 17.107 10.892 16.681 11.189 16.444C8.905 16.203 6.504 15.354 6.504 11.732C6.504 10.618 6.896 9.707 7.686 8.999C7.596 8.759 7.243 7.759 7.776 6.369C7.776 6.369 8.612 6.115 11.5 8.153C12.31 7.948 13.16 7.845 14.01 7.843C14.86 7.845 15.71 7.948 16.52 8.153C19.408 6.115 20.244 6.369 20.244 6.369C20.777 7.759 20.424 8.759 20.334 8.999C21.124 9.707 21.516 10.618 21.516 11.732C21.516 15.363 19.112 16.2 16.82 16.437C17.2 16.759 17.505 17.4 17.505 18.378C17.505 19.791 17.492 20.931 17.492 21.282C17.492 21.537 17.674 21.832 18.184 21.746C23.157 20.724 27.02 16.923 27.02 12.017C27.02 6.484 22.545 2 17.02 2H12Z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="Twitter">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="#features">Features</a></li>
+                            <li><a href="#architecture">Architecture</a></li>
+                            <li><a href="#integration">Integration</a></li>
+                            <li><a href="#docs">Documentation</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Constitutional</h4>
+                        <ul>
+                            <li><a href="#agents">Constitutional Agents</a></li>
+                            <li><a href="#framework">Parliamentary Framework</a></li>
+                            <li><a href="#compliance">Compliance</a></li>
+                            <li><a href="#audit">Audit Trail</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Developers</h4>
+                        <ul>
+                            <li><a href="https://github.com/DamionR/ai-triad-model">GitHub Repository</a></li>
+                            <li><a href="#api">API Reference</a></li>
+                            <li><a href="#examples">Examples</a></li>
+                            <li><a href="#community">Community</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 AI Triad Constitutional Team. Licensed under MIT License.</p>
+                    <div class="footer-legal-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#security">Security</a>
+                    </div>
+                </div>
+                <div class="footer-badge">
+                    <span class="badge badge--outline">🇨🇦 Based on Canadian Westminster System</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Demo Modal -->
+    <div class="modal" id="demoModal">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Live Democratic AI Demo</h3>
+                <button class="modal-close" aria-label="Close modal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Experience the Westminster Parliamentary AI system in action. Watch as your request flows through all four constitutional agents for democratic oversight.</p>
+                <div class="demo-interface">
+                    <div class="demo-input">
+                        <label for="demoRequest">Your Request:</label>
+                        <textarea id="demoRequest" placeholder="Ask the AI Triad to help with a decision..."></textarea>
+                        <button class="btn btn--primary">Submit to Parliament</button>
+                    </div>
+                    <div class="demo-output">
+                        <div class="agent-responses">
+                            <div class="agent-response" data-agent="legislative">
+                                <h4>Legislative Response</h4>
+                                <div class="response-content">Processing...</div>
+                            </div>
+                            <div class="agent-response" data-agent="executive">
+                                <h4>Executive Response</h4>
+                                <div class="response-content">Waiting...</div>
+                            </div>
+                            <div class="agent-response" data-agent="judicial">
+                                <h4>Judicial Review</h4>
+                                <div class="response-content">Waiting...</div>
+                            </div>
+                            <div class="agent-response" data-agent="crown">
+                                <h4>Crown Oversight</h4>
+                                <div class="response-content">Waiting...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading State -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner-crown">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 20H22L20 8H4L2 20Z"/>
+                    <path d="M6 8V6C6 3.79086 7.79086 2 10 2H14C16.2091 2 18 3.79086 18 6V8"/>
+                    <circle cx="12" cy="14" r="2"/>
+                </svg>
+            </div>
+            <p>Initializing Constitutional Framework...</p>
+        </div>
+    </div>
+</body>
+</html>

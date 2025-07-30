@@ -1,0 +1,249 @@
+# Triad Model Configuration
+# Westminster Parliamentary AI System Configuration
+
+# Application Settings
+app:
+  name: "Triad Model"
+  version: "1.0.0"
+  description: "Westminster Parliamentary AI System with Constitutional Oversight"
+  environment: "development"
+  debug: true
+  
+# Server Configuration
+server:
+  host: "0.0.0.0"
+  port: 8000
+  reload: true
+  workers: 1
+  timeout: 300
+  
+# Constitutional Framework
+constitutional:
+  framework_version: "Westminster_Parliamentary_v1.0"
+  oversight_enabled: true
+  parliamentary_accountability: true
+  separation_of_powers: true
+  rule_of_law: true
+  democratic_principles: true
+  
+  # Constitutional Authorities
+  authorities:
+    legislative:
+      name: "Legislative Branch"
+      agent: "planner_agent"
+      powers: ["policy_creation", "planning", "legislative_review"]
+      
+    executive:
+      name: "Executive Branch" 
+      agent: "executor_agent"
+      powers: ["implementation", "execution", "administrative_action"]
+      
+    judicial:
+      name: "Judicial Branch"
+      agent: "evaluator_agent" 
+      powers: ["constitutional_review", "compliance_evaluation", "judicial_decision"]
+      
+    crown:
+      name: "Crown"
+      agent: "overwatch_agent"
+      powers: ["constitutional_oversight", "crisis_management", "royal_prerogative"]
+
+# Agent Configuration
+agents:
+  planner_agent:
+    name: "Planner Agent"
+    constitutional_authority: "legislative"
+    model: "claude-3-5-sonnet-20241022"
+    max_retries: 3
+    timeout_seconds: 120
+    
+  executor_agent:
+    name: "Executor Agent"
+    constitutional_authority: "executive"
+    model: "claude-3-5-sonnet-20241022"
+    max_retries: 3
+    timeout_seconds: 180
+    
+  evaluator_agent:
+    name: "Evaluator Agent"
+    constitutional_authority: "judicial"
+    model: "claude-3-5-sonnet-20241022"
+    max_retries: 3
+    timeout_seconds: 90
+    
+  overwatch_agent:
+    name: "Overwatch Agent"
+    constitutional_authority: "crown"
+    model: "claude-3-5-sonnet-20241022"
+    max_retries: 3
+    timeout_seconds: 60
+
+# Parliamentary Procedures
+parliamentary:
+  question_period:
+    enabled: true
+    default_duration_minutes: 30
+    parliamentary_privilege: true
+    
+  motions:
+    enabled: true
+    require_vote: true
+    constitutional_review: true
+    
+  voting:
+    enabled: true
+    quorum_required: 3
+    majority_threshold: 0.5
+    
+  sessions:
+    max_duration_hours: 8
+    agenda_required: true
+    transparency: true
+
+# A2A (Agent-to-Agent) Communication
+a2a:
+  broker:
+    enabled: true
+    constitutional_oversight: true
+    audit_trail: true
+    
+  message_queue:
+    max_size: 1000
+    timeout_seconds: 30
+    retry_attempts: 3
+    
+  routing:
+    load_balancing: "round_robin"
+    failover_enabled: true
+    circuit_breaker: true
+
+# MCP (Model Context Protocol) Integration
+mcp:
+  client:
+    enabled: true
+    timeout_seconds: 30
+    constitutional_oversight: true
+    
+  servers:
+    validation_server:
+      enabled: true
+      url: "http://localhost:8001"
+      constitutional_validation: true
+      
+    monitoring_server:
+      enabled: true
+      url: "http://localhost:8002"
+      health_checks: true
+      
+    integration_server:
+      enabled: true
+      url: "http://localhost:8003"
+      external_systems: true
+      
+  adapters:
+    legacy_database:
+      enabled: false
+      read_only: true
+      backup_enabled: true
+      
+    external_api:
+      enabled: false
+      rate_limit: 100
+      timeout_seconds: 30
+      
+    file_system:
+      enabled: false
+      base_path: "/tmp/triad"
+      read_only: true
+
+# Database Configuration
+database:
+  # PostgreSQL Configuration (primary)
+  postgresql:
+    enabled: false
+    host: "localhost"
+    port: 5432
+    database: "triad_model"
+    username: "triad_user"
+    password: "${DATABASE_PASSWORD}"
+    max_connections: 20
+    
+  # SQLite Configuration (development)
+  sqlite:
+    enabled: true
+    path: "data/triad_model.db"
+    constitutional_audit: true
+
+# Logging and Observability
+logging:
+  # Logfire Configuration
+  logfire:
+    enabled: true
+    service_name: "triad-model"
+    service_version: "1.0.0"
+    constitutional_logging: true
+    parliamentary_audit: true
+    
+  # Log Levels
+  level: "INFO"
+  format: "json"
+  
+  # Audit Trail
+  audit_trail:
+    enabled: true
+    retention_days: 90
+    constitutional_compliance: true
+
+# Security Configuration
+security:
+  # API Security
+  api:
+    cors_enabled: true
+    trusted_hosts: ["*"]
+    rate_limiting: false
+    
+  # Constitutional Security
+  constitutional:
+    separation_enforcement: true
+    authority_validation: true
+    audit_trail_protection: true
+    
+  # Authentication (disabled for development)
+  authentication:
+    enabled: false
+    provider: "oauth2"
+    constitutional_roles: true
+
+# Monitoring and Health Checks
+monitoring:
+  health_checks:
+    enabled: true
+    interval_seconds: 30
+    constitutional_compliance: true
+    
+  metrics:
+    enabled: true
+    export_interval_seconds: 60
+    parliamentary_metrics: true
+    
+  alerts:
+    enabled: true
+    constitutional_violations: true
+    performance_thresholds:
+      response_time_ms: 1000
+      error_rate_percent: 5.0
+      cpu_usage_percent: 80.0
+
+# Development Settings
+development:
+  debug_mode: true
+  auto_reload: true
+  mock_external_services: true
+  constitutional_testing: true
+  
+# Production Settings (override in production.yaml)
+production:
+  debug_mode: false
+  auto_reload: false
+  mock_external_services: false
+  security_hardened: true

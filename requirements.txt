@@ -1,0 +1,71 @@
+# Triad Model Dependencies
+# Westminster Parliamentary AI System
+
+# Core Dependencies
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+pydantic>=2.10.0
+pydantic-ai>=0.0.12
+
+# AI Model Provider Dependencies
+openai>=1.52.0
+anthropic>=0.40.0
+google-generativeai>=0.8.3
+groq>=0.13.0
+mistralai>=1.2.0
+
+# Tools and MCP Dependencies
+# Note: pydantic-ai includes tools support
+# Additional MCP server dependencies
+mcp>=1.0.0
+asyncio-extra>=1.3.2
+
+# Graph and Multi-Agent Dependencies
+# Note: pydantic-ai includes graph support
+# Additional dependencies for advanced workflows
+networkx>=3.2  # For complex graph analysis
+typing-extensions>=4.8.0  # For advanced type hints
+
+# Advanced Pydantic AI Features
+tenacity>=8.2.3  # For retry patterns
+# Note: pydantic-ai includes thinking, direct, and input support
+
+# Database
+prisma==0.13.1
+
+# Observability
+logfire>=4.0.0
+
+# HTTP Client
+httpx>=0.27.2
+
+# Configuration
+pyyaml==6.0.1
+python-dotenv==1.0.0
+
+# Security
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+python-multipart==0.0.6
+PyJWT>=2.10.0
+
+# Utilities
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Development Dependencies
+pytest==7.4.3
+pytest-asyncio==0.21.1
+pytest-cov==4.1.0
+black==23.11.0
+isort==5.12.0
+flake8==6.1.0
+mypy==1.7.1
+
+# Testing
+factory-boy==3.3.0
+faker==20.1.0
+
+# Documentation
+mkdocs==1.5.3
+mkdocs-material==9.4.8

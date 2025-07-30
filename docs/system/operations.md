@@ -270,7 +270,7 @@ class MaintenanceScheduler:
         """Schedule maintenance with constitutional approval process."""
         
         maintenance_request = OperationRequest(
-            operation_id=f"maint_{int(datetime.utcnow().timestamp())}",
+            operation_id=f"maint_{int(datetime.now(timezone.utc).timestamp())}",
             operation_type=OperationType.MAINTENANCE,
             constitutional_authority=ConstitutionalAuthority.EXECUTIVE,
             description=description,
@@ -399,7 +399,7 @@ class SystemHealthChecker:
             span.set_attribute("alerts_generated", len(alerts))
             
             final_health_report = {
-                "timestamp": datetime.utcnow().isoformat(),
+                "timestamp": datetime.now(timezone.utc).isoformat(),
                 "overall_health": overall_health,
                 "branch_health": health_results,
                 "alerts": alerts,
@@ -458,7 +458,7 @@ class SystemHealthChecker:
                     "severity": "critical",
                     "component": branch,
                     "message": f"Constitutional branch {branch} is unhealthy (score: {health_score:.2f})",
-                    "timestamp": datetime.utcnow().isoformat(),
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
                     "constitutional_authority": "crown",
                     "requires_immediate_attention": True
                 })
@@ -467,7 +467,7 @@ class SystemHealthChecker:
                     "severity": "warning",
                     "component": branch,
                     "message": f"Constitutional branch {branch} performance degraded (score: {health_score:.2f})",
-                    "timestamp": datetime.utcnow().isoformat(),
+                    "timestamp": datetime.now(timezone.utc).isoformat(),
                     "constitutional_authority": "judicial",
                     "requires_immediate_attention": False
                 })
@@ -494,7 +494,7 @@ class BackupManager:
         """Execute backup with constitutional oversight and validation."""
         
         backup_request = OperationRequest(
-            operation_id=f"backup_{backup_type}_{int(datetime.utcnow().timestamp())}",
+            operation_id=f"backup_{backup_type}_{int(datetime.now(timezone.utc).timestamp())}",
             operation_type=OperationType.MAINTENANCE,
             constitutional_authority=ConstitutionalAuthority.EXECUTIVE,
             description=f"Execute {backup_type} backup for {backup_scope}",

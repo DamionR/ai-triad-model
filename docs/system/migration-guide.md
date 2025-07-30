@@ -539,7 +539,7 @@ class ConstitutionalRollbackManager:
         checkpoint = RollbackCheckpoint(
             system_name=system_name,
             checkpoint_id=f"cp_{system_name}_{int(time.time())}",
-            timestamp=datetime.utcnow(),
+            timestamp=datetime.now(timezone.utc),
             system_state=checkpoint_data,
             constitutional_authority="crown",  # Overwatch authority
             validation_hash=self._create_validation_hash(checkpoint_data)
