@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - AI Triad Model</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-primary);
+            color: var(--white);
+            text-align: center;
+            padding: var(--space-md);
+        }
+        .error-content {
+            max-width: 600px;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--constitutional-purple), var(--parliamentary-gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-lg);
+        }
+        .error-title {
+            font-size: 2rem;
+            margin-bottom: var(--space-md);
+        }
+        .error-description {
+            font-size: 1.125rem;
+            color: var(--gray-300);
+            margin-bottom: var(--space-2xl);
+        }
+    </style>
+</head>
+<body>
+    <div class="error-page">
+        <div class="error-content">
+            <div class="error-code">404</div>
+            <h1 class="error-title">Page Not Found</h1>
+            <p class="error-description">
+                The page you're looking for doesn't exist in our AI framework.
+                Let's get you back to the main system.
+            </p>
+            <a href="/" class="btn btn--primary btn--lg">
+                <span>Return to Home</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9L12 2L21 9V20C21 20.5523 20.5523 21 20 21H15V16C15 15.4477 14.5523 15 14 15H10C9.44772 15 9 15.4477 9 16V21H4C3.44772 21 3 20.5523 3 20V9Z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
