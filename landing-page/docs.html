@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - AI Triad Model</title>
+    <meta name="description" content="Comprehensive documentation for the AI Triad Model multi-agent framework. Learn how to implement structured AI coordination.">
+    <meta name="keywords" content="AI documentation, multi-agent framework, AI coordination, agent documentation">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://damionr.github.io/ai-triad-model/docs.html">
+    <meta property="og:title" content="Documentation - AI Triad Model">
+    <meta property="og:description" content="Comprehensive documentation for the AI Triad Model multi-agent framework.">
+    <meta property="og:image" content="./assets/og-image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://damionr.github.io/ai-triad-model/docs.html">
+    <meta property="twitter:title" content="Documentation - AI Triad Model">
+    <meta property="twitter:description" content="Comprehensive documentation for the AI Triad Model multi-agent framework.">
+    <meta property="twitter:image" content="./assets/og-image.png">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg">
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/docs.css">
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/docs.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">
+                    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                    </svg>
+                    <span>AI Triad Model</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="docs.html" class="nav-link nav-link--active">Documentation</a>
+                <a href="api.html" class="nav-link">API Reference</a>
+                <a href="examples.html" class="nav-link">Examples</a>
+                <a href="https://github.com/DamionR/ai-triad-model" class="nav-link nav-link--external" target="_blank" rel="noopener">
+                    <span>GitHub</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15,3 21,3 21,9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn--secondary btn--sm">Search</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Documentation Header -->
+    <section class="docs-header">
+        <div class="container">
+            <div class="docs-header-content">
+                <div class="docs-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Documentation</span>
+                </div>
+                
+                <h1 class="docs-title">AI Triad Model Documentation</h1>
+                <p class="docs-description">
+                    Complete guide to implementing and using the AI Triad Model framework. 
+                    Learn how to build structured multi-agent AI systems with built-in oversight and coordination.
+                </p>
+                
+                <div class="docs-header-actions">
+                    <a href="#quick-start" class="btn btn--primary btn--lg">
+                        <span>Quick Start Guide</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7,7 17,7 17,17"></polyline>
+                        </svg>
+                    </a>
+                    <a href="api.html" class="btn btn--secondary btn--lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z"/>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                        </svg>
+                        <span>API Reference</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Documentation Content -->
+    <div class="docs-layout">
+        <div class="container">
+            <div class="docs-container">
+                <!-- Sidebar Navigation -->
+                <aside class="docs-sidebar">
+                    <div class="docs-nav">
+                        <div class="docs-nav-section">
+                            <h3>Getting Started</h3>
+                            <ul>
+                                <li><a href="#overview" class="docs-nav-link active">Overview</a></li>
+                                <li><a href="#installation" class="docs-nav-link">Installation</a></li>
+                                <li><a href="#quick-start" class="docs-nav-link">Quick Start</a></li>
+                                <li><a href="#configuration" class="docs-nav-link">Configuration</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <h3>Core Concepts</h3>
+                            <ul>
+                                <li><a href="#architecture" class="docs-nav-link">Architecture</a></li>
+                                <li><a href="#agents" class="docs-nav-link">Agent System</a></li>
+                                <li><a href="#coordination" class="docs-nav-link">Coordination Flow</a></li>
+                                <li><a href="#oversight" class="docs-nav-link">Oversight Mechanisms</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <h3>Implementation</h3>
+                            <ul>
+                                <li><a href="#framework-setup" class="docs-nav-link">Framework Setup</a></li>
+                                <li><a href="#agent-configuration" class="docs-nav-link">Agent Configuration</a></li>
+                                <li><a href="#request-processing" class="docs-nav-link">Request Processing</a></li>
+                                <li><a href="#error-handling" class="docs-nav-link">Error Handling</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <h3>Advanced Topics</h3>
+                            <ul>
+                                <li><a href="#custom-agents" class="docs-nav-link">Custom Agents</a></li>
+                                <li><a href="#monitoring" class="docs-nav-link">Monitoring</a></li>
+                                <li><a href="#scaling" class="docs-nav-link">Scaling</a></li>
+                                <li><a href="#security" class="docs-nav-link">Security</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Main Content -->
+                <main class="docs-content">
+                    <!-- Overview Section -->
+                    <section id="overview" class="docs-section">
+                        <div class="docs-section-header">
+                            <h2>Overview</h2>
+                            <p>Understanding the AI Triad Model framework and its structured approach to multi-agent coordination.</p>
+                        </div>
+                        
+                        <div class="docs-content-block">
+                            <h3>What is the AI Triad Model?</h3>
+                            <p>
+                                The AI Triad Model is a structured multi-agent AI framework that implements proven organizational patterns 
+                                for reliable AI coordination. It consists of four specialized agents working together with built-in 
+                                oversight and transparent decision-making processes.
+                            </p>
+                            
+                            <div class="docs-highlight">
+                                <div class="docs-highlight-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                    </svg>
+                                </div>
+                                <div class="docs-highlight-content">
+                                    <h4>Key Benefits</h4>
+                                    <ul>
+                                        <li><strong>Structured Coordination:</strong> Clear separation of responsibilities</li>
+                                        <li><strong>Built-in Oversight:</strong> Quality assurance at every step</li>
+                                        <li><strong>Transparent Processes:</strong> Complete audit trails</li>
+                                        <li><strong>Proven Patterns:</strong> Based on battle-tested organizational structures</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="docs-content-block">
+                            <h3>Four-Agent Architecture</h3>
+                            <p>The framework consists of four specialized agents, each with distinct responsibilities:</p>
+                            
+                            <div class="docs-agent-grid">
+                                <div class="docs-agent-card">
+                                    <div class="docs-agent-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15M9 5C9 6.10457 9.89543 7 11 7H13C14.1046 7 15 6.10457 15 5M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5M12 12H15M9 12H9.01M9 16H9.01M12 16H15"/>
+                                        </svg>
+                                    </div>
+                                    <h4>Planner Agent</h4>
+                                    <p>Strategic planning and task coordination. Designs workflows and allocates resources.</p>
+                                </div>
+                                
+                                <div class="docs-agent-card">
+                                    <div class="docs-agent-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="3"/>
+                                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1 1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+                                        </svg>
+                                    </div>
+                                    <h4>Executor Agent</h4>
+                                    <p>Task implementation and operational management. Executes plans with systematic accountability.</p>
+                                </div>
+                                
+                                <div class="docs-agent-card">
+                                    <div class="docs-agent-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 12L11 14L15 10"/>
+                                            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/>
+                                        </svg>
+                                    </div>
+                                    <h4>Evaluator Agent</h4>
+                                    <p>Quality review and compliance checking. Provides independent evaluation of all decisions.</p>
+                                </div>
+                                
+                                <div class="docs-agent-card">
+                                    <div class="docs-agent-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12S4 6 12 6S23 12 23 12S20 18 12 18S1 12 1 12Z"/>
+                                            <circle cx="12" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                    <h4>Overwatch Agent</h4>
+                                    <p>System monitoring and crisis management. Maintains overall system integrity and stability.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Installation Section -->
+                    <section id="installation" class="docs-section">
+                        <div class="docs-section-header">
+                            <h2>Installation</h2>
+                            <p>Get the AI Triad Model framework installed and ready for use in your projects.</p>
+                        </div>
+                        
+                        <div class="docs-content-block">
+                            <h3>Prerequisites</h3>
+                            <p>Before installing the AI Triad Model, ensure you have the following requirements:</p>
+                            
+                            <ul class="docs-list">
+                                <li><strong>Python 3.11+</strong> - The framework requires modern Python features</li>
+                                <li><strong>pip package manager</strong> - For installing dependencies</li>
+                                <li><strong>Virtual environment</strong> - Recommended for project isolation</li>
+                                <li><strong>API keys</strong> - For AI model providers (OpenAI, Anthropic, etc.)</li>
+                            </ul>
+                        </div>
+
+                        <div class="docs-content-block">
+                            <h3>Installation Steps</h3>
+                            
+                            <div class="docs-code-block">
+                                <div class="docs-code-header">
+                                    <span class="docs-code-title">Terminal</span>
+                                    <button class="docs-code-copy" data-copy-target="#install-code">Copy</button>
+                                </div>
+                                <pre id="install-code"><code class="language-bash"># Clone the repository
+git clone https://github.com/DamionR/ai-triad-model.git
+cd ai-triad-model
+
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Set up environment variables
+cp .env.example .env
+# Edit .env with your API keys and configuration</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="docs-content-block">
+                            <h3>Verify Installation</h3>
+                            <p>Test that everything is working correctly:</p>
+                            
+                            <div class="docs-code-block">
+                                <div class="docs-code-header">
+                                    <span class="docs-code-title">Python</span>
+                                    <button class="docs-code-copy" data-copy-target="#verify-code">Copy</button>
+                                </div>
+                                <pre id="verify-code"><code class="language-python"># Test basic import
+from triad import TriadFramework
+
+# Initialize framework
+framework = TriadFramework()
+print("AI Triad Model installed successfully!")
+
+# Run basic health check
+print(f"Framework version: {framework.__version__}")</code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Quick Start Section -->
+                    <section id="quick-start" class="docs-section">
+                        <div class="docs-section-header">
+                            <h2>Quick Start</h2>
+                            <p>Get up and running with the AI Triad Model in just a few minutes.</p>
+                        </div>
+                        
+                        <div class="docs-content-block">
+                            <h3>Basic Usage</h3>
+                            <p>Here's how to process your first request through the four-agent framework:</p>
+                            
+                            <div class="docs-code-block">
+                                <div class="docs-code-header">
+                                    <span class="docs-code-title">example.py</span>
+                                    <button class="docs-code-copy" data-copy-target="#quickstart-code">Copy</button>
+                                </div>
+                                <pre id="quickstart-code"><code class="language-python">import asyncio
+from triad import TriadFramework, TriadDeps
+
+async def main():
+    # Initialize the framework
+    framework = TriadFramework()
+    deps = TriadDeps.from_environment()
+    
+    # Process a request through all four agents
+    result = await framework.process_request(
+        request="Analyze market trends for Q4 strategy",
+        deps=deps,
+        require_consensus=True
+    )
+    
+    # Display results
+    print("Response:", result.response)
+    print("Agents involved:", result.agents_involved)
+    print("System compliance:", result.system_compliance)
+    print("Audit trail:", result.audit_trail)
+
+# Run the example
+if __name__ == "__main__":
+    asyncio.run(main())</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="docs-content-block">
+                            <h3>Configuration</h3>
+                            <p>Set up your environment variables for the framework:</p>
+                            
+                            <div class="docs-code-block">
+                                <div class="docs-code-header">
+                                    <span class="docs-code-title">.env</span>
+                                    <button class="docs-code-copy" data-copy-target="#env-code">Copy</button>
+                                </div>
+                                <pre id="env-code"><code class="language-bash"># AI Model Configuration
+OPENAI_API_KEY="your-openai-api-key"
+ANTHROPIC_API_KEY="your-anthropic-api-key"
+
+# Framework Settings
+TRIAD_LOG_LEVEL="INFO"
+TRIAD_ENABLE_MONITORING="true"
+TRIAD_REQUIRE_CONSENSUS="false"
+
+# Database (Optional)
+DATABASE_URL="postgresql://user:pass@localhost/triad"
+
+# Monitoring (Optional)
+LOGFIRE_TOKEN="your-logfire-token"</code></pre>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- More sections would continue here... -->
+                    
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <svg class="footer-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                            </svg>
+                            <span>AI Triad Model</span>
+                        </a>
+                        <p class="footer-description">
+                            Four-Agent AI Framework with structured coordination, 
+                            systematic accountability, and transparent decision-making.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Documentation</h4>
+                        <ul>
+                            <li><a href="docs.html">Getting Started</a></li>
+                            <li><a href="api.html">API Reference</a></li>
+                            <li><a href="examples.html">Examples</a></li>
+                            <li><a href="#guides">Guides</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Framework</h4>
+                        <ul>
+                            <li><a href="#agents">Specialized Agents</a></li>
+                            <li><a href="#framework">Agent Framework</a></li>
+                            <li><a href="#compliance">Compliance</a></li>
+                            <li><a href="#audit">Audit Trail</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="https://github.com/DamionR/ai-triad-model">GitHub Repository</a></li>
+                            <li><a href="#community">Community</a></li>
+                            <li><a href="#support">Support</a></li>
+                            <li><a href="#changelog">Changelog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 AI Triad Model Team. Licensed under MIT License.</p>
+                    <div class="footer-legal-links">
+                        <a href="#privacy">Privacy Policy</a>
+                        <a href="#terms">Terms of Service</a>
+                        <a href="#security">Security</a>
+                    </div>
+                </div>
+                <div class="footer-badge">
+                    <span class="badge badge--outline">⚡ Four-Agent AI Framework</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

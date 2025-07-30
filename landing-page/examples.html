@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examples - AI Triad Model</title>
+    <meta name="description" content="Practical examples and use cases for the AI Triad Model framework. See how to implement multi-agent AI systems in real-world scenarios.">
+    <meta name="keywords" content="AI examples, multi-agent examples, AI use cases, framework examples">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/docs.css">
+    <link rel="stylesheet" href="./css/examples.css">
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/docs.js" defer></script>
+    <script src="./js/examples.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">
+                    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                    </svg>
+                    <span>AI Triad Model</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="docs.html" class="nav-link">Documentation</a>
+                <a href="api.html" class="nav-link">API Reference</a>
+                <a href="examples.html" class="nav-link nav-link--active">Examples</a>
+                <a href="https://github.com/DamionR/ai-triad-model" class="nav-link nav-link--external" target="_blank" rel="noopener">
+                    <span>GitHub</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15,3 21,3 21,9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn--secondary btn--sm">Try Example</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Examples Header -->
+    <section class="docs-header">
+        <div class="container">
+            <div class="docs-header-content">
+                <div class="docs-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Examples</span>
+                </div>
+                
+                <h1 class="docs-title">Examples & Use Cases</h1>
+                <p class="docs-description">
+                    Practical examples showcasing real-world applications of the AI Triad Model framework. 
+                    Learn how to implement structured multi-agent systems for different use cases.
+                </p>
+                
+                <div class="docs-header-actions">
+                    <a href="#basic-examples" class="btn btn--primary btn--lg">
+                        <span>Basic Examples</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7,7 17,7 17,17"></polyline>
+                        </svg>
+                    </a>
+                    <a href="#advanced-examples" class="btn btn--secondary btn--lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                        </svg>
+                        <span>Advanced Examples</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Content -->
+    <div class="docs-layout">
+        <div class="container">
+            <div class="docs-container">
+                <!-- Examples Sidebar -->
+                <aside class="docs-sidebar">
+                    <div class="docs-nav">
+                        <div class="docs-nav-section">
+                            <h3>Basic Examples</h3>
+                            <ul>
+                                <li><a href="#hello-world" class="docs-nav-link active">Hello World</a></li>
+                                <li><a href="#simple-analysis" class="docs-nav-link">Simple Analysis</a></li>
+                                <li><a href="#task-coordination" class="docs-nav-link">Task Coordination</a></li>
+                                <li><a href="#quality-review" class="docs-nav-link">Quality Review</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <h3>Business Use Cases</h3>
+                            <ul>
+                                <li><a href="#customer-support" class="docs-nav-link">Customer Support</a></li>
+                                <li><a href="#content-creation" class="docs-nav-link">Content Creation</a></li>
+                                <li><a href="#data-analysis" class="docs-nav-link">Data Analysis</a></li>
+                                <li><a href="#decision-making" class="docs-nav-link">Decision Making</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <h3>Advanced Examples</h3>
+                            <ul>
+                                <li><a href="#multi-stage-pipeline" class="docs-nav-link">Multi-Stage Pipeline</a></li>
+                                <li><a href="#crisis-management" class="docs-nav-link">Crisis Management</a></li>
+                                <li><a href="#custom-agents" class="docs-nav-link">Custom Agents</a></li>
+                                <li><a href="#monitoring-setup" class="docs-nav-link">Monitoring Setup</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <h3>Integration Examples</h3>
+                            <ul>
+                                <li><a href="#fastapi-integration" class="docs-nav-link">FastAPI Integration</a></li>
+                                <li><a href="#async-processing" class="docs-nav-link">Async Processing</a></li>
+                                <li><a href="#database-integration" class="docs-nav-link">Database Integration</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Examples Documentation -->
+                <main class="docs-content">
+                    <!-- Basic Examples -->
+                    <section id="basic-examples" class="docs-section">
+                        <div class="docs-section-header">
+                            <h2>Basic Examples</h2>
+                            <p>Start with these fundamental examples to understand how the AI Triad Model framework works.</p>
+                        </div>
+                    </section>
+
+                    <!-- Hello World Example -->
+                    <section id="hello-world" class="docs-section">
+                        <div class="docs-section-header">
+                            <h2>Hello World</h2>
+                            <p>Your first AI Triad Model application - process a simple request through all four agents.</p>
+                        </div>
+                        
+                        <div class="example-container">
+                            <div class="example-header">
+                                <div class="example-meta">
+                                    <span class="example-difficulty example-difficulty--beginner">Beginner</span>
+                                    <span class="example-time">5 minutes</span>
+                                </div>
+                                <div class="example-actions">
+                                    <button class="btn btn--ghost btn--sm" data-action="copy-example">Copy Code</button>
+                                    <button class="btn btn--ghost btn--sm" data-action="run-example">Try Online</button>
+                                </div>
+                            </div>
+                            
+                            <div class="example-description">
+                                <p>
+                                    This example demonstrates the basic workflow of processing a request through 
+                                    all four agents in the framework. Each agent performs its specialized role 
+                                    and contributes to the final result.
+                                </p>
+                            </div>
+
+                            <div class="docs-code-block">
+                                <div class="docs-code-header">
+                                    <span class="docs-code-title">hello_world.py</span>
+                                    <button class="docs-code-copy" data-copy-target="#hello-world-code">Copy</button>
+                                </div>
+                                <pre id="hello-world-code"><code class="language-python">import asyncio
+from triad import TriadFramework, TriadDeps
+
+async def hello_world_example():
+    """Basic example of processing a request through the AI Triad Model."""
+    
+    # Initialize the framework
+    print("🚀 Initializing AI Triad Model framework...")
+    framework = TriadFramework()
+    deps = TriadDeps.from_environment()
+    
+    # Process a simple request
+    request = "Generate a greeting message for new users"
+    print(f"📝 Processing request: {request}")
+    
+    # Send through the four-agent framework
+    result = await framework.process_request(
+        request=request,
+        deps=deps,
+        require_consensus=False  # Start simple without consensus
+    )
+    
+    # Display the results
+    print("\n✅ Framework Response:")
+    print(f"Result: {result['result']}")
+    print(f"System Compliance: {result['system_compliance']}")
+    print(f"Agents Involved: {', '.join(result['agents_involved'])}")
+    
+    print("\n📋 Audit Trail:")
+    for agent, action in result['audit_trail'].items():
+        print(f"  {agent.title()}: {action}")
+    
+    return result
+
+# Run the example
+if __name__ == "__main__":
+    print("🎯 AI Triad Model - Hello World Example")
+    print("=" * 50)
+    
+    try:
+        result = asyncio.run(hello_world_example())
+        print("\n🎉 Example completed successfully!")
+        
+    except Exception as e:
+        print(f"\n❌ Error: {e}")
+        print("Make sure you have configured your .env file with API keys.")</code></pre>
+                            </div>
+
+                            <div class="example-output">
+                                <h4>Expected Output</h4>
+                                <div class="example-output-block">
+                                    <pre><code>🎯 AI Triad Model - Hello World Example
+==================================================
+🚀 Initializing AI Triad Model framework...
+📝 Processing request: Generate a greeting message for new users
+
+✅ Framework Response:
+Result: Welcome to our platform! We're excited to have you join us. Our AI-powered system is here to help you get started and make the most of your experience.
+System Compliance: True
+Agents Involved: planner, executor, evaluator, overwatch
+
+📋 Audit Trail:
+  Planner: Created strategic plan for user greeting
+  Executor: Generated personalized welcome message
+  Evaluator: Reviewed message for tone and compliance
+  Overwatch: Approved final result for delivery
+
+🎉 Example completed successfully!</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Customer Support Example -->
+                    <section id="customer-support" class="docs-section">
+                        <div class="docs-section-header">
+                            <h2>Customer Support System</h2>
+                            <p>Build an intelligent customer support system using the four-agent architecture.</p>
+                        </div>
+                        
+                        <div class="example-container">
+                            <div class="example-header">
+                                <div class="example-meta">
+                                    <span class="example-difficulty example-difficulty--intermediate">Intermediate</span>
+                                    <span class="example-time">15 minutes</span>
+                                </div>
+                                <div class="example-actions">
+                                    <button class="btn btn--ghost btn--sm" data-action="copy-example">Copy Code</button>
+                                    <button class="btn btn--ghost btn--sm" data-action="view-demo">View Demo</button>
+                                </div>
+                            </div>
+                            
+                            <div class="example-description">
+                                <p>
+                                    This example shows how to create a sophisticated customer support system where 
+                                    each agent has a specific role: planning the response strategy, executing the 
+                                    solution, evaluating customer satisfaction, and monitoring for escalation needs.
+                                </p>
+                            </div>
+
+                            <div class="example-features">
+                                <h4>Features Demonstrated</h4>
+                                <ul>
+                                    <li>🎯 <strong>Strategic Response Planning</strong> - Planner analyzes customer intent</li>
+                                    <li>🔧 <strong>Solution Execution</strong> - Executor provides tailored responses</li>
+                                    <li>✅ <strong>Quality Assurance</strong> - Evaluator ensures response quality</li>
+                                    <li>👁️ <strong>Escalation Monitoring</strong> - Overwatch detects complex issues</li>
+                                </ul>
+                            </div>
+
+                            <div class="docs-code-block">
+                                <div class="docs-code-header">
+                                    <span class="docs-code-title">customer_support.py</span>
+                                    <button class="docs-code-copy" data-copy-target="#support-code">Copy</button>
+                                </div>
+                                <pre id="support-code"><code class="language-python">import asyncio
+from triad import TriadFramework, TriadDeps
+from triad.agents import PlannerAgent, ExecutorAgent, EvaluatorAgent, OverwatchAgent
+from dataclasses import dataclass
+from typing import Dict, List, Optional
+
+@dataclass
+class SupportTicket:
+    id: str
+    customer_id: str
+    subject: str
+    message: str
+    priority: str = "normal"  # low, normal, high, urgent
+    category: Optional[str] = None
+    sentiment: Optional[str] = None
+
+class CustomerSupportSystem:
+    """Intelligent customer support system using AI Triad Model."""
+    
+    def __init__(self):
+        self.framework = TriadFramework()
+        self.deps = TriadDeps.from_environment()
+        
+        # Initialize specialized agents
+        self.planner = PlannerAgent(role="support_strategist")
+        self.executor = ExecutorAgent(role="solution_provider") 
+        self.evaluator = EvaluatorAgent(role="quality_assessor")
+        self.overwatch = OverwatchAgent(role="escalation_monitor")
+    
+    async def process_support_ticket(self, ticket: SupportTicket) -> Dict:
+        """Process a customer support ticket through the four-agent system."""
+        
+        print(f"🎫 Processing Ticket #{ticket.id}")
+        print(f"   Subject: {ticket.subject}")
+        print(f"   Priority: {ticket.priority.upper()}")
+        
+        # Phase 1: Strategic Planning
+        print("\n📋 Phase 1: Strategic Analysis")
+        plan_result = await self.planner.create_strategy(
+            f"""
+            Customer Support Ticket Analysis:
+            - Subject: {ticket.subject}
+            - Message: {ticket.message}
+            - Priority: {ticket.priority}
+            - Customer ID: {ticket.customer_id}
+            
+            Analyze the customer's intent, categorize the issue, 
+            and recommend response strategy.
+            """
+        )
+        
+        ticket.category = plan_result.get("category", "general")
+        ticket.sentiment = plan_result.get("sentiment", "neutral")
+        print(f"   Category: {ticket.category}")
+        print(f"   Sentiment: {ticket.sentiment}")
+        
+        # Phase 2: Solution Execution
+        print("\n🔧 Phase 2: Solution Generation")
+        solution_result = await self.executor.implement_plan(
+            plan_result,
+            context={
+                "ticket": ticket,
+                "customer_history": await self._get_customer_history(ticket.customer_id),
+                "knowledge_base": await self._query_knowledge_base(ticket.category)
+            }
+        )
+        
+        response_draft = solution_result.get("response", "")
+        suggested_actions = solution_result.get("actions", [])
+        print(f"   Response generated: {len(response_draft)} characters")
+        print(f"   Suggested actions: {len(suggested_actions)} items")
+        
+        # Phase 3: Quality Evaluation
+        print("\n✅ Phase 3: Quality Review")
+        evaluation_result = await self.evaluator.quality_review(
+            {
+                "original_ticket": ticket,
+                "response_draft": response_draft,
+                "suggested_actions": suggested_actions,
+                "plan": plan_result
+            }
+        )
+        
+        quality_score = evaluation_result.get("quality_score", 0)
+        improvements = evaluation_result.get("improvements", [])
+        print(f"   Quality score: {quality_score}/100")
+        print(f"   Improvements suggested: {len(improvements)}")
+        
+        # Phase 4: Oversight & Escalation Check
+        print("\n👁️ Phase 4: Oversight Review")
+        oversight_result = await self.overwatch.final_approval(
+            {
+                "ticket": ticket,
+                "plan": plan_result,
+                "solution": solution_result,
+                "evaluation": evaluation_result
+            }
+        )
+        
+        requires_escalation = oversight_result.get("escalate", False)
+        escalation_reason = oversight_result.get("escalation_reason", "")
+        final_response = oversight_result.get("approved_response", response_draft)
+        
+        if requires_escalation:
+            print(f"   ⚠️ Escalation required: {escalation_reason}")
+        else:
+            print("   ✅ Approved for customer delivery")
+        
+        return {
+            "ticket_id": ticket.id,
+            "response": final_response,
+            "actions": suggested_actions,
+            "category": ticket.category,
+            "sentiment": ticket.sentiment,
+            "quality_score": quality_score,
+            "requires_escalation": requires_escalation,
+            "escalation_reason": escalation_reason,
+            "processing_summary": {
+                "planner": "Analyzed customer intent and categorized issue",
+                "executor": f"Generated {len(response_draft)} character response",
+                "evaluator": f"Quality score: {quality_score}/100",
+                "overwatch": "Approved" if not requires_escalation else f"Escalated: {escalation_reason}"
+            }
+        }
+    
+    async def _get_customer_history(self, customer_id: str) -> List[Dict]:
+        """Simulate retrieving customer history."""
+        # In real implementation, query your customer database
+        return [
+            {"date": "2025-01-15", "type": "ticket", "status": "resolved"},
+            {"date": "2025-01-10", "type": "purchase", "amount": 299.99}
+        ]
+    
+    async def _query_knowledge_base(self, category: str) -> List[Dict]:
+        """Simulate querying knowledge base for category-specific information."""
+        knowledge_base = {
+            "billing": [{"title": "Billing FAQ", "content": "Common billing questions..."}],
+            "technical": [{"title": "Troubleshooting Guide", "content": "Technical solutions..."}],
+            "general": [{"title": "General Help", "content": "General assistance..."}]
+        }
+        return knowledge_base.get(category, knowledge_base["general"])
+
+async def main():
+    """Run customer support examples."""
+    support_system = CustomerSupportSystem()
+    
+    # Example tickets
+    tickets = [
+        SupportTicket(
+            id="TICK-001",
+            customer_id="CUST-12345", 
+            subject="Unable to access my account",
+            message="I've been trying to log in for the past hour but keep getting an error message. This is very frustrating as I need to access my recent orders.",
+            priority="high"
+        ),
+        SupportTicket(
+            id="TICK-002",
+            customer_id="CUST-67890",
+            subject="Question about billing", 
+            message="Hi, I noticed a charge on my account that I don't recognize. Could you please help me understand what this is for?",
+            priority="normal"
+        )
+    ]
+    
+    print("🏢 AI Triad Model - Customer Support System")
+    print("=" * 60)
+    
+    # Process each ticket
+    for i, ticket in enumerate(tickets, 1):
+        print(f"\n{'='*20} TICKET {i} {'='*20}")
+        
+        try:
+            result = await support_system.process_support_ticket(ticket)
+            
+            print(f"\n📧 Final Response to Customer:")
+            print(f"'{result['response'][:200]}{'...' if len(result['response']) > 200 else ''}'")
+            
+            if result['requires_escalation']:
+                print(f"\n⚠️ ESCALATION REQUIRED: {result['escalation_reason']}")
+            
+            print(f"\n📊 Processing Summary:")
+            for agent, summary in result['processing_summary'].items():
+                print(f"   {agent.title()}: {summary}")
+                
+        except Exception as e:
+            print(f"❌ Error processing ticket: {e}")
+
+if __name__ == "__main__":
+    asyncio.run(main())</code></pre>
+                            </div>
+
+                            <div class="example-workflow">
+                                <h4>Agent Workflow</h4>
+                                <div class="workflow-steps">
+                                    <div class="workflow-step">
+                                        <div class="workflow-step-number">1</div>
+                                        <div class="workflow-step-content">
+                                            <h5>Planner Analysis</h5>
+                                            <p>Analyzes customer intent, categorizes issue, determines sentiment and priority</p>
+                                        </div>
+                                    </div>
+                                    <div class="workflow-step">
+                                        <div class="workflow-step-number">2</div>
+                                        <div class="workflow-step-content">
+                                            <h5>Executor Solution</h5>
+                                            <p>Generates personalized response using customer history and knowledge base</p>
+                                        </div>
+                                    </div>
+                                    <div class="workflow-step">
+                                        <div class="workflow-step-number">3</div>
+                                        <div class="workflow-step-content">
+                                            <h5>Evaluator Review</h5>
+                                            <p>Assesses response quality, tone, completeness, and suggests improvements</p>
+                                        </div>
+                                    </div>
+                                    <div class="workflow-step">
+                                        <div class="workflow-step-number">4</div>
+                                        <div class="workflow-step-content">
+                                            <h5>Overwatch Approval</h5>
+                                            <p>Checks for escalation needs, approves final response or routes to human agent</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Advanced Multi-Stage Pipeline -->
+                    <section id="multi-stage-pipeline" class="docs-section">
+                        <div class="docs-section-header">
+                            <h2>Multi-Stage Processing Pipeline</h2>
+                            <p>Advanced example showing complex multi-stage processing with custom coordination patterns.</p>
+                        </div>
+                        
+                        <div class="example-container">
+                            <div class="example-header">
+                                <div class="example-meta">
+                                    <span class="example-difficulty example-difficulty--advanced">Advanced</span>
+                                    <span class="example-time">30 minutes</span>
+                                </div>
+                                <div class="example-actions">
+                                    <button class="btn btn--ghost btn--sm" data-action="copy-example">Copy Code</button>
+                                    <button class="btn btn--ghost btn--sm" data-action="view-architecture">View Architecture</button>
+                                </div>
+                            </div>
+                            
+                            <div class="example-description">
+                                <p>
+                                    This example demonstrates a sophisticated multi-stage processing pipeline where 
+                                    agents coordinate across multiple phases, handle complex error scenarios, 
+                                    and maintain state throughout the entire workflow.
+                                </p>
+                            </div>
+
+                            <div class="example-architecture">
+                                <h4>Pipeline Architecture</h4>
+                                <div class="pipeline-diagram">
+                                    <div class="pipeline-stage">
+                                        <h5>Stage 1: Intake</h5>
+                                        <div class="pipeline-agents">
+                                            <span class="pipeline-agent pipeline-agent--planner">Planner</span>
+                                            <span class="pipeline-agent pipeline-agent--overwatch">Overwatch</span>
+                                        </div>
+                                    </div>
+                                    <div class="pipeline-arrow">→</div>
+                                    <div class="pipeline-stage">
+                                        <h5>Stage 2: Processing</h5>
+                                        <div class="pipeline-agents">
+                                            <span class="pipeline-agent pipeline-agent--executor">Executor</span>
+                                            <span class="pipeline-agent pipeline-agent--evaluator">Evaluator</span>
+                                        </div>
+                                    </div>
+                                    <div class="pipeline-arrow">→</div>
+                                    <div class="pipeline-stage">
+                                        <h5>Stage 3: Validation</h5>
+                                        <div class="pipeline-agents">
+                                            <span class="pipeline-agent pipeline-agent--evaluator">Evaluator</span>
+                                            <span class="pipeline-agent pipeline-agent--overwatch">Overwatch</span>
+                                        </div>
+                                    </div>
+                                    <div class="pipeline-arrow">→</div>
+                                    <div class="pipeline-stage">
+                                        <h5>Stage 4: Delivery</h5>
+                                        <div class="pipeline-agents">
+                                            <span class="pipeline-agent pipeline-agent--all">All Agents</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="docs-code-block">
+                                <div class="docs-code-header">
+                                    <span class="docs-code-title">pipeline_example.py</span>
+                                    <button class="docs-code-copy" data-copy-target="#pipeline-code">Copy</button>
+                                </div>
+                                <pre id="pipeline-code"><code class="language-python">import asyncio
+from triad import TriadFramework, TriadDeps, SystemDecision, AgentRole
+from dataclasses import dataclass, field
+from typing import Dict, List, Any, Optional
+from enum import Enum
+import uuid
+from datetime import datetime
+
+class PipelineStage(str, Enum):
+    INTAKE = "intake"
+    PROCESSING = "processing" 
+    VALIDATION = "validation"
+    DELIVERY = "delivery"
+
+@dataclass
+class PipelineTask:
+    id: str = field(default_factory=lambda: str(uuid.uuid4()))
+    title: str = ""
+    data: Dict[str, Any] = field(default_factory=dict)
+    stage: PipelineStage = PipelineStage.INTAKE
+    status: str = "pending"  # pending, processing, completed, failed
+    created_at: datetime = field(default_factory=datetime.now)
+    agent_history: List[Dict] = field(default_factory=list)
+    error_log: List[str] = field(default_factory=list)
+
+class MultiStagePipeline:
+    """Advanced multi-stage processing pipeline with agent coordination."""
+    
+    def __init__(self):
+        self.framework = TriadFramework()
+        self.deps = TriadDeps.from_environment()
+        self.active_tasks: Dict[str, PipelineTask] = {}
+        
+    async def process_pipeline_task(self, task: PipelineTask) -> Dict[str, Any]:
+        """Process a task through all pipeline stages."""
+        
+        print(f"🚀 Starting pipeline processing for task: {task.title}")
+        print(f"   Task ID: {task.id}")
+        print(f"   Created: {task.created_at.strftime('%Y-%m-%d %H:%M:%S')}")
+        
+        self.active_tasks[task.id] = task
+        
+        try:
+            # Stage 1: Intake Analysis
+            await self._process_intake_stage(task)
+            
+            # Stage 2: Core Processing
+            await self._process_processing_stage(task)
+            
+            # Stage 3: Validation & Quality Check
+            await self._process_validation_stage(task)
+            
+            # Stage 4: Final Delivery Preparation
+            await self._process_delivery_stage(task)
+            
+            task.status = "completed"
+            print(f"\n✅ Pipeline completed successfully for task {task.id}")
+            
+            return {
+                "task_id": task.id,
+                "status": "completed",
+                "stages_completed": 4,
+                "total_agents_involved": len(set(entry["agent"] for entry in task.agent_history)),
+                "processing_time": (datetime.now() - task.created_at).total_seconds(),
+                "final_result": task.data.get("final_result"),
+                "quality_score": task.data.get("quality_score", 0),
+                "agent_history": task.agent_history
+            }
+            
+        except Exception as e:
+            task.status = "failed"
+            task.error_log.append(f"Pipeline failure: {str(e)}")
+            print(f"\n❌ Pipeline failed for task {task.id}: {e}")
+            
+            # Attempt recovery through overwatch
+            recovery_result = await self._attempt_recovery(task, str(e))
+            
+            return {
+                "task_id": task.id,
+                "status": "failed",
+                "error": str(e),
+                "recovery_attempted": True,
+                "recovery_result": recovery_result,
+                "agent_history": task.agent_history
+            }
+    
+    async def _process_intake_stage(self, task: PipelineTask):
+        """Stage 1: Intake analysis and planning."""
+        print(f"\n📋 Stage 1: Intake Analysis")
+        task.stage = PipelineStage.INTAKE
+        
+        # Planner analyzes the incoming task
+        intake_decision = SystemDecision(
+            agent_role=AgentRole.PLANNER,
+            decision_type="intake_analysis",
+            description=f"Analyze and categorize incoming task: {task.title}",
+            agent_responsible="planner"
+        )
+        
+        # Validate decision
+        validation_result = await self.framework.validate_system_decision(intake_decision)
+        
+        if not validation_result["system_compliance"]:
+            raise Exception(f"Intake validation failed: {validation_result['violations']}")
+        
+        # Simulate planner analysis
+        analysis_result = await self._simulate_agent_processing(
+            agent="planner",
+            task=task,
+            action="analyze_requirements",
+            data={
+                "complexity": self._assess_complexity(task.data),
+                "priority": task.data.get("priority", "normal"),
+                "estimated_resources": ["executor", "evaluator"],
+                "processing_strategy": "standard_pipeline"
+            }
+        )
+        
+        task.data.update(analysis_result)
+        
+        # Overwatch reviews intake decision
+        oversight_review = await self._simulate_agent_processing(
+            agent="overwatch",
+            task=task,
+            action="review_intake", 
+            data={
+                "intake_approved": True,
+                "risk_assessment": "low",
+                "monitoring_flags": []
+            }
+        )
+        
+        task.data.update(oversight_review)
+        print(f"   ✅ Intake completed - Complexity: {task.data['complexity']}")
+    
+    async def _process_processing_stage(self, task: PipelineTask):
+        """Stage 2: Core processing execution."""
+        print(f"\n🔧 Stage 2: Core Processing")
+        task.stage = PipelineStage.PROCESSING
+        
+        # Executor handles the main processing
+        processing_result = await self._simulate_agent_processing(
+            agent="executor",
+            task=task,
+            action="execute_main_processing",
+            data={
+                "processing_method": task.data.get("processing_strategy", "standard"),
+                "intermediate_results": ["step_1_completed", "step_2_completed"],
+                "resource_usage": {"cpu": 0.75, "memory": 0.60},
+                "processing_status": "successful"
+            }
+        )
+        
+        task.data.update(processing_result)
+        
+        # Evaluator provides real-time quality feedback
+        quality_feedback = await self._simulate_agent_processing(
+            agent="evaluator",
+            task=task,
+            action="provide_realtime_feedback",
+            data={
+                "quality_checkpoints": ["checkpoint_1_passed", "checkpoint_2_passed"],
+                "intermediate_quality_score": 85,
+                "feedback_notes": "Processing within expected parameters"
+            }
+        )
+        
+        task.data.update(quality_feedback)
+        print(f"   ✅ Processing completed - Quality: {task.data['intermediate_quality_score']}/100")
+    
+    async def _process_validation_stage(self, task: PipelineTask):
+        """Stage 3: Comprehensive validation and quality assurance."""
+        print(f"\n✅ Stage 3: Validation & Quality Assurance")
+        task.stage = PipelineStage.VALIDATION
+        
+        # Evaluator performs comprehensive quality review
+        quality_review = await self._simulate_agent_processing(
+            agent="evaluator",
+            task=task,
+            action="comprehensive_quality_review",
+            data={
+                "final_quality_score": 92,
+                "quality_dimensions": {
+                    "accuracy": 94,
+                    "completeness": 90,
+                    "consistency": 93,
+                    "performance": 91
+                },
+                "quality_approved": True,
+                "recommendations": ["minor_optimization_suggested"]
+            }
+        )
+        
+        task.data.update(quality_review)
+        
+        # Overwatch validates against system principles
+        system_validation = await self._simulate_agent_processing(
+            agent="overwatch",
+            task=task,
+            action="validate_system_compliance",
+            data={
+                "system_compliance": True,
+                "principle_violations": [],
+                "security_check": "passed",
+                "performance_check": "passed",
+                "validation_approved": True
+            }
+        )
+        
+        task.data.update(system_validation)
+        print(f"   ✅ Validation completed - Final Score: {task.data['final_quality_score']}/100")
+    
+    async def _process_delivery_stage(self, task: PipelineTask):
+        """Stage 4: Final delivery preparation and coordination."""
+        print(f"\n🚀 Stage 4: Delivery Preparation")
+        task.stage = PipelineStage.DELIVERY
+        
+        # All agents coordinate for final delivery
+        delivery_coordination = await self._simulate_multi_agent_coordination(
+            task=task,
+            coordination_type="delivery_preparation",
+            participating_agents=["planner", "executor", "evaluator", "overwatch"]
+        )
+        
+        task.data.update(delivery_coordination)
+        
+        # Generate final result package
+        final_result = {
+            "result_id": f"result_{task.id}",
+            "processed_data": task.data.get("processed_content", ""),
+            "quality_metrics": task.data.get("quality_dimensions", {}),
+            "processing_metadata": {
+                "pipeline_version": "1.0",
+                "processing_time": (datetime.now() - task.created_at).total_seconds(),
+                "agents_involved": list(set(entry["agent"] for entry in task.agent_history)),
+                "quality_score": task.data.get("final_quality_score", 0)
+            },
+            "delivery_format": "json",
+            "delivery_timestamp": datetime.now().isoformat()
+        }
+        
+        task.data["final_result"] = final_result
+        print(f"   ✅ Delivery prepared - Package ready for output")
+    
+    async def _simulate_agent_processing(self, agent: str, task: PipelineTask, 
+                                       action: str, data: Dict) -> Dict:
+        """Simulate agent processing with realistic delays and logging."""
+        
+        # Add to agent history
+        task.agent_history.append({
+            "agent": agent,
+            "action": action,
+            "timestamp": datetime.now().isoformat(),
+            "stage": task.stage.value
+        })
+        
+        print(f"   🤖 {agent.title()} executing: {action}")
+        
+        # Simulate processing time
+        await asyncio.sleep(0.5)  # Simulate work
+        
+        return data
+    
+    async def _simulate_multi_agent_coordination(self, task: PipelineTask,
+                                               coordination_type: str,
+                                               participating_agents: List[str]) -> Dict:
+        """Simulate multi-agent coordination."""
+        
+        print(f"   🤝 Multi-agent coordination: {coordination_type}")
+        
+        coordination_result = {
+            "coordination_type": coordination_type,
+            "participating_agents": participating_agents,
+            "coordination_successful": True,
+            "consensus_reached": True,
+            "coordination_timestamp": datetime.now().isoformat()
+        }
+        
+        for agent in participating_agents:
+            task.agent_history.append({
+                "agent": agent,
+                "action": f"participate_in_{coordination_type}",
+                "timestamp": datetime.now().isoformat(),
+                "stage": task.stage.value
+            })
+        
+        await asyncio.sleep(1.0)  # Simulate coordination time
+        
+        return coordination_result
+    
+    async def _attempt_recovery(self, task: PipelineTask, error: str) -> Dict:
+        """Attempt to recover from pipeline failure."""
+        print(f"   🔄 Attempting recovery for task {task.id}")
+        
+        # Overwatch attempts recovery
+        recovery_result = await self._simulate_agent_processing(
+            agent="overwatch",
+            task=task,
+            action="attempt_recovery",
+            data={
+                "recovery_attempted": True,
+                "recovery_strategy": "retry_last_stage",
+                "recovery_successful": False,  # Simulate failed recovery for demo
+                "recovery_recommendations": "Manual intervention required"
+            }
+        )
+        
+        return recovery_result
+    
+    def _assess_complexity(self, data: Dict) -> str:
+        """Assess task complexity based on input data."""
+        data_size = len(str(data))
+        if data_size < 100:
+            return "low"
+        elif data_size < 500:
+            return "medium"
+        else:
+            return "high"
+
+async def main():
+    """Run multi-stage pipeline examples."""
+    pipeline = MultiStagePipeline()
+    
+    print("🏭 AI Triad Model - Multi-Stage Processing Pipeline")
+    print("=" * 70)
+    
+    # Create sample tasks
+    tasks = [
+        PipelineTask(
+            title="Data Analysis Report Generation",
+            data={
+                "source_data": {"records": 1500, "format": "json"},
+                "analysis_type": "trend_analysis",
+                "priority": "high",
+                "deadline": "2025-02-01"
+            }
+        ),
+        PipelineTask(
+            title="Customer Feedback Processing",
+            data={
+                "feedback_sources": ["surveys", "reviews", "support_tickets"],
+                "sentiment_analysis": True,
+                "priority": "normal",
+                "output_format": "dashboard"
+            }
+        )
+    ]
+    
+    # Process tasks
+    for i, task in enumerate(tasks, 1):
+        print(f"\n{'='*25} TASK {i} {'='*25}")
+        
+        try:
+            result = await pipeline.process_pipeline_task(task)
+            
+            print(f"\n📊 Pipeline Results:")
+            print(f"   Status: {result['status'].upper()}")
+            print(f"   Stages Completed: {result.get('stages_completed', 0)}/4")
+            print(f"   Processing Time: {result.get('processing_time', 0):.2f} seconds")
+            print(f"   Quality Score: {result.get('quality_score', 0)}/100")
+            print(f"   Agents Involved: {result.get('total_agents_involved', 0)}")
+            
+            if result['status'] == 'completed':
+                print(f"   ✅ Final result package generated")
+            else:
+                print(f"   ❌ Pipeline failed: {result.get('error', 'Unknown error')}")
+                
+        except Exception as e:
+            print(f"❌ Unexpected error: {e}")
+
+if __name__ == "__main__":
+    asyncio.run(main())</code></pre>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <svg class="footer-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                            </svg>
+                            <span>AI Triad Model</span>
+                        </a>
+                        <p class="footer-description">
+                            Four-Agent AI Framework with structured coordination, 
+                            systematic accountability, and transparent decision-making.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Examples</h4>
+                        <ul>
+                            <li><a href="#hello-world">Hello World</a></li>
+                            <li><a href="#customer-support">Customer Support</a></li>
+                            <li><a href="#multi-stage-pipeline">Advanced Pipeline</a></li>
+                            <li><a href="#fastapi-integration">Integrations</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Documentation</h4>
+                        <ul>
+                            <li><a href="docs.html">Getting Started</a></li>
+                            <li><a href="api.html">API Reference</a></li>
+                            <li><a href="#guides">Guides</a></li>
+                            <li><a href="#tutorials">Tutorials</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="https://github.com/DamionR/ai-triad-model">GitHub Repository</a></li>
+                            <li><a href="#community">Community</a></li>
+                            <li><a href="#support">Support</a></li>
+                            <li><a href="#changelog">Changelog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 AI Triad Model Team. Licensed under MIT License.</p>
+                </div>
+                <div class="footer-badge">
+                    <span class="badge badge--outline">⚡ Four-Agent AI Framework</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Reference - AI Triad Model</title>
+    <meta name="description" content="Complete API reference for the AI Triad Model framework. Detailed documentation of classes, methods, and parameters.">
+    <meta name="keywords" content="AI API, framework API, multi-agent API, Python API documentation">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/docs.css">
+    <link rel="stylesheet" href="./css/api.css">
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/docs.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">
+                    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                    </svg>
+                    <span>AI Triad Model</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="docs.html" class="nav-link">Documentation</a>
+                <a href="api.html" class="nav-link nav-link--active">API Reference</a>
+                <a href="examples.html" class="nav-link">Examples</a>
+                <a href="https://github.com/DamionR/ai-triad-model" class="nav-link nav-link--external" target="_blank" rel="noopener">
+                    <span>GitHub</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15,3 21,3 21,9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <button class="btn btn--secondary btn--sm">Search API</button>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- API Header -->
+    <section class="docs-header">
+        <div class="container">
+            <div class="docs-header-content">
+                <div class="docs-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>API Reference</span>
+                </div>
+                
+                <h1 class="docs-title">API Reference</h1>
+                <p class="docs-description">
+                    Complete reference documentation for the AI Triad Model framework API. 
+                    Detailed information about classes, methods, parameters, and return values.
+                </p>
+                
+                <div class="docs-header-actions">
+                    <a href="#triad-framework" class="btn btn--primary btn--lg">
+                        <span>Core Framework</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7,7 17,7 17,17"></polyline>
+                        </svg>
+                    </a>
+                    <a href="docs.html" class="btn btn--secondary btn--lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z"/>
+                            <polyline points="14,2 14,8 20,8"></polyline>
+                        </svg>
+                        <span>Documentation</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- API Content -->
+    <div class="docs-layout">
+        <div class="container">
+            <div class="docs-container">
+                <!-- API Sidebar -->
+                <aside class="docs-sidebar">
+                    <div class="docs-nav">
+                        <div class="docs-nav-section">
+                            <h3>Core Framework</h3>
+                            <ul>
+                                <li><a href="#triad-framework" class="docs-nav-link active">TriadFramework</a></li>
+                                <li><a href="#triad-deps" class="docs-nav-link">TriadDeps</a></li>
+                                <li><a href="#system-decision" class="docs-nav-link">SystemDecision</a></li>
+                                <li><a href="#coordination-session" class="docs-nav-link">CoordinationSession</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <h3>Agents</h3>
+                            <ul>
+                                <li><a href="#planner-agent" class="docs-nav-link">PlannerAgent</a></li>
+                                <li><a href="#executor-agent" class="docs-nav-link">ExecutorAgent</a></li>
+                                <li><a href="#evaluator-agent" class="docs-nav-link">EvaluatorAgent</a></li>
+                                <li><a href="#overwatch-agent" class="docs-nav-link">OverwatchAgent</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <h3>System Components</h3>
+                            <ul>
+                                <li><a href="#system-procedures" class="docs-nav-link">SystemProcedures</a></li>
+                                <li><a href="#crisis-manager" class="docs-nav-link">SystemCrisisManager</a></li>
+                                <li><a href="#system-oversight" class="docs-nav-link">SystemOversight</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="docs-nav-section">
+                            <h3>Enums & Types</h3>
+                            <ul>
+                                <li><a href="#agent-role" class="docs-nav-link">AgentRole</a></li>
+                                <li><a href="#system-principle" class="docs-nav-link">SystemPrinciple</a></li>
+                                <li><a href="#response-types" class="docs-nav-link">Response Types</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- API Documentation -->
+                <main class="docs-content">
+                    <!-- TriadFramework Class -->
+                    <section id="triad-framework" class="docs-section">
+                        <div class="docs-section-header">
+                            <h2>TriadFramework</h2>
+                            <p>The main framework class for coordinating multi-agent AI systems with structured oversight.</p>
+                        </div>
+                        
+                        <div class="api-class">
+                            <div class="api-signature">
+                                <code>class TriadFramework()</code>
+                            </div>
+                            
+                            <div class="api-description">
+                                <p>
+                                    Core framework implementing multi-agent coordination principles. This class ensures 
+                                    all AI agents operate within proper system constraints and structured accountability mechanisms.
+                                </p>
+                            </div>
+
+                            <!-- Constructor -->
+                            <div class="api-method">
+                                <div class="api-method-header">
+                                    <h4>__init__()</h4>
+                                    <span class="api-method-type">Constructor</span>
+                                </div>
+                                
+                                <div class="api-method-signature">
+                                    <code>def __init__(self) -> None</code>
+                                </div>
+                                
+                                <div class="api-method-description">
+                                    <p>Initialize a new TriadFramework instance with default system principles and empty coordination session.</p>
+                                </div>
+                                
+                                <div class="api-method-example">
+                                    <h5>Example</h5>
+                                    <div class="docs-code-block">
+                                        <pre><code class="language-python">from triad import TriadFramework
+
+# Initialize the framework
+framework = TriadFramework()
+print(f"Framework initialized with {len(framework.system_principles)} principles")</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- process_request method -->
+                            <div class="api-method">
+                                <div class="api-method-header">
+                                    <h4>process_request</h4>
+                                    <span class="api-method-type">async method</span>
+                                </div>
+                                
+                                <div class="api-method-signature">
+                                    <code>async def process_request(self, request: str, deps: TriadDeps, require_consensus: bool = False) -> Dict[str, Any]</code>
+                                </div>
+                                
+                                <div class="api-method-description">
+                                    <p>Process a request through the four-agent framework with proper oversight and validation.</p>
+                                </div>
+                                
+                                <div class="api-parameters">
+                                    <h5>Parameters</h5>
+                                    <div class="api-parameter">
+                                        <div class="api-parameter-name">request</div>
+                                        <div class="api-parameter-type">str</div>
+                                        <div class="api-parameter-description">The user request to process through the framework</div>
+                                    </div>
+                                    <div class="api-parameter">
+                                        <div class="api-parameter-name">deps</div>
+                                        <div class="api-parameter-type">TriadDeps</div>
+                                        <div class="api-parameter-description">Framework dependencies and configuration</div>
+                                    </div>
+                                    <div class="api-parameter">
+                                        <div class="api-parameter-name">require_consensus</div>
+                                        <div class="api-parameter-type">bool</div>
+                                        <div class="api-parameter-description">Whether all agents must agree on the result (default: False)</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="api-returns">
+                                    <h5>Returns</h5>
+                                    <div class="api-return">
+                                        <div class="api-return-type">Dict[str, Any]</div>
+                                        <div class="api-return-description">
+                                            Result dictionary containing:
+                                            <ul>
+                                                <li><code>result</code>: The processed response</li>
+                                                <li><code>agents_involved</code>: List of agents that participated</li>
+                                                <li><code>system_compliance</code>: Boolean indicating system compliance</li>
+                                                <li><code>audit_trail</code>: Dictionary of agent actions and decisions</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="api-method-example">
+                                    <h5>Example</h5>
+                                    <div class="docs-code-block">
+                                        <pre><code class="language-python">import asyncio
+from triad import TriadFramework, TriadDeps
+
+async def main():
+    framework = TriadFramework()
+    deps = TriadDeps.from_environment()
+    
+    result = await framework.process_request(
+        request="Analyze customer feedback trends",
+        deps=deps,
+        require_consensus=True
+    )
+    
+    print("Response:", result["result"])
+    print("Compliance:", result["system_compliance"])
+
+asyncio.run(main())</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- validate_system_decision method -->
+                            <div class="api-method">
+                                <div class="api-method-header">
+                                    <h4>validate_system_decision</h4>
+                                    <span class="api-method-type">async method</span>
+                                </div>
+                                
+                                <div class="api-method-signature">
+                                    <code>async def validate_system_decision(self, decision: SystemDecision) -> Dict[str, Any]</code>
+                                </div>
+                                
+                                <div class="api-method-description">
+                                    <p>Validate a decision against system principles and framework constraints.</p>
+                                </div>
+                                
+                                <div class="api-parameters">
+                                    <h5>Parameters</h5>
+                                    <div class="api-parameter">
+                                        <div class="api-parameter-name">decision</div>
+                                        <div class="api-parameter-type">SystemDecision</div>
+                                        <div class="api-parameter-description">The decision to validate</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="api-returns">
+                                    <h5>Returns</h5>
+                                    <div class="api-return">
+                                        <div class="api-return-type">Dict[str, Any]</div>
+                                        <div class="api-return-description">
+                                            Validation result containing compliance status, violations, and recommendations
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- TriadDeps Class -->
+                    <section id="triad-deps" class="docs-section">
+                        <div class="docs-section-header">
+                            <h2>TriadDeps</h2>
+                            <p>Dependency container for framework configuration and services.</p>
+                        </div>
+                        
+                        <div class="api-class">
+                            <div class="api-signature">
+                                <code>class TriadDeps</code>
+                            </div>
+                            
+                            <div class="api-description">
+                                <p>
+                                    Manages dependencies, configuration, and shared services for the AI Triad Model framework.
+                                    Provides dependency injection for agents and system components.
+                                </p>
+                            </div>
+
+                            <!-- from_environment method -->
+                            <div class="api-method">
+                                <div class="api-method-header">
+                                    <h4>from_environment</h4>
+                                    <span class="api-method-type">class method</span>
+                                </div>
+                                
+                                <div class="api-method-signature">
+                                    <code>@classmethod<br>def from_environment(cls) -> TriadDeps</code>
+                                </div>
+                                
+                                <div class="api-method-description">
+                                    <p>Create a TriadDeps instance configured from environment variables and default settings.</p>
+                                </div>
+                                
+                                <div class="api-returns">
+                                    <h5>Returns</h5>
+                                    <div class="api-return">
+                                        <div class="api-return-type">TriadDeps</div>
+                                        <div class="api-return-description">Configured dependency container</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="api-method-example">
+                                    <h5>Example</h5>
+                                    <div class="docs-code-block">
+                                        <pre><code class="language-python">from triad import TriadDeps
+
+# Create from environment
+deps = TriadDeps.from_environment()
+
+# Use with framework
+framework = TriadFramework()
+result = await framework.process_request("Hello", deps)</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Agent Classes -->
+                    <section id="planner-agent" class="docs-section">
+                        <div class="docs-section-header">
+                            <h2>PlannerAgent</h2>
+                            <p>Strategic planning and task coordination agent.</p>
+                        </div>
+                        
+                        <div class="api-class">
+                            <div class="api-signature">
+                                <code>class PlannerAgent(BaseAgent)</code>
+                            </div>
+                            
+                            <div class="api-description">
+                                <p>
+                                    Specialized agent responsible for strategic planning, task coordination, and workflow design.
+                                    Creates systematic approaches to problem-solving and resource allocation.
+                                </p>
+                            </div>
+
+                            <div class="api-method">
+                                <div class="api-method-header">
+                                    <h4>create_strategy</h4>
+                                    <span class="api-method-type">async method</span>
+                                </div>
+                                
+                                <div class="api-method-signature">
+                                    <code>async def create_strategy(self, request: str) -> PlanResult</code>
+                                </div>
+                                
+                                <div class="api-method-description">
+                                    <p>Create a strategic plan for handling the given request.</p>
+                                </div>
+                                
+                                <div class="api-parameters">
+                                    <h5>Parameters</h5>
+                                    <div class="api-parameter">
+                                        <div class="api-parameter-name">request</div>
+                                        <div class="api-parameter-type">str</div>
+                                        <div class="api-parameter-description">The request to create a strategy for</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="api-returns">
+                                    <h5>Returns</h5>
+                                    <div class="api-return">
+                                        <div class="api-return-type">PlanResult</div>
+                                        <div class="api-return-description">Strategic plan with steps, resources, and timeline</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Enums Section -->
+                    <section id="agent-role" class="docs-section">
+                        <div class="docs-section-header">
+                            <h2>AgentRole</h2>
+                            <p>Enumeration of available agent roles in the framework.</p>
+                        </div>
+                        
+                        <div class="api-enum">
+                            <div class="api-signature">
+                                <code>class AgentRole(str, Enum)</code>
+                            </div>
+                            
+                            <div class="api-description">
+                                <p>Defines the four specialized roles available in the AI Triad Model framework.</p>
+                            </div>
+
+                            <div class="api-enum-values">
+                                <h4>Values</h4>
+                                <div class="api-enum-value">
+                                    <div class="api-enum-name">PLANNER</div>
+                                    <div class="api-enum-type">"planner"</div>
+                                    <div class="api-enum-description">Strategic planning and task coordination</div>
+                                </div>
+                                <div class="api-enum-value">
+                                    <div class="api-enum-name">EXECUTOR</div>
+                                    <div class="api-enum-type">"executor"</div>
+                                    <div class="api-enum-description">Task execution and operational management</div>
+                                </div>
+                                <div class="api-enum-value">
+                                    <div class="api-enum-name">EVALUATOR</div>
+                                    <div class="api-enum-type">"evaluator"</div>
+                                    <div class="api-enum-description">Quality review and compliance checking</div>
+                                </div>
+                                <div class="api-enum-value">
+                                    <div class="api-enum-name">OVERWATCH</div>
+                                    <div class="api-enum-type">"overwatch"</div>
+                                    <div class="api-enum-description">System monitoring and crisis management</div>
+                                </div>
+                            </div>
+                            
+                            <div class="api-method-example">
+                                <h5>Example</h5>
+                                <div class="docs-code-block">
+                                    <pre><code class="language-python">from triad import AgentRole
+
+# Use in agent configuration
+agent_role = AgentRole.PLANNER
+print(f"Agent role: {agent_role.value}")  # Output: planner
+
+# Check role type
+if agent_role == AgentRole.PLANNER:
+    print("This is a planning agent")</code></pre>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <svg class="footer-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                            </svg>
+                            <span>AI Triad Model</span>
+                        </a>
+                        <p class="footer-description">
+                            Four-Agent AI Framework with structured coordination, 
+                            systematic accountability, and transparent decision-making.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>API Reference</h4>
+                        <ul>
+                            <li><a href="#triad-framework">TriadFramework</a></li>
+                            <li><a href="#planner-agent">Agents</a></li>
+                            <li><a href="#agent-role">Types & Enums</a></li>
+                            <li><a href="#examples">Examples</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Documentation</h4>
+                        <ul>
+                            <li><a href="docs.html">Getting Started</a></li>
+                            <li><a href="examples.html">Examples</a></li>
+                            <li><a href="#guides">Guides</a></li>
+                            <li><a href="#tutorials">Tutorials</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="https://github.com/DamionR/ai-triad-model">GitHub Repository</a></li>
+                            <li><a href="#community">Community</a></li>
+                            <li><a href="#support">Support</a></li>
+                            <li><a href="#changelog">Changelog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 AI Triad Model Team. Licensed under MIT License.</p>
+                </div>
+                <div class="footer-badge">
+                    <span class="badge badge--outline">⚡ Four-Agent AI Framework</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

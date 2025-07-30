@@ -1,0 +1,422 @@
+/* API Documentation Specific Styles */
+/* Extends the documentation styles with API-specific formatting */
+
+/* API Class Styling */
+.api-class {
+  margin-bottom: var(--space-2xl);
+}
+
+.api-signature {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-xl);
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--framework-purple-light);
+  border-left: 4px solid var(--system-gold);
+}
+
+.api-description {
+  margin-bottom: var(--space-xl);
+}
+
+.api-description p {
+  color: var(--gray-300);
+  line-height: 1.7;
+  margin-bottom: var(--space-lg);
+}
+
+/* API Method Styling */
+.api-method {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-xl);
+  padding: var(--space-xl);
+  border-left: 4px solid var(--framework-purple);
+}
+
+.api-method:last-child {
+  margin-bottom: 0;
+}
+
+.api-method-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.api-method-header h4 {
+  color: var(--framework-purple-light);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+  font-family: var(--font-mono);
+}
+
+.api-method-type {
+  background: var(--system-gold);
+  color: var(--gray-900);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.api-method-signature {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  margin-bottom: var(--space-lg);
+  overflow-x: auto;
+}
+
+.api-method-signature code {
+  font-family: var(--font-mono);
+  color: var(--white);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.api-method-description {
+  margin-bottom: var(--space-lg);
+}
+
+.api-method-description p {
+  color: var(--gray-300);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Parameters Section */
+.api-parameters {
+  margin-bottom: var(--space-xl);
+}
+
+.api-parameters h5 {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.api-parameters h5::before {
+  content: '';
+  width: 3px;
+  height: 1rem;
+  background: var(--framework-purple);
+  border-radius: 2px;
+}
+
+.api-parameter {
+  display: grid;
+  grid-template-columns: 1fr 100px 2fr;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-sm);
+  align-items: start;
+}
+
+.api-parameter:last-child {
+  margin-bottom: 0;
+}
+
+.api-parameter-name {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--framework-purple-light);
+  font-size: 0.875rem;
+}
+
+.api-parameter-type {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--system-gold);
+  background: var(--bg-secondary);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  border: 1px solid var(--border-primary);
+}
+
+.api-parameter-description {
+  color: var(--gray-300);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Returns Section */
+.api-returns {
+  margin-bottom: var(--space-xl);
+}
+
+.api-returns h5 {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.api-returns h5::before {
+  content: '';
+  width: 3px;
+  height: 1rem;
+  background: var(--system-gold);
+  border-radius: 2px;
+}
+
+.api-return {
+  padding: var(--space-md);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--system-gold);
+}
+
+.api-return-type {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--system-gold);
+  font-size: 0.875rem;
+  margin-bottom: var(--space-sm);
+}
+
+.api-return-description {
+  color: var(--gray-300);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.api-return-description ul {
+  margin-top: var(--space-sm);
+  margin-bottom: 0;
+  padding-left: var(--space-lg);
+}
+
+.api-return-description li {
+  color: var(--gray-300);
+  margin-bottom: var(--space-xs);
+}
+
+.api-return-description code {
+  font-family: var(--font-mono);
+  background: var(--bg-secondary);
+  color: var(--framework-purple-light);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8125rem;
+}
+
+/* Method Examples */
+.api-method-example {
+  margin-top: var(--space-xl);
+}
+
+.api-method-example h5 {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.api-method-example h5::before {
+  content: '✨';
+  font-size: 1rem;
+}
+
+/* Enum Styling */
+.api-enum {
+  margin-bottom: var(--space-2xl);
+}
+
+.api-enum-values {
+  margin-top: var(--space-xl);
+}
+
+.api-enum-values h4 {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.api-enum-values h4::before {
+  content: '';
+  width: 3px;
+  height: 1rem;
+  background: var(--framework-purple);
+  border-radius: 2px;
+}
+
+.api-enum-value {
+  display: grid;
+  grid-template-columns: 1fr 120px 2fr;
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--space-sm);
+  align-items: start;
+}
+
+.api-enum-value:last-child {
+  margin-bottom: 0;
+}
+
+.api-enum-name {
+  font-family: var(--font-mono);
+  font-weight: 600;
+  color: var(--framework-purple-light);
+  font-size: 0.875rem;
+}
+
+.api-enum-type {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--system-gold);
+  background: var(--bg-secondary);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  text-align: center;
+  border: 1px solid var(--border-primary);
+}
+
+.api-enum-description {
+  color: var(--gray-300);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+/* Status Badges */
+.api-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.api-status-badge--stable {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.api-status-badge--beta {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--system-gold);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.api-status-badge--deprecated {
+  background: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+/* Type Links */
+.api-type-link {
+  color: var(--framework-purple-light);
+  text-decoration: none;
+  font-family: var(--font-mono);
+  font-size: 0.875rem;
+  border-bottom: 1px dotted var(--framework-purple-light);
+  transition: all 0.2s ease;
+}
+
+.api-type-link:hover {
+  color: var(--framework-purple);
+  border-bottom-color: var(--framework-purple);
+}
+
+/* Search Enhancements for API */
+.api-search-result {
+  border-left: 4px solid var(--framework-purple);
+}
+
+.api-search-result .search-result-title::before {
+  content: '📘';
+  margin-right: var(--space-xs);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .api-parameter {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  
+  .api-parameter-type {
+    text-align: left;
+    width: fit-content;
+  }
+  
+  .api-enum-value {
+    grid-template-columns: 1fr;
+    gap: var(--space-sm);
+  }
+  
+  .api-enum-type {
+    text-align: left;
+    width: fit-content;
+  }
+}
+
+@media (max-width: 768px) {
+  .api-method-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .api-method-signature {
+    font-size: 0.8125rem;
+  }
+  
+  .api-signature {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .api-method {
+    padding: var(--space-lg);
+  }
+  
+  .api-parameter {
+    padding: var(--space-sm);
+  }
+  
+  .api-return {
+    padding: var(--space-sm);
+  }
+}

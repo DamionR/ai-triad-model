@@ -1,0 +1,513 @@
+/* Examples Page Specific Styles */
+/* Extends documentation styles with example-specific components */
+
+/* Example Container */
+.example-container {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  margin-bottom: var(--space-2xl);
+  overflow: hidden;
+  border-left: 4px solid var(--framework-purple);
+}
+
+.example-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-lg) var(--space-xl);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-primary);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.example-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.example-difficulty {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.example-difficulty--beginner {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.example-difficulty--intermediate {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--system-gold);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.example-difficulty--advanced {
+  background: rgba(239, 68, 68, 0.1);
+  color: #EF4444;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+}
+
+.example-time {
+  color: var(--gray-400);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.example-time::before {
+  content: '⏱️';
+  font-size: 1rem;
+}
+
+.example-actions {
+  display: flex;
+  gap: var(--space-sm);
+}
+
+/* Example Content */
+.example-description {
+  padding: var(--space-xl);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.example-description p {
+  color: var(--gray-300);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Example Features */
+.example-features {
+  padding: var(--space-xl);
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.example-features h4 {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.example-features h4::before {
+  content: '✨';
+  font-size: 1rem;
+}
+
+.example-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+}
+
+.example-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  color: var(--gray-300);
+  line-height: 1.6;
+  padding: var(--space-md);
+  background: var(--bg-secondary);
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-primary);
+}
+
+.example-features strong {
+  color: var(--framework-purple-light);
+}
+
+/* Example Output */
+.example-output {
+  padding: var(--space-xl);
+  background: var(--bg-secondary);
+}
+
+.example-output h4 {
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.example-output h4::before {
+  content: '📟';
+  font-size: 1rem;
+}
+
+.example-output-block {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+.example-output-block pre {
+  margin: 0;
+  color: #10B981;
+}
+
+.example-output-block code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* Workflow Steps */
+.example-workflow {
+  padding: var(--space-xl);
+  background: var(--bg-primary);
+}
+
+.example-workflow h4 {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.example-workflow h4::before {
+  content: '🔄';
+  font-size: 1rem;
+}
+
+.workflow-steps {
+  display: grid;
+  gap: var(--space-lg);
+}
+
+.workflow-step {
+  display: flex;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+.workflow-step-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, var(--framework-purple), var(--system-gold));
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.125rem;
+  flex-shrink: 0;
+}
+
+.workflow-step-content {
+  flex: 1;
+}
+
+.workflow-step-content h5 {
+  color: var(--framework-purple-light);
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: var(--space-sm);
+}
+
+.workflow-step-content p {
+  color: var(--gray-300);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Pipeline Architecture Visualization */
+.example-architecture {
+  padding: var(--space-xl);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.example-architecture h4 {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.example-architecture h4::before {
+  content: '🏗️';
+  font-size: 1rem;
+}
+
+.pipeline-diagram {
+  display: flex;
+  align-items: center;
+  gap: var(--space-lg);
+  overflow-x: auto;
+  padding: var(--space-lg);
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-primary);
+}
+
+.pipeline-stage {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  text-align: center;
+  min-width: 160px;
+  flex-shrink: 0;
+}
+
+.pipeline-stage h5 {
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: var(--space-md);
+}
+
+.pipeline-agents {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.pipeline-agent {
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.pipeline-agent--planner {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--system-gold);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+.pipeline-agent--executor {
+  background: rgba(59, 130, 246, 0.1);
+  color: var(--royal-blue-light);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.pipeline-agent--evaluator {
+  background: rgba(16, 185, 129, 0.1);
+  color: #10B981;
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.pipeline-agent--overwatch {
+  background: rgba(139, 92, 246, 0.1);
+  color: var(--framework-purple-light);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.pipeline-agent--all {
+  background: linear-gradient(135deg, var(--framework-purple), var(--system-gold));
+  color: var(--white);
+  border: none;
+}
+
+.pipeline-arrow {
+  color: var(--framework-purple);
+  font-size: 1.5rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+/* Interactive Elements */
+.example-interactive {
+  padding: var(--space-xl);
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-primary);
+}
+
+.example-interactive h4 {
+  color: var(--white);
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: var(--space-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.example-interactive h4::before {
+  content: '🎮';
+  font-size: 1rem;
+}
+
+.example-playground {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+}
+
+.playground-controls {
+  display: flex;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  flex-wrap: wrap;
+}
+
+.playground-input {
+  flex: 1;
+  min-width: 300px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  color: var(--white);
+  font-size: 0.875rem;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.playground-input:focus {
+  outline: none;
+  border-color: var(--framework-purple);
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.playground-output {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--gray-300);
+  min-height: 200px;
+  white-space: pre-wrap;
+}
+
+/* Copy to Clipboard Animation */
+.example-copied {
+  animation: copySuccess 2s ease-in-out;
+}
+
+@keyframes copySuccess {
+  0% { background: var(--framework-purple); }
+  50% { background: #10B981; }
+  100% { background: var(--framework-purple); }
+}
+
+/* Loading States */
+.example-loading {
+  opacity: 0.6;
+  pointer-events: none;
+  position: relative;
+}
+
+.example-loading::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px;
+  border: 2px solid var(--framework-purple);
+  border-top: 2px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .pipeline-diagram {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .pipeline-arrow {
+    transform: rotate(90deg);
+    align-self: center;
+  }
+  
+  .example-features ul {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .example-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .example-actions {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .workflow-step {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .workflow-step-number {
+    align-self: center;
+  }
+  
+  .playground-controls {
+    flex-direction: column;
+  }
+  
+  .playground-input {
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .example-container {
+    margin-left: calc(-1 * var(--container-padding));
+    margin-right: calc(-1 * var(--container-padding));
+    border-radius: 0;
+  }
+  
+  .pipeline-stage {
+    min-width: 120px;
+    padding: var(--space-md);
+  }
+  
+  .example-description,
+  .example-features,
+  .example-workflow,
+  .example-architecture,
+  .example-output {
+    padding: var(--space-lg);
+  }
+}
