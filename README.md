@@ -1,16 +1,15 @@
-# Triad Model - AI Governance System 🏛️
+# AI Triad Model 🤖
 
-An intelligent governance framework implementing proven Westminster-style separation of powers, adaptable for any organization - from Fortune 500 companies to personal decision-making systems.
+A structured multi-agent AI framework with built-in oversight and transparent decision-making. Four specialized agents work together using proven architectural patterns for reliable AI coordination.
 
 ## 🌟 Features
 
-- **Governance Framework**: Proven Westminster-style separation of powers
-- **Four Core Agents**: Strategic (Planner), Implementation (Executor), Quality (Evaluator), Oversight (Overwatch)
-- **Organizational Processes**: Decision-making, review cycles, escalation, and crisis management
-- **Agent Communication**: Structured messaging with accountability oversight
-- **MCP Integration**: External system connectivity with audit trails
-- **FastAPI**: Modern async API with comprehensive documentation
-- **Pydantic AI**: Type-safe agent implementation with structured outputs
+- **Four-Agent Architecture**: Planner, Executor, Evaluator, and Oversight agents
+- **Structured Coordination**: Clear separation of responsibilities and systematic workflows  
+- **Built-in Oversight**: Quality assurance and compliance checking at every step
+- **Transparent Processes**: Complete audit trails and decision logging
+- **Modern Stack**: Built with Pydantic AI, FastAPI, and Prisma
+- **Easy Integration**: Simple Python SDK with comprehensive documentation
 
 ## 🚀 Quick Start
 
@@ -23,17 +22,17 @@ An intelligent governance framework implementing proven Westminster-style separa
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-org/triad-model.git
-cd triad-model
+git clone https://github.com/DamionR/ai-triad-model.git
+cd ai-triad-model
 
-# Create virtual environment (required on macOS)
+# Create virtual environment
 python3 -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
 pip install -r requirements.txt
 
-# Copy environment configuration
+# Set up environment
 cp .env.example .env
 # Edit .env with your API keys
 ```
@@ -41,45 +40,61 @@ cp .env.example .env
 ### Run the Application
 
 ```bash
-# Check configuration
-python scripts/start.py --check-config
-
-# Start development server
+# Start the development server
 python scripts/start.py
 
 # Or use make
 make run
 ```
 
-Access the API documentation at http://localhost:8000/docs
+Access the API at http://localhost:8000/docs
 
 ## 🏗️ Architecture
 
 ```
-Triad Model
-├── Planner Agent (Legislative Branch)
-│   ├── Policy creation and planning
+AI Triad Model
+├── Planner Agent
+│   ├── Strategic planning
 │   ├── Workflow design
-│   └── Legislative review
-├── Executor Agent (Executive Branch)
-│   ├── Implementation and execution
+│   └── Task coordination
+├── Executor Agent  
+│   ├── Plan implementation
 │   ├── Resource management
-│   └── Administrative actions
-├── Evaluator Agent (Judicial Branch)
-│   ├── Constitutional review
-│   ├── Compliance evaluation
-│   └── Judicial decisions
-└── Overwatch Agent (Crown)
-    ├── Constitutional oversight
+│   └── Operational tasks
+├── Evaluator Agent
+│   ├── Quality review
+│   ├── Compliance checking
+│   └── Performance evaluation
+└── Oversight Agent
+    ├── System monitoring
     ├── Crisis management
-    └── System monitoring
+    └── Final approval
+```
+
+## 💡 Basic Usage
+
+```python
+from triad import TriadFramework
+
+# Initialize the framework
+framework = TriadFramework()
+
+# Process a request through all four agents
+result = await framework.process_request(
+    request="Analyze market trends for Q4 strategy",
+    require_consensus=True
+)
+
+print(result.response)
+print(result.audit_trail)
 ```
 
 ## 📚 Documentation
 
-- [Setup Guide](SETUP.md) - Detailed installation instructions
-- [Architecture](docs/system/architecture.md) - System design and principles
-- [API Documentation](http://localhost:8000/docs) - Interactive API docs (when running)
+- [Setup Guide](SETUP.md) - Detailed installation and configuration
+- [API Documentation](http://localhost:8000/docs) - Interactive API docs
+- [Architecture Overview](docs/MULTI_AGENT_ARCHITECTURE.md) - System design
+- [Tools Integration](docs/TOOLS_AND_MCP_GUIDE.md) - MCP and external tools
 
 ## 🛠️ Development
 
@@ -87,24 +102,27 @@ Triad Model
 # Run tests
 make test
 
-# Check code quality
+# Check code quality  
 make lint
 
 # Format code
 make format
 
-# Constitutional compliance check
-make constitutional-check
+# Run full checks
+make check
 ```
+
+## 🌐 Landing Page
+
+Check out the landing page at: https://damionr.github.io/ai-triad-model/
 
 ## 🤝 Contributing
 
-Contributions must maintain constitutional compliance and parliamentary accountability. Please ensure:
-
-1. All tests pass (`make check`)
-2. Constitutional compliance is maintained
-3. Parliamentary procedures are followed
-4. Documentation is updated
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Run tests and checks: `make check`
+5. Submit a pull request
 
 ## 📄 License
 
@@ -112,10 +130,10 @@ MIT License - see LICENSE file for details.
 
 ## 🔗 Links
 
-- [Documentation](https://triad-model.readthedocs.io)
-- [API Reference](http://localhost:8000/docs)
-- [Issues](https://github.com/your-org/triad-model/issues)
+- [Landing Page](https://damionr.github.io/ai-triad-model/)
+- [GitHub Repository](https://github.com/DamionR/ai-triad-model)
+- [Issues](https://github.com/DamionR/ai-triad-model/issues)
 
 ---
 
-Built with Pydantic AI, FastAPI, and constitutional principles 🏛️
+Built with Pydantic AI and modern Python frameworks 🐍
