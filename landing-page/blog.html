@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - AI Triad Model | Latest News, Insights & Updates</title>
+    <meta name="description" content="Stay updated with the latest news, insights, and technical articles about AI Triad Model. Learn from our team and community about multi-agent AI development.">
+    <meta name="keywords" content="AI Triad Model blog, AI news, multi-agent AI insights, technical articles, framework updates">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aitriadmodel.com/blog.html">
+    <meta property="og:title" content="Blog - AI Triad Model">
+    <meta property="og:description" content="Latest news, insights, and technical articles about multi-agent AI development with AI Triad Model.">
+    <meta property="og:image" content="https://aitriadmodel.com/images/og-blog.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aitriadmodel.com/blog.html">
+    <meta property="twitter:title" content="Blog - AI Triad Model">
+    <meta property="twitter:description" content="Latest news, insights, and technical articles about multi-agent AI development with AI Triad Model.">
+    <meta property="twitter:image" content="https://aitriadmodel.com/images/og-blog.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/docs.css">
+    <link rel="stylesheet" href="./css/blog.css">
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/blog.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">
+                    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                    </svg>
+                    <span>AI Triad Model</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="docs.html" class="nav-link">Documentation</a>
+                <a href="api.html" class="nav-link">API Reference</a>
+                <a href="examples.html" class="nav-link">Examples</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="https://github.com/DamionR/ai-triad-model" class="nav-link nav-link--external" target="_blank" rel="noopener">
+                    <span>GitHub</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15,3 21,3 21,9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn--secondary btn--sm">Contact Us</a>
+                <a href="careers.html" class="btn btn--primary btn--sm">Careers</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="docs-header">
+        <div class="container">
+            <div class="docs-header-content">
+                <div class="docs-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Blog</span>
+                </div>
+                
+                <h1 class="docs-title">AI Triad Model Blog</h1>
+                <p class="docs-description">
+                    Stay updated with the latest developments in multi-agent AI systems. Read insights from our team, 
+                    learn about new features, and discover how others are using AI Triad Model in production.
+                </p>
+                
+                <div class="docs-header-actions">
+                    <div class="blog-search">
+                        <input type="text" id="blogSearch" placeholder="Search articles..." class="blog-search-input">
+                        <button class="blog-search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="M21 21L16.65 16.65"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="blog-filters">
+                        <button class="filter-btn active" data-category="all">All Posts</button>
+                        <button class="filter-btn" data-category="announcements">Announcements</button>
+                        <button class="filter-btn" data-category="tutorials">Tutorials</button>
+                        <button class="filter-btn" data-category="insights">Insights</button>
+                        <button class="filter-btn" data-category="case-studies">Case Studies</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <div class="blog-layout">
+        <div class="container">
+            <!-- Featured Post -->
+            <section class="blog-section">
+                <div class="featured-post" data-category="announcements">
+                    <div class="post-image">
+                        <div class="post-image-placeholder">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-category">
+                            <span class="category-tag announcements">Announcement</span>
+                            <span class="post-featured">Featured</span>
+                        </div>
+                        <h2>Introducing AI Triad Model v1.3.0: Advanced Agent Coordination</h2>
+                        <p class="post-excerpt">
+                            We're excited to announce the release of AI Triad Model v1.3.0, featuring a completely rewritten 
+                            agent coordination engine, enhanced configuration system, and built-in performance monitoring. 
+                            This release represents a major step forward in multi-agent AI reliability and scalability.
+                        </p>
+                        <div class="post-meta">
+                            <div class="author-info">
+                                <div class="author-avatar">DR</div>
+                                <div class="author-details">
+                                    <span class="author-name">Damion Rashford</span>
+                                    <span class="post-date">January 25, 2025</span>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <span class="reading-time">8 min read</span>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#post-v1-3-0" class="btn btn--primary">Read Full Article</a>
+                            <button class="btn btn--secondary share-post" data-post="v1-3-0">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="18" cy="5" r="3"/>
+                                    <circle cx="6" cy="12" r="3"/>
+                                    <circle cx="18" cy="19" r="3"/>
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                                </svg>
+                                Share
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Posts -->
+            <section class="blog-section">
+                <div class="blog-section-header">
+                    <h2>Recent Posts</h2>
+                    <p>Latest articles and updates from the AI Triad Model team.</p>
+                </div>
+                
+                <div class="blog-posts">
+                    <article class="blog-post" data-category="tutorials">
+                        <div class="post-header">
+                            <div class="post-category">
+                                <span class="category-tag tutorials">Tutorial</span>
+                            </div>
+                            <h3>Building Production-Ready Multi-Agent Workflows</h3>
+                        </div>
+                        <p class="post-excerpt">
+                            Learn how to design and implement robust multi-agent workflows that can handle high-volume 
+                            production workloads. This comprehensive guide covers error handling, retry logic, monitoring, 
+                            and scaling strategies.
+                        </p>
+                        <div class="post-meta">
+                            <div class="author-info">
+                                <div class="author-avatar">AS</div>
+                                <div class="author-details">
+                                    <span class="author-name">Alex Smith</span>
+                                    <span class="post-date">January 20, 2025</span>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <span class="reading-time">12 min read</span>
+                                <span class="post-views">1.2K views</span>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#post-production-workflows" class="post-read-more">Read More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-post" data-category="case-studies">
+                        <div class="post-header">
+                            <div class="post-category">
+                                <span class="category-tag case-studies">Case Study</span>
+                            </div>
+                            <h3>How TechCorp Reduced Customer Support Response Time by 75%</h3>
+                        </div>
+                        <p class="post-excerpt">
+                            Discover how TechCorp implemented AI Triad Model to transform their customer support operations. 
+                            This case study reveals the architecture, challenges, and impressive results of their multi-agent 
+                            support system deployment.
+                        </p>
+                        <div class="post-meta">
+                            <div class="author-info">
+                                <div class="author-avatar">MJ</div>
+                                <div class="author-details">
+                                    <span class="author-name">Maria Johnson</span>
+                                    <span class="post-date">January 18, 2025</span>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <span class="reading-time">15 min read</span>
+                                <span class="post-views">2.1K views</span>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#post-techcorp-case-study" class="post-read-more">Read More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-post" data-category="insights">
+                        <div class="post-header">
+                            <div class="post-category">
+                                <span class="category-tag insights">Insights</span>
+                            </div>
+                            <h3>The Future of Multi-Agent AI Systems: Trends and Predictions</h3>
+                        </div>
+                        <p class="post-excerpt">
+                            Explore the evolving landscape of multi-agent AI systems and what lies ahead. From autonomous 
+                            coordination to self-improving agent networks, we examine the trends shaping the future of AI 
+                            collaboration.
+                        </p>
+                        <div class="post-meta">
+                            <div class="author-info">
+                                <div class="author-avatar">DR</div>
+                                <div class="author-details">
+                                    <span class="author-name">Damion Rashford</span>
+                                    <span class="post-date">January 15, 2025</span>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <span class="reading-time">10 min read</span>
+                                <span class="post-views">3.4K views</span>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#post-future-multi-agent" class="post-read-more">Read More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-post" data-category="tutorials">
+                        <div class="post-header">
+                            <div class="post-category">
+                                <span class="category-tag tutorials">Tutorial</span>
+                            </div>
+                            <h3>Advanced Agent Communication Patterns</h3>
+                        </div>
+                        <p class="post-excerpt">
+                            Master sophisticated communication patterns between agents in complex workflows. Learn about 
+                            message passing, event-driven coordination, and designing resilient agent communication protocols.
+                        </p>
+                        <div class="post-meta">
+                            <div class="author-info">
+                                <div class="author-avatar">SK</div>
+                                <div class="author-details">
+                                    <span class="author-name">Sarah Kim</span>
+                                    <span class="post-date">January 12, 2025</span>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <span class="reading-time">14 min read</span>
+                                <span class="post-views">987 views</span>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#post-communication-patterns" class="post-read-more">Read More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-post" data-category="announcements">
+                        <div class="post-header">
+                            <div class="post-category">
+                                <span class="category-tag announcements">Announcement</span>
+                            </div>
+                            <h3>AI Triad Model Community Reaches 10,000 Developers</h3>
+                        </div>
+                        <p class="post-excerpt">
+                            We're thrilled to celebrate reaching 10,000 developers in our community! Thank you to everyone 
+                            who has contributed, shared feedback, and helped build the future of multi-agent AI systems together.
+                        </p>
+                        <div class="post-meta">
+                            <div class="author-info">
+                                <div class="author-avatar">Community</div>
+                                <div class="author-details">
+                                    <span class="author-name">AI Triad Model Team</span>
+                                    <span class="post-date">January 10, 2025</span>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <span class="reading-time">5 min read</span>
+                                <span class="post-views">5.2K views</span>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#post-community-milestone" class="post-read-more">Read More</a>
+                        </div>
+                    </article>
+                    
+                    <article class="blog-post" data-category="insights">
+                        <div class="post-header">
+                            <div class="post-category">
+                                <span class="category-tag insights">Insights</span>
+                            </div>
+                            <h3>Performance Benchmarks: AI Triad Model vs Traditional Approaches</h3>
+                        </div>
+                        <p class="post-excerpt">
+                            Comprehensive performance analysis comparing AI Triad Model's multi-agent approach with traditional 
+                            single-agent systems. See how structured coordination improves response quality, consistency, and reliability.
+                        </p>
+                        <div class="post-meta">
+                            <div class="author-info">
+                                <div class="author-avatar">RT</div>
+                                <div class="author-details">
+                                    <span class="author-name">Robert Taylor</span>
+                                    <span class="post-date">January 8, 2025</span>
+                                </div>
+                            </div>
+                            <div class="post-stats">
+                                <span class="reading-time">18 min read</span>
+                                <span class="post-views">1.8K views</span>
+                            </div>
+                        </div>
+                        <div class="post-actions">
+                            <a href="#post-performance-benchmarks" class="post-read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+                
+                <!-- Load More -->
+                <div class="load-more-section">
+                    <button class="btn btn--secondary btn--lg load-more-btn">
+                        Load More Posts
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M6 9L12 15L18 9"/>
+                        </svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- Categories -->
+            <section class="blog-section">
+                <div class="blog-section-header">
+                    <h2>Browse by Category</h2>
+                    <p>Find content that matches your interests and expertise level.</p>
+                </div>
+                
+                <div class="blog-categories">
+                    <div class="category-card" data-category="announcements">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L13.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Announcements</h3>
+                        <p>Product updates, releases, and important news from the AI Triad Model team.</p>
+                        <div class="category-stats">
+                            <span class="post-count">12 posts</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="tutorials">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z"/>
+                                <polyline points="14,2 14,8 20,8"/>
+                                <line x1="16" y1="13" x2="8" y2="13"/>
+                                <line x1="16" y1="17" x2="8" y2="17"/>
+                            </svg>
+                        </div>
+                        <h3>Tutorials</h3>
+                        <p>Step-by-step guides and technical tutorials for building with AI Triad Model.</p>
+                        <div class="category-stats">
+                            <span class="post-count">18 posts</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="insights">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>Insights</h3>
+                        <p>Deep dives into AI technology, industry trends, and thought leadership articles.</p>
+                        <div class="category-stats">
+                            <span class="post-count">15 posts</span>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="case-studies">
+                        <div class="category-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H8M9 12L11 14L15 10M9 1V3M15 1V3"/>
+                            </svg>
+                        </div>
+                        <h3>Case Studies</h3>
+                        <p>Real-world examples and success stories from companies using AI Triad Model.</p>
+                        <div class="category-stats">
+                            <span class="post-count">8 posts</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Newsletter Signup -->
+            <section class="blog-section">
+                <div class="newsletter-signup">
+                    <div class="newsletter-content">
+                        <h2>Stay Updated</h2>
+                        <p>Get the latest AI Triad Model news, tutorials, and insights delivered directly to your inbox.</p>
+                        <form class="newsletter-form" id="newsletterForm">
+                            <div class="form-group">
+                                <input type="email" id="newsletterEmail" placeholder="Enter your email address" class="newsletter-input" required>
+                                <button type="submit" class="btn btn--primary newsletter-submit">
+                                    Subscribe
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="22" y1="2" x2="11" y2="13"></line>
+                                        <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="newsletter-privacy">
+                                <p>We respect your privacy. Unsubscribe at any time. Read our <a href="privacy.html">Privacy Policy</a>.</p>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="newsletter-stats">
+                        <div class="stat">
+                            <div class="stat-number">2,400+</div>
+                            <div class="stat-label">Subscribers</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">Weekly</div>
+                            <div class="stat-label">Updates</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">No Spam</div>
+                            <div class="stat-label">Promise</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Community Posts -->
+            <section class="blog-section">
+                <div class="blog-section-header">
+                    <h2>Community Spotlight</h2>
+                    <p>Highlighting exceptional content and contributions from our community members.</p>
+                </div>
+                
+                <div class="community-posts">
+                    <div class="community-post">
+                        <div class="post-author">
+                            <div class="author-avatar">JD</div>
+                            <div class="author-info">
+                                <span class="author-name">John Doe</span>
+                                <span class="author-role">Senior AI Engineer at TechStart</span>
+                            </div>
+                        </div>
+                        <h3>Scaling Multi-Agent Systems to Handle 1M+ Daily Requests</h3>
+                        <p>Learn how we scaled our AI Triad Model deployment to handle massive traffic while maintaining sub-second response times.</p>
+                        <div class="post-engagement">
+                            <span class="post-likes">342 likes</span>
+                            <span class="post-comments">28 comments</span>
+                        </div>
+                    </div>
+                    
+                    <div class="community-post">
+                        <div class="post-author">
+                            <div class="author-avatar">LC</div>
+                            <div class="author-info">
+                                <span class="author-name">Lisa Chen</span>
+                                <span class="author-role">ML Researcher at DataLab</span>
+                            </div>
+                        </div>
+                        <h3>Implementing Multi-Language Support with Agent Specialization</h3>
+                        <p>A detailed walkthrough of building specialized agents for different languages while maintaining coordination.</p>
+                        <div class="post-engagement">
+                            <span class="post-likes">198 likes</span>
+                            <span class="post-comments">15 comments</span>
+                        </div>
+                    </div>
+                    
+                    <div class="community-post">
+                        <div class="post-author">
+                            <div class="author-avatar">MR</div>
+                            <div class="author-info">
+                                <span class="author-name">Mike Rodriguez</span>
+                                <span class="author-role">DevOps Engineer at CloudCorp</span>
+                            </div>
+                        </div>
+                        <h3>Complete CI/CD Pipeline for AI Triad Model Applications</h3>
+                        <p>From development to production: a comprehensive guide to setting up automated deployment pipelines.</p>
+                        <div class="post-engagement">
+                            <span class="post-likes">267 likes</span>
+                            <span class="post-comments">22 comments</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="community-cta">
+                    <h3>Share Your Story</h3>
+                    <p>Have you built something amazing with AI Triad Model? We'd love to feature your story on our blog.</p>
+                    <a href="contact.html?subject=blog-contribution" class="btn btn--primary">Submit Your Story</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <svg class="footer-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                            </svg>
+                            <span>AI Triad Model</span>
+                        </a>
+                        <p class="footer-description">
+                            Four-Agent AI Framework with structured coordination, 
+                            systematic accountability, and transparent decision-making.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="docs.html">Documentation</a></li>
+                            <li><a href="api.html">API Reference</a></li>
+                            <li><a href="examples.html">Examples</a></li>
+                            <li><a href="guides.html">Guides</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="community.html">Community</a></li>
+                            <li><a href="support.html">Support</a></li>
+                            <li><a href="changelog.html">Changelog</a></li>
+                            <li><a href="https://github.com/DamionR/ai-triad-model">GitHub</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="security.html">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 AI Triad Model Team. Licensed under MIT License.</p>
+                </div>
+                <div class="footer-badge">
+                    <span class="badge badge--outline">⚡ Four-Agent AI Framework</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

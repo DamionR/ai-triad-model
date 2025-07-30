@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security - AI Triad Model | Security Practices and Vulnerability Disclosure</title>
+    <meta name="description" content="Learn about AI Triad Model's security practices, responsible disclosure policy, and how we protect your data and applications.">
+    <meta name="keywords" content="AI Triad Model security, vulnerability disclosure, security practices, data protection, security policy">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aitriadmodel.com/security.html">
+    <meta property="og:title" content="Security - AI Triad Model">
+    <meta property="og:description" content="Comprehensive security practices and responsible vulnerability disclosure for AI Triad Model.">
+    <meta property="og:image" content="https://aitriadmodel.com/images/og-security.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aitriadmodel.com/security.html">
+    <meta property="twitter:title" content="Security - AI Triad Model">
+    <meta property="twitter:description" content="Comprehensive security practices and responsible vulnerability disclosure for AI Triad Model.">
+    <meta property="twitter:image" content="https://aitriadmodel.com/images/og-security.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/docs.css">
+    <link rel="stylesheet" href="./css/legal.css">
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/legal.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">
+                    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                    </svg>
+                    <span>AI Triad Model</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="docs.html" class="nav-link">Documentation</a>
+                <a href="api.html" class="nav-link">API Reference</a>
+                <a href="examples.html" class="nav-link">Examples</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="https://github.com/DamionR/ai-triad-model" class="nav-link nav-link--external" target="_blank" rel="noopener">
+                    <span>GitHub</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15,3 21,3 21,9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn--secondary btn--sm">Contact Us</a>
+                <a href="careers.html" class="btn btn--primary btn--sm">Careers</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Security Header -->
+    <section class="docs-header">
+        <div class="container">
+            <div class="docs-header-content">
+                <div class="docs-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Security</span>
+                </div>
+                
+                <h1 class="docs-title">Security</h1>
+                <p class="docs-description">
+                    Security is fundamental to AI Triad Model. Learn about our security practices, 
+                    vulnerability disclosure process, and how we protect your applications and data.
+                </p>
+                
+                <div class="docs-header-actions">
+                    <a href="mailto:security@aitriadmodel.com" class="btn btn--primary btn--lg">
+                        <span>Report Security Issue</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22S8 18 8 12V7L12 5L16 7V12C16 18 12 22 12 22Z"/>
+                        </svg>
+                    </a>
+                    <a href="#security-policy" class="btn btn--secondary btn--lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z"/>
+                            <polyline points="14,2 14,8 20,8"/>
+                        </svg>
+                        <span>Security Policy</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Content -->
+    <div class="legal-layout">
+        <div class="container">
+            <!-- Table of Contents -->
+            <div class="legal-toc">
+                <h2>Table of Contents</h2>
+                <nav class="toc-nav">
+                    <a href="#overview" class="toc-link">1. Security Overview</a>
+                    <a href="#framework-security" class="toc-link">2. Framework Security</a>
+                    <a href="#infrastructure-security" class="toc-link">3. Infrastructure Security</a>
+                    <a href="#data-protection" class="toc-link">4. Data Protection</a>
+                    <a href="#vulnerability-disclosure" class="toc-link">5. Vulnerability Disclosure</a>
+                    <a href="#security-best-practices" class="toc-link">6. Security Best Practices</a>
+                    <a href="#security-updates" class="toc-link">7. Security Updates</a>
+                    <a href="#compliance" class="toc-link">8. Compliance</a>
+                    <a href="#incident-response" class="toc-link">9. Incident Response</a>
+                    <a href="#contact" class="toc-link">10. Contact Security Team</a>
+                </nav>
+            </div>
+
+            <!-- Legal Content -->
+            <div class="legal-content">
+                <!-- Security Overview -->
+                <section class="legal-section" id="overview">
+                    <h2>1. Security Overview</h2>
+                    <p>
+                        Security is a core principle in the design and development of AI Triad Model. 
+                        We implement comprehensive security measures across all aspects of our framework, 
+                        infrastructure, and processes to protect our users and their applications.
+                    </p>
+                    
+                    <div class="legal-success">
+                        <h4>Our Security Commitment</h4>
+                        <p>
+                            We are committed to maintaining the highest security standards through continuous 
+                            monitoring, regular security audits, and prompt response to security issues.
+                        </p>
+                    </div>
+                    
+                    <h3>Security Principles</h3>
+                    <ul>
+                        <li><strong>Security by Design:</strong> Security considerations are integrated from the ground up</li>
+                        <li><strong>Defense in Depth:</strong> Multiple layers of security controls protect our systems</li>
+                        <li><strong>Principle of Least Privilege:</strong> Access is granted only as needed</li>
+                        <li><strong>Transparency:</strong> Open communication about security practices and issues</li>
+                        <li><strong>Continuous Improvement:</strong> Regular assessment and enhancement of security measures</li>
+                    </ul>
+                </section>
+
+                <!-- Framework Security -->
+                <section class="legal-section" id="framework-security">
+                    <h2>2. Framework Security</h2>
+                    
+                    <h3>2.1 Secure Development Practices</h3>
+                    <p>The AI Triad Model framework is developed following secure coding practices:</p>
+                    <ul>
+                        <li><strong>Code Review:</strong> All code changes undergo thorough security-focused peer review</li>
+                        <li><strong>Static Analysis:</strong> Automated security scanning tools analyze code for vulnerabilities</li>
+                        <li><strong>Dependency Management:</strong> Regular updates and security scanning of dependencies</li>
+                        <li><strong>Input Validation:</strong> Comprehensive validation and sanitization of all inputs</li>
+                        <li><strong>Error Handling:</strong> Secure error handling that doesn't leak sensitive information</li>
+                    </ul>
+                    
+                    <h3>2.2 Authentication and Authorization</h3>
+                    <ul>
+                        <li>Secure API key management and rotation</li>
+                        <li>Role-based access control (RBAC) for multi-user environments</li>
+                        <li>Session management with secure tokens</li>
+                        <li>Support for enterprise authentication protocols</li>
+                    </ul>
+                    
+                    <h3>2.3 Data Handling Security</h3>
+                    <ul>
+                        <li>Encryption of sensitive data at rest and in transit</li>
+                        <li>Secure memory management to prevent data leaks</li>
+                        <li>Configurable data retention and deletion policies</li>
+                        <li>Protection against injection attacks and data exfiltration</li>
+                    </ul>
+                    
+                    <div class="legal-card">
+                        <h3>Security Testing</h3>
+                        <p>
+                            We conduct regular security testing including penetration testing, vulnerability 
+                            assessments, and fuzzing to identify and address potential security issues.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Infrastructure Security -->
+                <section class="legal-section" id="infrastructure-security">
+                    <h2>3. Infrastructure Security</h2>
+                    
+                    <h3>3.1 Cloud Security</h3>
+                    <p>Our infrastructure is built on secure cloud platforms with:</p>
+                    <ul>
+                        <li><strong>Network Security:</strong> Firewalls, VPCs, and network segmentation</li>
+                        <li><strong>Access Control:</strong> Multi-factor authentication for all administrative access</li>
+                        <li><strong>Monitoring:</strong> 24/7 security monitoring and intrusion detection</li>
+                        <li><strong>Compliance:</strong> SOC 2, ISO 27001, and other security certifications</li>
+                    </ul>
+                    
+                    <h3>3.2 Application Security</h3>
+                    <ul>
+                        <li>Web Application Firewall (WAF) protection</li>
+                        <li>DDoS protection and rate limiting</li>
+                        <li>SSL/TLS encryption for all communications</li>
+                        <li>Regular security patches and updates</li>
+                    </ul>
+                    
+                    <h3>3.3 Data Center Security</h3>
+                    <ul>
+                        <li>Physical security controls at data centers</li>
+                        <li>Redundant power and network connectivity</li>
+                        <li>Environmental monitoring and controls</li>
+                        <li>Secure data destruction procedures</li>
+                    </ul>
+                </section>
+
+                <!-- Data Protection -->
+                <section class="legal-section" id="data-protection">
+                    <h2>4. Data Protection</h2>
+                    
+                    <h3>4.1 Encryption</h3>
+                    <p>We protect data using industry-standard encryption:</p>
+                    <ul>
+                        <li><strong>In Transit:</strong> TLS 1.3 for all network communications</li>
+                        <li><strong>At Rest:</strong> AES-256 encryption for stored data</li>
+                        <li><strong>Key Management:</strong> Hardware security modules (HSMs) for key protection</li>
+                        <li><strong>Algorithm Updates:</strong> Regular review and update of cryptographic algorithms</li>
+                    </ul>
+                    
+                    <h3>4.2 Data Classification</h3>
+                    <ul>
+                        <li><strong>Public:</strong> Documentation, marketing materials</li>
+                        <li><strong>Internal:</strong> Business information, non-sensitive user data</li>
+                        <li><strong>Confidential:</strong> User personal information, API keys</li>
+                        <li><strong>Restricted:</strong> Security credentials, financial information</li>
+                    </ul>
+                    
+                    <h3>4.3 Data Minimization</h3>
+                    <p>We follow data minimization principles:</p>
+                    <ul>
+                        <li>Collect only necessary data for functionality</li>
+                        <li>Implement data retention policies</li>
+                        <li>Provide user controls for data deletion</li>
+                        <li>Regular audits of data collection practices</li>
+                    </ul>
+                </section>
+
+                <!-- Vulnerability Disclosure -->
+                <section class="legal-section" id="vulnerability-disclosure">
+                    <h2>5. Responsible Vulnerability Disclosure</h2>
+                    
+                    <h3>5.1 Reporting Security Issues</h3>
+                    <p>
+                        We welcome and encourage responsible disclosure of security vulnerabilities. 
+                        If you discover a security issue, please report it to us privately before 
+                        disclosing it publicly.
+                    </p>
+                    
+                    <div class="legal-warning">
+                        <h4>Critical Security Issues</h4>
+                        <p>
+                            For critical security vulnerabilities that could pose immediate risk to users, 
+                            please contact our security team immediately at 
+                            <a href="mailto:security@aitriadmodel.com">security@aitriadmodel.com</a>.
+                        </p>
+                    </div>
+                    
+                    <h3>5.2 What to Include</h3>
+                    <p>When reporting a security issue, please include:</p>
+                    <ul>
+                        <li>Detailed description of the vulnerability</li>
+                        <li>Steps to reproduce the issue</li>
+                        <li>Potential impact and severity assessment</li>
+                        <li>Proof of concept (if applicable)</li>
+                        <li>Your contact information for follow-up</li>
+                    </ul>
+                    
+                    <h3>5.3 Our Response Process</h3>
+                    <ol>
+                        <li><strong>Acknowledgment:</strong> We'll acknowledge receipt within 24 hours</li>
+                        <li><strong>Investigation:</strong> Our security team will investigate the issue</li>
+                        <li><strong>Communication:</strong> We'll keep you updated on our progress</li>
+                        <li><strong>Resolution:</strong> We'll develop and deploy a fix</li>
+                        <li><strong>Disclosure:</strong> Coordinated public disclosure after resolution</li>
+                    </ol>
+                    
+                    <h3>5.4 Security Researcher Recognition</h3>
+                    <p>
+                        We appreciate the security research community and maintain a hall of fame 
+                        for researchers who responsibly disclose vulnerabilities to us.
+                    </p>
+                    
+                    <div class="legal-card">
+                        <h3>Bug Bounty Program</h3>
+                        <p>
+                            We are considering launching a bug bounty program to reward security researchers 
+                            who help us identify and fix security vulnerabilities. Stay tuned for updates.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Security Best Practices -->
+                <section class="legal-section" id="security-best-practices">
+                    <h2>6. Security Best Practices for Users</h2>
+                    
+                    <h3>6.1 API Key Management</h3>
+                    <ul>
+                        <li>Store API keys securely using environment variables or key management systems</li>
+                        <li>Never commit API keys to version control systems</li>
+                        <li>Rotate API keys regularly</li>
+                        <li>Use different API keys for different environments (dev, staging, prod)</li>
+                        <li>Monitor API key usage for unusual activity</li>
+                    </ul>
+                    
+                    <h3>6.2 Application Security</h3>
+                    <ul>
+                        <li>Implement proper input validation and sanitization</li>
+                        <li>Use secure communication protocols (HTTPS/TLS)</li>
+                        <li>Implement rate limiting and throttling</li>
+                        <li>Log security events for monitoring and auditing</li>
+                        <li>Keep dependencies and frameworks updated</li>
+                    </ul>
+                    
+                    <h3>6.3 Data Handling</h3>
+                    <ul>
+                        <li>Encrypt sensitive data before sending to AI models</li>
+                        <li>Implement data retention and deletion policies</li>
+                        <li>Use data anonymization and pseudonymization techniques</li>
+                        <li>Comply with relevant data protection regulations</li>
+                        <li>Regularly audit data access and usage</li>
+                    </ul>
+                    
+                    <h3>6.4 Infrastructure Security</h3>
+                    <ul>
+                        <li>Use secure cloud configurations and follow cloud security best practices</li>
+                        <li>Implement network segmentation and firewalls</li>
+                        <li>Enable logging and monitoring for security events</li>
+                        <li>Regularly update and patch systems</li>
+                        <li>Use infrastructure as code for consistent security configurations</li>
+                    </ul>
+                </section>
+
+                <!-- Security Updates -->
+                <section class="legal-section" id="security-updates">
+                    <h2>7. Security Updates and Notifications</h2>
+                    
+                    <h3>7.1 Security Advisories</h3>
+                    <p>We publish security advisories for:</p>
+                    <ul>
+                        <li>Security vulnerabilities in AI Triad Model framework</li>
+                        <li>Security issues in dependencies</li>
+                        <li>Security best practice updates</li>
+                        <li>Infrastructure security incidents</li>
+                    </ul>
+                    
+                    <h3>7.2 Notification Channels</h3>
+                    <p>Stay informed about security updates through:</p>
+                    <ul>
+                        <li><strong>GitHub Security Advisories:</strong> Published in our GitHub repository</li>
+                        <li><strong>Security Mailing List:</strong> Subscribe for critical security notifications</li>
+                        <li><strong>Release Notes:</strong> Security fixes documented in release notes</li>
+                        <li><strong>Website:</strong> Security notices posted on our website</li>
+                    </ul>
+                    
+                    <h3>7.3 Update Recommendations</h3>
+                    <ul>
+                        <li>Always use the latest stable version of AI Triad Model</li>
+                        <li>Subscribe to security notifications for timely updates</li>
+                        <li>Test security updates in non-production environments first</li>
+                        <li>Implement automated dependency updates where possible</li>
+                    </ul>
+                </section>
+
+                <!-- Compliance -->
+                <section class="legal-section" id="compliance">
+                    <h2>8. Compliance and Certifications</h2>
+                    
+                    <h3>8.1 Security Standards</h3>
+                    <p>We align with industry security standards including:</p>
+                    <ul>
+                        <li><strong>ISO 27001:</strong> Information security management systems</li>
+                        <li><strong>SOC 2 Type II:</strong> Security, availability, and confidentiality</li>
+                        <li><strong>NIST Cybersecurity Framework:</strong> Risk management approach</li>
+                        <li><strong>OWASP Top 10:</strong> Web application security risks</li>
+                    </ul>
+                    
+                    <h3>8.2 Privacy Regulations</h3>
+                    <p>Our security practices support compliance with:</p>
+                    <ul>
+                        <li><strong>GDPR:</strong> EU General Data Protection Regulation</li>
+                        <li><strong>CCPA:</strong> California Consumer Privacy Act</li>
+                        <li><strong>PIPEDA:</strong> Personal Information Protection and Electronic Documents Act</li>
+                        <li><strong>SOX:</strong> Sarbanes-Oxley Act (for applicable data)</li>
+                    </ul>
+                    
+                    <h3>8.3 Industry-Specific Requirements</h3>
+                    <p>We can support customers with specific compliance needs:</p>
+                    <ul>
+                        <li><strong>HIPAA:</strong> Healthcare applications</li>
+                        <li><strong>PCI DSS:</strong> Payment processing</li>
+                        <li><strong>FERPA:</strong> Educational records</li>
+                        <li><strong>FedRAMP:</strong> U.S. government cloud services</li>
+                    </ul>
+                </section>
+
+                <!-- Incident Response -->
+                <section class="legal-section" id="incident-response">
+                    <h2>9. Security Incident Response</h2>
+                    
+                    <h3>9.1 Incident Response Team</h3>
+                    <p>
+                        Our dedicated security incident response team is available 24/7 to handle 
+                        security incidents and coordinate response efforts.
+                    </p>
+                    
+                    <h3>9.2 Response Process</h3>
+                    <ol>
+                        <li><strong>Detection:</strong> Continuous monitoring identifies potential incidents</li>
+                        <li><strong>Assessment:</strong> Rapid assessment of incident scope and impact</li>
+                        <li><strong>Containment:</strong> Immediate actions to contain the incident</li>
+                        <li><strong>Investigation:</strong> Thorough investigation to understand root cause</li>
+                        <li><strong>Recovery:</strong> Restore normal operations securely</li>
+                        <li><strong>Communication:</strong> Transparent communication with affected users</li>
+                        <li><strong>Lessons Learned:</strong> Post-incident review and improvements</li>
+                    </ol>
+                    
+                    <h3>9.3 Communication During Incidents</h3>
+                    <p>During security incidents, we will:</p>
+                    <ul>
+                        <li>Provide timely updates on our status page</li>
+                        <li>Send notifications to affected users</li>
+                        <li>Publish post-incident reports with lessons learned</li>
+                        <li>Be transparent about impacts and remediation steps</li>
+                    </ul>
+                    
+                    <div class="legal-notice">
+                        <h4>Incident Reporting</h4>
+                        <p>
+                            If you experience or suspect a security incident related to AI Triad Model, 
+                            please report it immediately to 
+                            <a href="mailto:security@aitriadmodel.com">security@aitriadmodel.com</a>.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Contact Security Team -->
+                <section class="legal-section" id="contact">
+                    <h2>10. Contact Our Security Team</h2>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <strong>Security Issues:</strong> <a href="mailto:security@aitriadmodel.com">security@aitriadmodel.com</a>
+                        </div>
+                        <div class="contact-method">
+                            <strong>Security Questions:</strong> <a href="mailto:security-questions@aitriadmodel.com">security-questions@aitriadmodel.com</a>
+                        </div>
+                        <div class="contact-method">
+                            <strong>PGP Key:</strong> <a href="/pgp-key.txt" target="_blank">Download PGP Key</a>
+                        </div>
+                        <div class="contact-method">
+                            <strong>General Contact:</strong> <a href="contact.html">Contact Form</a>
+                        </div>
+                    </div>
+                    
+                    <h3>Security Team Response Times</h3>
+                    <ul>
+                        <li><strong>Critical Issues:</strong> Within 2 hours</li>
+                        <li><strong>High Severity:</strong> Within 24 hours</li>
+                        <li><strong>Medium/Low Severity:</strong> Within 72 hours</li>
+                        <li><strong>General Questions:</strong> Within 5 business days</li>
+                    </ul>
+                </section>
+
+                <!-- Security Acknowledgments -->
+                <section class="legal-section">
+                    <div class="legal-card">
+                        <h3>Security Research Community</h3>
+                        <p>
+                            We extend our gratitude to the security research community for their 
+                            contributions to making AI Triad Model more secure. We welcome 
+                            responsible disclosure and collaboration in improving our security posture.
+                        </p>
+                    </div>
+                </section>
+
+                <!-- Security Contact Card -->
+                <section class="legal-section">
+                    <div class="rights-request-card">
+                        <h3>Found a Security Issue?</h3>
+                        <p>Help us keep AI Triad Model secure by reporting security vulnerabilities responsibly.</p>
+                        <a href="mailto:security@aitriadmodel.com?subject=Security%20Vulnerability%20Report" class="btn btn--primary">Report Security Issue</a>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <svg class="footer-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                            </svg>
+                            <span>AI Triad Model</span>
+                        </a>
+                        <p class="footer-description">
+                            Four-Agent AI Framework with structured coordination, 
+                            systematic accountability, and transparent decision-making.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="docs.html">Documentation</a></li>
+                            <li><a href="api.html">API Reference</a></li>
+                            <li><a href="examples.html">Examples</a></li>
+                            <li><a href="guides.html">Guides</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="community.html">Community</a></li>
+                            <li><a href="support.html">Support</a></li>
+                            <li><a href="changelog.html">Changelog</a></li>
+                            <li><a href="https://github.com/DamionR/ai-triad-model">GitHub</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="security.html">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 AI Triad Model Team. Licensed under MIT License.</p>
+                </div>
+                <div class="footer-badge">
+                    <span class="badge badge--outline">⚡ Four-Agent AI Framework</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

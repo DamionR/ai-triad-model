@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guides & Tutorials - AI Triad Model | Learn Multi-Agent AI Development</title>
+    <meta name="description" content="Learn AI Triad Model with comprehensive guides and tutorials. From beginner basics to advanced patterns, master multi-agent AI development step by step.">
+    <meta name="keywords" content="AI Triad Model tutorials, guides, multi-agent AI tutorial, AI framework guide, learn AI development">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aitriadmodel.com/guides.html">
+    <meta property="og:title" content="Guides & Tutorials - AI Triad Model">
+    <meta property="og:description" content="Comprehensive tutorials and guides for mastering multi-agent AI development with AI Triad Model.">
+    <meta property="og:image" content="https://aitriadmodel.com/images/og-guides.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aitriadmodel.com/guides.html">
+    <meta property="twitter:title" content="Guides & Tutorials - AI Triad Model">
+    <meta property="twitter:description" content="Comprehensive tutorials and guides for mastering multi-agent AI development with AI Triad Model.">
+    <meta property="twitter:image" content="https://aitriadmodel.com/images/og-guides.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/docs.css">
+    <link rel="stylesheet" href="./css/guides.css">
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/guides.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">
+                    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                    </svg>
+                    <span>AI Triad Model</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="docs.html" class="nav-link">Documentation</a>
+                <a href="api.html" class="nav-link">API Reference</a>
+                <a href="examples.html" class="nav-link">Examples</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="https://github.com/DamionR/ai-triad-model" class="nav-link nav-link--external" target="_blank" rel="noopener">
+                    <span>GitHub</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15,3 21,3 21,9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn--secondary btn--sm">Contact Us</a>
+                <a href="careers.html" class="btn btn--primary btn--sm">Careers</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Guides Header -->
+    <section class="docs-header">
+        <div class="container">
+            <div class="docs-header-content">
+                <div class="docs-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Guides & Tutorials</span>
+                </div>
+                
+                <h1 class="docs-title">Guides & Tutorials</h1>
+                <p class="docs-description">
+                    Master AI Triad Model with our comprehensive learning resources. From your first multi-agent workflow 
+                    to advanced coordination patterns, we'll guide you every step of the way.
+                </p>
+                
+                <div class="docs-header-actions">
+                    <div class="guides-search">
+                        <input type="text" id="guidesSearch" placeholder="Search guides..." class="guides-search-input">
+                        <button class="guides-search-btn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="M21 21L16.65 16.65"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div class="skill-level-filter">
+                        <button class="skill-btn active" data-level="all">All Levels</button>
+                        <button class="skill-btn" data-level="beginner">Beginner</button>
+                        <button class="skill-btn" data-level="intermediate">Intermediate</button>
+                        <button class="skill-btn" data-level="advanced">Advanced</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guides Content -->
+    <div class="guides-layout">
+        <div class="container">
+            <!-- Learning Paths -->
+            <section class="guides-section">
+                <div class="guides-section-header">
+                    <h2>Learning Paths</h2>
+                    <p>Structured learning journeys to master different aspects of AI Triad Model.</p>
+                </div>
+                
+                <div class="learning-paths">
+                    <div class="learning-path">
+                        <div class="path-header">
+                            <div class="path-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                </svg>
+                            </div>
+                            <div class="path-info">
+                                <h3>Getting Started</h3>
+                                <p>Perfect for developers new to multi-agent AI systems</p>
+                                <div class="path-meta">
+                                    <span class="path-duration">4-6 hours</span>
+                                    <span class="path-level beginner">Beginner</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="path-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0 of 5 completed</span>
+                        </div>
+                        <div class="path-guides">
+                            <a href="#installation" class="path-guide">
+                                <span class="guide-number">1</span>
+                                <span class="guide-title">Installation & Setup</span>
+                                <span class="guide-duration">30 min</span>
+                            </a>
+                            <a href="#first-workflow" class="path-guide">
+                                <span class="guide-number">2</span>
+                                <span class="guide-title">Your First Workflow</span>
+                                <span class="guide-duration">45 min</span>
+                            </a>
+                            <a href="#understanding-agents" class="path-guide">
+                                <span class="guide-number">3</span>
+                                <span class="guide-title">Understanding the Four Agents</span>
+                                <span class="guide-duration">60 min</span>
+                            </a>
+                            <a href="#configuration" class="path-guide">
+                                <span class="guide-number">4</span>
+                                <span class="guide-title">Configuration & Customization</span>
+                                <span class="guide-duration">45 min</span>
+                            </a>
+                            <a href="#best-practices" class="path-guide">
+                                <span class="guide-number">5</span>
+                                <span class="guide-title">Best Practices & Tips</span>
+                                <span class="guide-duration">30 min</span>
+                            </a>
+                        </div>
+                        <div class="path-actions">
+                            <a href="#installation" class="btn btn--primary">Start Learning</a>
+                            <button class="btn btn--secondary track-progress">Track Progress</button>
+                        </div>
+                    </div>
+                    
+                    <div class="learning-path">
+                        <div class="path-header">
+                            <div class="path-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="18" cy="5" r="3"/>
+                                    <circle cx="6" cy="12" r="3"/>
+                                    <circle cx="18" cy="19" r="3"/>
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                                </svg>
+                            </div>
+                            <div class="path-info">
+                                <h3>Advanced Coordination</h3>
+                                <p>Master complex multi-agent coordination patterns</p>
+                                <div class="path-meta">
+                                    <span class="path-duration">8-10 hours</span>
+                                    <span class="path-level advanced">Advanced</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="path-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0 of 6 completed</span>
+                        </div>
+                        <div class="path-guides">
+                            <a href="#custom-agents" class="path-guide">
+                                <span class="guide-number">1</span>
+                                <span class="guide-title">Custom Agent Development</span>
+                                <span class="guide-duration">90 min</span>
+                            </a>
+                            <a href="#agent-communication" class="path-guide">
+                                <span class="guide-number">2</span>
+                                <span class="guide-title">Agent Communication Protocols</span>
+                                <span class="guide-duration">75 min</span>
+                            </a>
+                            <a href="#parallel-workflows" class="path-guide">
+                                <span class="guide-number">3</span>
+                                <span class="guide-title">Parallel Workflow Execution</span>
+                                <span class="guide-duration">60 min</span>
+                            </a>
+                            <a href="#error-handling" class="path-guide">
+                                <span class="guide-number">4</span>
+                                <span class="guide-title">Advanced Error Handling</span>
+                                <span class="guide-duration">45 min</span>
+                            </a>
+                            <a href="#performance-optimization" class="path-guide">
+                                <span class="guide-number">5</span>
+                                <span class="guide-title">Performance Optimization</span>
+                                <span class="guide-duration">90 min</span>
+                            </a>
+                            <a href="#monitoring" class="path-guide">
+                                <span class="guide-number">6</span>
+                                <span class="guide-title">Monitoring & Observability</span>
+                                <span class="guide-duration">60 min</span>
+                            </a>
+                        </div>
+                        <div class="path-actions">
+                            <a href="#custom-agents" class="btn btn--primary">Start Learning</a>
+                            <button class="btn btn--secondary track-progress">Track Progress</button>
+                        </div>
+                    </div>
+                    
+                    <div class="learning-path">
+                        <div class="path-header">
+                            <div class="path-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H8M9 12L11 14L15 10M9 1V3M15 1V3"/>
+                                </svg>
+                            </div>
+                            <div class="path-info">
+                                <h3>Production Deployment</h3>
+                                <p>Deploy and scale AI Triad Model in production environments</p>
+                                <div class="path-meta">
+                                    <span class="path-duration">6-8 hours</span>
+                                    <span class="path-level intermediate">Intermediate</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="path-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 0%"></div>
+                            </div>
+                            <span class="progress-text">0 of 5 completed</span>
+                        </div>
+                        <div class="path-guides">
+                            <a href="#deployment-strategies" class="path-guide">
+                                <span class="guide-number">1</span>
+                                <span class="guide-title">Deployment Strategies</span>
+                                <span class="guide-duration">75 min</span>
+                            </a>
+                            <a href="#security-hardening" class="path-guide">
+                                <span class="guide-number">2</span>
+                                <span class="guide-title">Security & Hardening</span>
+                                <span class="guide-duration">90 min</span>
+                            </a>
+                            <a href="#scaling" class="path-guide">
+                                <span class="guide-number">3</span>
+                                <span class="guide-title">Scaling & Load Balancing</span>
+                                <span class="guide-duration">80 min</span>
+                            </a>
+                            <a href="#monitoring-production" class="path-guide">
+                                <span class="guide-number">4</span>
+                                <span class="guide-title">Production Monitoring</span>
+                                <span class="guide-duration">60 min</span>
+                            </a>
+                            <a href="#troubleshooting" class="path-guide">
+                                <span class="guide-number">5</span>
+                                <span class="guide-title">Troubleshooting Guide</span>
+                                <span class="guide-duration">45 min</span>
+                            </a>
+                        </div>
+                        <div class="path-actions">
+                            <a href="#deployment-strategies" class="btn btn--primary">Start Learning</a>
+                            <button class="btn btn--secondary track-progress">Track Progress</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Featured Guides -->
+            <section class="guides-section">
+                <div class="guides-section-header">
+                    <h2>Featured Guides</h2>
+                    <p>Popular tutorials and comprehensive guides to get you started quickly.</p>
+                </div>
+                
+                <div class="featured-guides">
+                    <div class="guide-card featured" data-level="beginner" data-category="getting-started">
+                        <div class="guide-header">
+                            <div class="guide-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                </svg>
+                            </div>
+                            <div class="guide-meta">
+                                <span class="guide-level beginner">Beginner</span>
+                                <span class="guide-duration">30 min</span>
+                            </div>
+                        </div>
+                        <h3>Quick Start Guide</h3>
+                        <p>Get up and running with AI Triad Model in under 30 minutes. Install the framework, create your first agent workflow, and see the four-agent system in action.</p>
+                        <div class="guide-topics">
+                            <span class="topic-tag">Installation</span>
+                            <span class="topic-tag">First Steps</span>
+                            <span class="topic-tag">Hello World</span>
+                        </div>
+                        <div class="guide-actions">
+                            <a href="#quick-start" class="btn btn--primary">Start Tutorial</a>
+                            <button class="btn btn--secondary bookmark-guide" data-guide="quick-start">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M19 21L12 16L5 21V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V21Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="guide-card featured" data-level="intermediate" data-category="development">
+                        <div class="guide-header">
+                            <div class="guide-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16,18 22,12 16,6"/>
+                                    <polyline points="8,6 2,12 8,18"/>
+                                </svg>
+                            </div>
+                            <div class="guide-meta">
+                                <span class="guide-level intermediate">Intermediate</span>
+                                <span class="guide-duration">90 min</span>
+                            </div>
+                        </div>
+                        <h3>Building Custom Agents</h3>
+                        <p>Learn how to create custom agent types with specialized behaviors. Extend the core framework to build agents tailored to your specific use cases and requirements.</p>
+                        <div class="guide-topics">
+                            <span class="topic-tag">Custom Agents</span>
+                            <span class="topic-tag">Agent APIs</span>
+                            <span class="topic-tag">Plugins</span>
+                        </div>
+                        <div class="guide-actions">
+                            <a href="#custom-agents" class="btn btn--primary">Start Tutorial</a>
+                            <button class="btn btn--secondary bookmark-guide" data-guide="custom-agents">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M19 21L12 16L5 21V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V21Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="guide-card featured" data-level="advanced" data-category="optimization">
+                        <div class="guide-header">
+                            <div class="guide-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                            </div>
+                            <div class="guide-meta">
+                                <span class="guide-level advanced">Advanced</span>
+                                <span class="guide-duration">120 min</span>
+                            </div>
+                        </div>
+                        <h3>Performance Optimization</h3>
+                        <p>Master advanced techniques for optimizing AI Triad Model performance. Learn about caching, parallel execution, resource management, and scaling strategies.</p>
+                        <div class="guide-topics">
+                            <span class="topic-tag">Performance</span>
+                            <span class="topic-tag">Caching</span>
+                            <span class="topic-tag">Scaling</span>
+                        </div>
+                        <div class="guide-actions">
+                            <a href="#performance-optimization" class="btn btn--primary">Start Tutorial</a>
+                            <button class="btn btn--secondary bookmark-guide" data-guide="performance">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M19 21L12 16L5 21V5C5 4.46957 5.21071 3.96086 5.58579 3.58579C5.96086 3.21071 6.46957 3 7 3H17C17.5304 3 18.0391 3.21071 18.4142 3.58579C18.7893 3.96086 19 4.46957 19 5V21Z"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Guide Categories -->
+            <section class="guides-section">
+                <div class="guides-section-header">
+                    <h2>Browse by Category</h2>
+                    <p>Find guides organized by topic and skill level.</p>
+                </div>
+                
+                <div class="guide-categories">
+                    <div class="category-card" data-category="getting-started">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                </svg>
+                            </div>
+                            <h3>Getting Started</h3>
+                            <span class="category-count">8 guides</span>
+                        </div>
+                        <p>Essential tutorials for new users to get up and running quickly.</p>
+                        <div class="category-guides">
+                            <a href="#installation" class="category-guide">Installation & Setup</a>
+                            <a href="#first-workflow" class="category-guide">Your First Workflow</a>
+                            <a href="#understanding-agents" class="category-guide">Understanding Agents</a>
+                            <a href="#configuration" class="category-guide">Basic Configuration</a>
+                        </div>
+                        <div class="category-actions">
+                            <a href="#getting-started" class="btn btn--primary btn--sm">View All</a>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="development">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16,18 22,12 16,6"/>
+                                    <polyline points="8,6 2,12 8,18"/>
+                                </svg>
+                            </div>
+                            <h3>Development</h3>
+                            <span class="category-count">12 guides</span>
+                        </div>
+                        <p>In-depth guides for building applications with AI Triad Model.</p>
+                        <div class="category-guides">
+                            <a href="#custom-agents" class="category-guide">Custom Agent Development</a>
+                            <a href="#workflows" class="category-guide">Complex Workflows</a>
+                            <a href="#integrations" class="category-guide">Third-party Integrations</a>
+                            <a href="#testing" class="category-guide">Testing Strategies</a>
+                        </div>
+                        <div class="category-actions">
+                            <a href="#development" class="btn btn--primary btn--sm">View All</a>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="deployment">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L2 7L12 12L22 7L12 2Z"/>
+                                    <path d="M2 17L12 22L22 17"/>
+                                    <path d="M2 12L12 17L22 12"/>
+                                </svg>
+                            </div>
+                            <h3>Deployment</h3>
+                            <span class="category-count">9 guides</span>
+                        </div>
+                        <p>Production deployment, scaling, and operational best practices.</p>
+                        <div class="category-guides">
+                            <a href="#docker" class="category-guide">Docker Deployment</a>
+                            <a href="#kubernetes" class="category-guide">Kubernetes Setup</a>
+                            <a href="#cloud-deployment" class="category-guide">Cloud Platforms</a>
+                            <a href="#monitoring" class="category-guide">Monitoring Setup</a>
+                        </div>
+                        <div class="category-actions">
+                            <a href="#deployment" class="btn btn--primary btn--sm">View All</a>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="optimization">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                            </div>
+                            <h3>Optimization</h3>
+                            <span class="category-count">7 guides</span>
+                        </div>
+                        <p>Performance tuning, cost optimization, and efficiency improvements.</p>
+                        <div class="category-guides">
+                            <a href="#performance" class="category-guide">Performance Tuning</a>
+                            <a href="#caching" class="category-guide">Caching Strategies</a>
+                            <a href="#cost-optimization" class="category-guide">Cost Optimization</a>
+                            <a href="#resource-management" class="category-guide">Resource Management</a>
+                        </div>
+                        <div class="category-actions">
+                            <a href="#optimization" class="btn btn--primary btn--sm">View All</a>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="security">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22S8 18 8 12V7L12 5L16 7V12C16 18 12 22 12 22Z"/>
+                                </svg>
+                            </div>
+                            <h3>Security</h3>
+                            <span class="category-count">6 guides</span>
+                        </div>
+                        <p>Security best practices, authentication, and data protection.</p>
+                        <div class="category-guides">
+                            <a href="#security-basics" class="category-guide">Security Fundamentals</a>
+                            <a href="#authentication" class="category-guide">Authentication Setup</a>
+                            <a href="#data-protection" class="category-guide">Data Protection</a>
+                            <a href="#secure-deployment" class="category-guide">Secure Deployment</a>
+                        </div>
+                        <div class="category-actions">
+                            <a href="#security" class="btn btn--primary btn--sm">View All</a>
+                        </div>
+                    </div>
+                    
+                    <div class="category-card" data-category="troubleshooting">
+                        <div class="category-header">
+                            <div class="category-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="15" y1="9" x2="9" y2="15"/>
+                                    <line x1="9" y1="9" x2="15" y2="15"/>
+                                </svg>
+                            </div>
+                            <h3>Troubleshooting</h3>
+                            <span class="category-count">10 guides</span>
+                        </div>
+                        <p>Common issues, debugging techniques, and problem-solving guides.</p>
+                        <div class="category-guides">
+                            <a href="#common-issues" class="category-guide">Common Issues</a>
+                            <a href="#debugging" class="category-guide">Debugging Techniques</a>
+                            <a href="#error-handling" class="category-guide">Error Handling</a>
+                            <a href="#performance-issues" class="category-guide">Performance Issues</a>
+                        </div>
+                        <div class="category-actions">
+                            <a href="#troubleshooting" class="btn btn--primary btn--sm">View All</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Video Tutorials -->
+            <section class="guides-section" id="videos">
+                <div class="guides-section-header">
+                    <h2>Video Tutorials</h2>
+                    <p>Learn visually with our comprehensive video tutorial series.</p>
+                </div>
+                
+                <div class="video-tutorials">
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="video-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="5,3 19,12 5,21 5,3"/>
+                                </svg>
+                            </div>
+                            <span class="video-duration">12:34</span>
+                        </div>
+                        <div class="video-content">
+                            <h3>AI Triad Model Overview</h3>
+                            <p>A comprehensive introduction to the four-agent architecture and core concepts.</p>
+                            <div class="video-meta">
+                                <span class="video-views">1.2K views</span>
+                                <span class="video-date">2 weeks ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="video-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="5,3 19,12 5,21 5,3"/>
+                                </svg>
+                            </div>
+                            <span class="video-duration">18:45</span>
+                        </div>
+                        <div class="video-content">
+                            <h3>Building Your First Workflow</h3>
+                            <p>Step-by-step tutorial for creating a complete multi-agent workflow from scratch.</p>
+                            <div class="video-meta">
+                                <span class="video-views">856 views</span>
+                                <span class="video-date">1 week ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="video-card">
+                        <div class="video-thumbnail">
+                            <div class="video-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polygon points="5,3 19,12 5,21 5,3"/>
+                                </svg>
+                            </div>
+                            <span class="video-duration">25:12</span>
+                        </div>
+                        <div class="video-content">
+                            <h3>Advanced Configuration Patterns</h3>
+                            <p>Learn advanced configuration techniques for complex production deployments.</p>
+                            <div class="video-meta">
+                                <span class="video-views">634 views</span>
+                                <span class="video-date">3 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="video-cta">
+                    <h3>Want more video content?</h3>
+                    <p>Subscribe to our YouTube channel for the latest tutorials, tips, and feature demonstrations.</p>
+                    <a href="#youtube-channel" class="btn btn--primary">Subscribe to Channel</a>
+                </div>
+            </section>
+
+            <!-- Community Contributions -->
+            <section class="guides-section">
+                <div class="guides-section-header">
+                    <h2>Community Guides</h2>
+                    <p>Tutorials and guides contributed by our amazing community members.</p>
+                </div>
+                
+                <div class="community-guides">
+                    <div class="community-guide">
+                        <div class="guide-author">
+                            <div class="author-avatar">JS</div>
+                            <div class="author-info">
+                                <span class="author-name">John Smith</span>
+                                <span class="author-role">Community Contributor</span>
+                            </div>
+                        </div>
+                        <h3>Building a Customer Support Bot</h3>
+                        <p>Real-world example of using AI Triad Model to build an intelligent customer support system with escalation handling.</p>
+                        <div class="guide-stats">
+                            <span class="guide-rating">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                                4.8 (42 reviews)
+                            </span>
+                            <span class="guide-difficulty intermediate">Intermediate</span>
+                        </div>
+                    </div>
+                    
+                    <div class="community-guide">
+                        <div class="guide-author">
+                            <div class="author-avatar">ML</div>
+                            <div class="author-info">
+                                <span class="author-name">Maria Lopez</span>
+                                <span class="author-role">AI Engineer</span>
+                            </div>
+                        </div>
+                        <h3>Multi-Language Content Generation</h3>
+                        <p>Learn how to build a content generation system that produces high-quality content in multiple languages using agent coordination.</p>
+                        <div class="guide-stats">
+                            <span class="guide-rating">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                                4.9 (28 reviews)
+                            </span>
+                            <span class="guide-difficulty advanced">Advanced</span>
+                        </div>
+                    </div>
+                    
+                    <div class="community-guide">
+                        <div class="guide-author">
+                            <div class="author-avatar">AK</div>
+                            <div class="author-info">
+                                <span class="author-name">Alex Kim</span>
+                                <span class="author-role">DevOps Engineer</span>
+                            </div>
+                        </div>
+                        <h3>Kubernetes Deployment with Monitoring</h3>
+                        <p>Complete guide to deploying AI Triad Model on Kubernetes with comprehensive monitoring and alerting setup.</p>
+                        <div class="guide-stats">
+                            <span class="guide-rating">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                                4.7 (35 reviews)
+                            </span>
+                            <span class="guide-difficulty intermediate">Intermediate</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contribute-cta">
+                    <h3>Share Your Knowledge</h3>
+                    <p>Have you built something amazing with AI Triad Model? Share your experience with the community by contributing a guide.</p>
+                    <a href="contact.html?subject=contribute-guide" class="btn btn--primary">Contribute a Guide</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <svg class="footer-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                            </svg>
+                            <span>AI Triad Model</span>
+                        </a>
+                        <p class="footer-description">
+                            Four-Agent AI Framework with structured coordination, 
+                            systematic accountability, and transparent decision-making.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="docs.html">Documentation</a></li>
+                            <li><a href="api.html">API Reference</a></li>
+                            <li><a href="examples.html">Examples</a></li>
+                            <li><a href="guides.html">Guides</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="community.html">Community</a></li>
+                            <li><a href="support.html">Support</a></li>
+                            <li><a href="changelog.html">Changelog</a></li>
+                            <li><a href="https://github.com/DamionR/ai-triad-model">GitHub</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="security.html">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 AI Triad Model Team. Licensed under MIT License.</p>
+                </div>
+                <div class="footer-badge">
+                    <span class="badge badge--outline">⚡ Four-Agent AI Framework</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - AI Triad Model</title>
+    <meta name="description" content="Learn about the AI Triad Model team and our mission to build structured, reliable multi-agent AI systems.">
+    <meta name="keywords" content="AI team, multi-agent AI, AI framework team, about AI Triad Model">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/docs.css">
+    <link rel="stylesheet" href="./css/about.css">
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">
+                    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                    </svg>
+                    <span>AI Triad Model</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="docs.html" class="nav-link">Documentation</a>
+                <a href="api.html" class="nav-link">API Reference</a>
+                <a href="examples.html" class="nav-link">Examples</a>
+                <a href="https://github.com/DamionR/ai-triad-model" class="nav-link nav-link--external" target="_blank" rel="noopener">
+                    <span>GitHub</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15,3 21,3 21,9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn--secondary btn--sm">Contact Us</a>
+                <a href="careers.html" class="btn btn--primary btn--sm">Careers</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Header -->
+    <section class="docs-header">
+        <div class="container">
+            <div class="docs-header-content">
+                <div class="docs-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>About Us</span>
+                </div>
+                
+                <h1 class="docs-title">About AI Triad Model</h1>
+                <p class="docs-description">
+                    Building the future of structured multi-agent AI systems. Our mission is to make reliable, 
+                    transparent AI coordination accessible to developers and organizations worldwide.
+                </p>
+                
+                <div class="docs-header-actions">
+                    <a href="contact.html" class="btn btn--primary btn--lg">
+                        <span>Get in Touch</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                    <a href="careers.html" class="btn btn--secondary btn--lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 4H18C19.1046 4 20 4.89543 20 6V18C20 19.1046 19.1046 20 18 20H6C4.89543 20 4 19.1046 4 18V6C4 4.89543 4.89543 4 6 4H8M16 4V2C16 0.89543 15.1046 0 14 0H10C8.89543 0 8 0.89543 8 2V4M16 4H8M9 12L11 14L15 10"/>
+                        </svg>
+                        <span>Join Our Team</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <div class="about-layout">
+        <div class="container">
+            <!-- Mission Section -->
+            <section class="about-section">
+                <div class="about-section-header">
+                    <h2>Our Mission</h2>
+                    <p>Democratizing structured AI coordination for the next generation of intelligent systems.</p>
+                </div>
+                
+                <div class="mission-content">
+                    <div class="mission-text">
+                        <h3>Building Reliable AI Systems</h3>
+                        <p>
+                            The AI Triad Model was born from a simple observation: while AI capabilities are advancing rapidly, 
+                            the coordination and oversight mechanisms haven't kept pace. Most AI systems operate as single agents 
+                            without structured accountability, transparency, or built-in quality assurance.
+                        </p>
+                        <p>
+                            We believe the future of AI lies not in more powerful individual models, but in sophisticated 
+                            multi-agent systems that work together with clear roles, systematic oversight, and transparent 
+                            decision-making processes.
+                        </p>
+                        
+                        <div class="mission-highlights">
+                            <div class="mission-highlight">
+                                <div class="mission-highlight-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                    </svg>
+                                </div>
+                                <div class="mission-highlight-content">
+                                    <h4>Structured Coordination</h4>
+                                    <p>Clear roles and responsibilities for every AI agent in the system.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mission-highlight">
+                                <div class="mission-highlight-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <circle cx="12" cy="12" r="6"/>
+                                        <circle cx="12" cy="12" r="2"/>
+                                    </svg>
+                                </div>
+                                <div class="mission-highlight-content">
+                                    <h4>Complete Transparency</h4>
+                                    <p>Full audit trails and decision logging for every AI interaction.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="mission-highlight">
+                                <div class="mission-highlight-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 12L11 14L15 10"/>
+                                        <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/>
+                                    </svg>
+                                </div>
+                                <div class="mission-highlight-content">
+                                    <h4>Built-in Quality Assurance</h4>
+                                    <p>Systematic evaluation and oversight at every step of the process.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mission-visual">
+                        <div class="mission-diagram">
+                            <div class="mission-center">
+                                <div class="mission-center-icon">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <path d="M8 12L10.5 14.5L16 9"/>
+                                    </svg>
+                                </div>
+                                <h4>AI Triad Model</h4>
+                                <p>Structured Multi-Agent Framework</p>
+                            </div>
+                            
+                            <div class="mission-orbit">
+                                <div class="mission-satellite" data-role="planner">
+                                    <div class="satellite-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 5H7C5.89543 5 5 5.89543 5 7V19C5 20.1046 5.89543 21 7 21H17C18.1046 21 19 20.1046 19 19V7C19 5.89543 18.1046 5 17 5H15"/>
+                                        </svg>
+                                    </div>
+                                    <span>Planner</span>
+                                </div>
+                                
+                                <div class="mission-satellite" data-role="executor">
+                                    <div class="satellite-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <circle cx="12" cy="12" r="3"/>
+                                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83"/>
+                                        </svg>
+                                    </div>
+                                    <span>Executor</span>
+                                </div>
+                                
+                                <div class="mission-satellite" data-role="evaluator">
+                                    <div class="satellite-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M9 12L11 14L15 10"/>
+                                            <circle cx="12" cy="12" r="9"/>
+                                        </svg>
+                                    </div>
+                                    <span>Evaluator</span>
+                                </div>
+                                
+                                <div class="mission-satellite" data-role="overwatch">
+                                    <div class="satellite-icon">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <path d="M1 12S4 6 12 6S23 12 23 12S20 18 12 18S1 12 1 12Z"/>
+                                            <circle cx="12" cy="12" r="3"/>
+                                        </svg>
+                                    </div>
+                                    <span>Overwatch</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values Section -->
+            <section class="about-section">
+                <div class="about-section-header">
+                    <h2>Our Values</h2>
+                    <p>The principles that guide everything we build and every decision we make.</p>
+                </div>
+                
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <circle cx="12" cy="12" r="6"/>
+                                <circle cx="12" cy="12" r="2"/>
+                            </svg>
+                        </div>
+                        <h3>Transparency First</h3>
+                        <p>
+                            Every decision, every process, every interaction should be auditable and explainable. 
+                            We believe transparency is the foundation of trustworthy AI systems.
+                        </p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Quality by Design</h3>
+                        <p>
+                            Quality isn't an afterthought—it's built into every layer of our framework through 
+                            systematic evaluation, testing, and continuous improvement.
+                        </p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21V19C23 16.7909 21.2091 15 19 15C18.0346 15 17.1496 15.3059 16.4442 15.8294"/>
+                                <circle cx="19" cy="7" r="4"/>
+                            </svg>
+                        </div>
+                        <h3>Community Driven</h3>
+                        <p>
+                            The best AI frameworks are built by and for the community. We're committed to open 
+                            development, shared learning, and collaborative innovation.
+                        </p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 12L11 14L15 10"/>
+                                <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/>
+                            </svg>
+                        </div>
+                        <h3>Reliable by Default</h3>
+                        <p>
+                            AI systems should work consistently and predictably. Our framework prioritizes 
+                            reliability and fault tolerance in every design decision.
+                        </p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                            </svg>
+                        </div>
+                        <h3>Developer Experience</h3>
+                        <p>
+                            Complex doesn't have to mean complicated. We obsess over making powerful multi-agent 
+                            coordination simple and intuitive for developers.
+                        </p>
+                    </div>
+                    
+                    <div class="value-card">
+                        <div class="value-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="18" cy="5" r="3"/>
+                                <circle cx="6" cy="12" r="3"/>
+                                <circle cx="18" cy="19" r="3"/>
+                                <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                                <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                            </svg>
+                        </div>
+                        <h3>Open Innovation</h3>
+                        <p>
+                            The future of AI is built on shared knowledge and open standards. We contribute to 
+                            the broader AI ecosystem through research, tools, and educational resources.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Team Section -->
+            <section class="about-section">
+                <div class="about-section-header">
+                    <h2>Our Team</h2>
+                    <p>Meet the people building the future of structured AI coordination.</p>
+                </div>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="team-avatar">
+                            <div class="avatar-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Damion Rashford</h3>
+                            <p class="team-role">Founder & Lead Architect</p>
+                            <p class="team-bio">
+                                Passionate about building reliable AI systems with structured coordination patterns. 
+                                Background in distributed systems and AI architecture design.
+                            </p>
+                            <div class="team-links">
+                                <a href="https://github.com/DamionR" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M12 2C6.477 2 2 6.484 2 12.017C2 16.624 5.865 20.426 10.839 21.447C11.339 21.527 11.521 21.235 11.521 20.982C11.521 20.756 11.514 20.127 11.51 19.304C7.78 20.005 7.166 17.957 7.166 17.957C6.708 16.781 6.032 16.49 6.032 16.49C5.12 15.767 6.1 15.78 6.1 15.78C7.108 15.847 7.663 16.896 7.663 16.896C8.544 18.444 9.999 18.018 10.543 17.772C10.621 17.107 10.892 16.681 11.189 16.444C8.905 16.203 6.504 15.354 6.504 11.732C6.504 10.618 6.896 9.707 7.686 8.999C7.596 8.759 7.243 7.759 7.776 6.369C7.776 6.369 8.612 6.115 11.5 8.153C12.31 7.948 13.16 7.845 14.01 7.843C14.86 7.845 15.71 7.948 16.52 8.153C19.408 6.115 20.244 6.369 20.244 6.369C20.777 7.759 20.424 8.759 20.334 8.999C21.124 9.707 21.516 10.618 21.516 11.732C21.516 15.363 19.112 16.2 16.82 16.437C17.2 16.759 17.505 17.4 17.505 18.378C17.505 19.791 17.492 20.931 17.492 21.282C17.492 21.537 17.674 21.832 18.184 21.746C23.157 20.724 27.02 16.923 27.02 12.017C27.02 6.484 22.545 2 17.02 2H12Z"/>
+                                    </svg>
+                                </a>
+                                <a href="https://linkedin.com/in/damionrashford" target="_blank" rel="noopener">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="team-avatar">
+                            <div class="avatar-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21V19C20 16.7909 18.2091 15 16 15H8C5.79086 15 4 16.7909 4 19V21"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="team-info">
+                            <h3>Join Our Team</h3>
+                            <p class="team-role">We're Hiring!</p>
+                            <p class="team-bio">
+                                We're looking for passionate engineers, researchers, and designers who want to shape 
+                                the future of AI coordination. Join us in building the next generation of AI frameworks.
+                            </p>
+                            <div class="team-action">
+                                <a href="careers.html" class="btn btn--primary btn--sm">
+                                    <span>View Open Positions</span>
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                                        <polyline points="7,7 17,7 17,17"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Story Section -->
+            <section class="about-section">
+                <div class="about-section-header">
+                    <h2>Our Story</h2>
+                    <p>From research project to production framework: the journey of AI Triad Model.</p>
+                </div>
+                
+                <div class="story-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 11H15L17 9H7L9 11Z"/>
+                                    <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"/>
+                                    <path d="M12 7V12L15 15"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024 Q3</div>
+                            <h3>The Spark</h3>
+                            <p>
+                                The idea for AI Triad Model emerged from frustration with existing AI systems' lack of 
+                                structured oversight. After working with various AI tools and frameworks, it became clear 
+                                that coordination and accountability were major gaps in the ecosystem.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M14 2H6C4.89543 2 4 2.89543 4 4V20C4 21.1046 4.89543 22 6 22H18C19.1046 22 20 21.1046 20 20V8L14 2Z"/>
+                                    <polyline points="14,2 14,8 20,8"/>
+                                    <line x1="16" y1="13" x2="8" y2="13"/>
+                                    <line x1="16" y1="17" x2="8" y2="17"/>
+                                    <polyline points="10,9 9,9 8,9"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2024 Q4</div>
+                            <h3>Research & Design</h3>
+                            <p>
+                                Months of research into organizational patterns, multi-agent systems, and AI coordination 
+                                frameworks. The four-agent architecture emerged as an optimal balance between simplicity 
+                                and comprehensive oversight.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <polyline points="16,18 22,12 16,6"/>
+                                    <polyline points="8,6 2,12 8,18"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025 Q1</div>
+                            <h3>First Prototype</h3>
+                            <p>
+                                The initial prototype proved the concept worked. Early testing showed significant 
+                                improvements in AI response quality, consistency, and transparency compared to 
+                                single-agent approaches.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="18" cy="5" r="3"/>
+                                    <circle cx="6" cy="12" r="3"/>
+                                    <circle cx="18" cy="19" r="3"/>
+                                    <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+                                    <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">2025 Q2</div>
+                            <h3>Open Source Launch</h3>
+                            <p>
+                                Released as an open-source framework with comprehensive documentation, examples, and 
+                                community support. The goal: make structured AI coordination accessible to every developer.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-date">Present</div>
+                            <h3>Growing Community</h3>
+                            <p>
+                                Today, AI Triad Model powers applications across industries, from customer support to 
+                                content creation. Our community of developers, researchers, and organizations continues 
+                                to grow, contributing to a more reliable AI future.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact CTA -->
+            <section class="about-cta">
+                <div class="cta-content">
+                    <h2>Ready to Build with Us?</h2>
+                    <p>
+                        Whether you're interested in contributing to the project, building with our framework, 
+                        or joining our team, we'd love to hear from you.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="btn btn--primary btn--xl">
+                            <span>Get in Touch</span>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4H20C21.1 4 22 4.9 22 6V18C22 19.1 21.1 20 20 20H4C2.9 20 2 19.1 2 18V6C2 4.9 2.9 4 4 4Z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </a>
+                        <a href="community.html" class="btn btn--secondary btn--xl">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21V19C17 16.7909 15.2091 15 13 15H5C2.79086 15 1 16.7909 1 19V21"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21V19C23 16.7909 21.2091 15 19 15C18.0346 15 17.1496 15.3059 16.4442 15.8294"/>
+                                <circle cx="19" cy="7" r="4"/>
+                            </svg>
+                            <span>Join Community</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <svg class="footer-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                            </svg>
+                            <span>AI Triad Model</span>
+                        </a>
+                        <p class="footer-description">
+                            Four-Agent AI Framework with structured coordination, 
+                            systematic accountability, and transparent decision-making.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="docs.html">Documentation</a></li>
+                            <li><a href="api.html">API Reference</a></li>
+                            <li><a href="examples.html">Examples</a></li>
+                            <li><a href="guides.html">Guides</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="community.html">Community</a></li>
+                            <li><a href="support.html">Support</a></li>
+                            <li><a href="changelog.html">Changelog</a></li>
+                            <li><a href="https://github.com/DamionR/ai-triad-model">GitHub</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="security.html">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 AI Triad Model Team. Licensed under MIT License.</p>
+                </div>
+                <div class="footer-badge">
+                    <span class="badge badge--outline">⚡ Four-Agent AI Framework</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

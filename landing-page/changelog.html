@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog - AI Triad Model | Release Notes and Version History</title>
+    <meta name="description" content="Stay updated with AI Triad Model releases. View detailed changelog with new features, improvements, bug fixes, and breaking changes for each version.">
+    <meta name="keywords" content="AI Triad Model changelog, release notes, version history, updates, bug fixes, new features">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://aitriadmodel.com/changelog.html">
+    <meta property="og:title" content="Changelog - AI Triad Model">
+    <meta property="og:description" content="Complete version history and release notes for AI Triad Model framework.">
+    <meta property="og:image" content="https://aitriadmodel.com/images/og-changelog.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://aitriadmodel.com/changelog.html">
+    <meta property="twitter:title" content="Changelog - AI Triad Model">
+    <meta property="twitter:description" content="Complete version history and release notes for AI Triad Model framework.">
+    <meta property="twitter:image" content="https://aitriadmodel.com/images/og-changelog.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/docs.css">
+    <link rel="stylesheet" href="./css/changelog.css">
+    
+    <!-- JavaScript -->
+    <script src="./js/main.js" defer></script>
+    <script src="./js/changelog.js" defer></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="navigation">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html" class="nav-logo">
+                    <svg class="nav-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                        <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                    </svg>
+                    <span>AI Triad Model</span>
+                </a>
+            </div>
+            
+            <div class="nav-menu" id="navMenu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="docs.html" class="nav-link">Documentation</a>
+                <a href="api.html" class="nav-link">API Reference</a>
+                <a href="examples.html" class="nav-link">Examples</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="https://github.com/DamionR/ai-triad-model" class="nav-link nav-link--external" target="_blank" rel="noopener">
+                    <span>GitHub</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15,3 21,3 21,9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                </a>
+            </div>
+            
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn--secondary btn--sm">Contact Us</a>
+                <a href="careers.html" class="btn btn--primary btn--sm">Careers</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Changelog Header -->
+    <section class="docs-header">
+        <div class="container">
+            <div class="docs-header-content">
+                <div class="docs-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9,18 15,12 9,6"></polyline>
+                    </svg>
+                    <span>Changelog</span>
+                </div>
+                
+                <h1 class="docs-title">Changelog</h1>
+                <p class="docs-description">
+                    Stay up to date with all the latest features, improvements, and bug fixes in AI Triad Model. 
+                    We follow semantic versioning and provide detailed release notes for every version.
+                </p>
+                
+                <div class="docs-header-actions">
+                    <div class="changelog-filters">
+                        <button class="filter-btn active" data-filter="all">All Changes</button>
+                        <button class="filter-btn" data-filter="features">Features</button>
+                        <button class="filter-btn" data-filter="improvements">Improvements</button>
+                        <button class="filter-btn" data-filter="fixes">Bug Fixes</button>
+                        <button class="filter-btn" data-filter="security">Security</button>
+                    </div>
+                    <a href="https://github.com/DamionR/ai-triad-model/releases" target="_blank" rel="noopener" class="btn btn--secondary btn--lg">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.477 2 2 6.484 2 12.017C2 16.624 5.865 20.426 10.839 21.447C11.339 21.527 11.521 21.235 11.521 20.982C11.521 20.756 11.514 20.127 11.51 19.304C7.78 20.005 7.166 17.957 7.166 17.957C6.708 16.781 6.032 16.49 6.032 16.49C5.12 15.767 6.1 15.78 6.1 15.78C7.108 15.847 7.663 16.896 7.663 16.896C8.544 18.444 9.999 18.018 10.543 17.772C10.621 17.107 10.892 16.681 11.189 16.444C8.905 16.203 6.504 15.354 6.504 11.732C6.504 10.618 6.896 9.707 7.686 8.999C7.596 8.759 7.243 7.759 7.776 6.369C7.776 6.369 8.612 6.115 11.5 8.153C12.31 7.948 13.16 7.845 14.01 7.843C14.86 7.845 15.71 7.948 16.52 8.153C19.408 6.115 20.244 6.369 20.244 6.369C20.777 7.759 20.424 8.759 20.334 8.999C21.124 9.707 21.516 10.618 21.516 11.732C21.516 15.363 19.112 16.2 16.82 16.437C17.2 16.759 17.505 17.4 17.505 18.378C17.505 19.791 17.492 20.931 17.492 21.282C17.492 21.537 17.674 21.832 18.184 21.746C23.157 20.724 27.02 16.923 27.02 12.017C27.02 6.484 22.545 2 17.02 2H12Z"/>
+                        </svg>
+                        <span>GitHub Releases</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Changelog Content -->
+    <div class="changelog-layout">
+        <div class="container">
+            <!-- Version Releases -->
+            <div class="changelog-timeline">
+                <!-- Version 1.3.0 -->
+                <div class="release-item" data-version="1.3.0">
+                    <div class="release-header">
+                        <div class="release-info">
+                            <div class="release-version">
+                                <h2>v1.3.0</h2>
+                                <span class="release-tag latest">Latest</span>
+                            </div>
+                            <div class="release-meta">
+                                <span class="release-date">January 25, 2025</span>
+                                <span class="release-size">12 commits</span>
+                            </div>
+                        </div>
+                        <div class="release-actions">
+                            <a href="https://github.com/DamionR/ai-triad-model/releases/tag/v1.3.0" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">
+                                View on GitHub
+                            </a>
+                            <button class="btn btn--primary btn--sm copy-install" data-version="1.3.0">
+                                Copy Install Command
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="release-highlights">
+                        <div class="highlight-card">
+                            <h3>🚀 New Agent Coordination Engine</h3>
+                            <p>Complete rewrite of the agent coordination system with improved performance and reliability.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h3>🔧 Enhanced Configuration System</h3>
+                            <p>New YAML-based configuration with validation and environment variable support.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h3>📊 Advanced Monitoring</h3>
+                            <p>Built-in metrics collection and dashboard for monitoring agent performance.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="release-changes">
+                        <div class="change-category">
+                            <h3 class="change-header features">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                                New Features
+                            </h3>
+                            <ul class="change-list">
+                                <li class="change-item">
+                                    <strong>Agent State Persistence:</strong> Agents can now maintain state across sessions with configurable persistence backends
+                                    <span class="change-pr">#245</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Custom Agent Types:</strong> Support for user-defined agent types with custom behavior and capabilities
+                                    <span class="change-pr">#238</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Real-time Collaboration:</strong> Multiple agents can now collaborate on complex tasks in real-time
+                                    <span class="change-pr">#251</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Workflow Templates:</strong> Pre-built workflow templates for common use cases and patterns
+                                    <span class="change-pr">#242</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="change-category">
+                            <h3 class="change-header improvements">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                </svg>
+                                Improvements
+                            </h3>
+                            <ul class="change-list">
+                                <li class="change-item">
+                                    <strong>Performance:</strong> 40% faster agent response times through optimized communication protocols
+                                    <span class="change-pr">#249</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Memory Usage:</strong> Reduced memory footprint by 25% through improved garbage collection
+                                    <span class="change-pr">#243</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Error Handling:</strong> Enhanced error messages with actionable suggestions and context
+                                    <span class="change-pr">#247</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Documentation:</strong> Updated API documentation with interactive examples and tutorials
+                                    <span class="change-pr">#252</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="change-category">
+                            <h3 class="change-header fixes">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="15" y1="9" x2="9" y2="15"/>
+                                    <line x1="9" y1="9" x2="15" y2="15"/>
+                                </svg>
+                                Bug Fixes
+                            </h3>
+                            <ul class="change-list">
+                                <li class="change-item">
+                                    <strong>Agent Deadlock:</strong> Fixed rare deadlock condition when multiple agents access shared resources
+                                    <span class="change-pr">#246</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Configuration Loading:</strong> Resolved issue with configuration file loading on Windows systems
+                                    <span class="change-pr">#244</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Memory Leaks:</strong> Fixed memory leaks in long-running agent sessions
+                                    <span class="change-pr">#248</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="change-category">
+                            <h3 class="change-header breaking">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M10 15L21 4M21 4H16M21 4V9"/>
+                                    <path d="M3 20H13V10H3V20Z"/>
+                                </svg>
+                                Breaking Changes
+                            </h3>
+                            <ul class="change-list">
+                                <li class="change-item">
+                                    <strong>Configuration Format:</strong> Configuration files now use YAML format instead of JSON
+                                    <div class="migration-guide">
+                                        <strong>Migration:</strong> Use the <code>convert-config</code> command to automatically migrate your configuration files
+                                    </div>
+                                    <span class="change-pr">#240</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Agent Interface:</strong> Removed deprecated <code>execute_sync()</code> method in favor of <code>execute()</code>
+                                    <div class="migration-guide">
+                                        <strong>Migration:</strong> Replace all calls to <code>execute_sync()</code> with <code>await execute()</code>
+                                    </div>
+                                    <span class="change-pr">#241</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Version 1.2.1 -->
+                <div class="release-item" data-version="1.2.1">
+                    <div class="release-header">
+                        <div class="release-info">
+                            <div class="release-version">
+                                <h2>v1.2.1</h2>
+                                <span class="release-tag patch">Patch</span>
+                            </div>
+                            <div class="release-meta">
+                                <span class="release-date">January 15, 2025</span>
+                                <span class="release-size">5 commits</span>
+                            </div>
+                        </div>
+                        <div class="release-actions">
+                            <a href="https://github.com/DamionR/ai-triad-model/releases/tag/v1.2.1" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">
+                                View on GitHub
+                            </a>
+                            <button class="btn btn--primary btn--sm copy-install" data-version="1.2.1">
+                                Copy Install Command
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="release-changes">
+                        <div class="change-category">
+                            <h3 class="change-header fixes">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="15" y1="9" x2="9" y2="15"/>
+                                    <line x1="9" y1="9" x2="15" y2="15"/>
+                                </svg>
+                                Bug Fixes
+                            </h3>
+                            <ul class="change-list">
+                                <li class="change-item">
+                                    <strong>Critical Security Fix:</strong> Patched vulnerability in agent authentication system
+                                    <span class="change-pr">#235</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Installation Error:</strong> Fixed pip installation issues on Python 3.12
+                                    <span class="change-pr">#234</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Agent Timeout:</strong> Resolved agent timeout issues with slow API providers
+                                    <span class="change-pr">#236</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="change-category">
+                            <h3 class="change-header security">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22S8 18 8 12V7L12 5L16 7V12C16 18 12 22 12 22Z"/>
+                                </svg>
+                                Security Updates
+                            </h3>
+                            <ul class="change-list">
+                                <li class="change-item">
+                                    <strong>Dependency Updates:</strong> Updated all dependencies to latest secure versions
+                                    <span class="change-pr">#237</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Version 1.2.0 -->
+                <div class="release-item" data-version="1.2.0">
+                    <div class="release-header">
+                        <div class="release-info">
+                            <div class="release-version">
+                                <h2>v1.2.0</h2>
+                                <span class="release-tag minor">Minor</span>
+                            </div>
+                            <div class="release-meta">
+                                <span class="release-date">January 8, 2025</span>
+                                <span class="release-size">18 commits</span>
+                            </div>
+                        </div>
+                        <div class="release-actions">
+                            <a href="https://github.com/DamionR/ai-triad-model/releases/tag/v1.2.0" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">
+                                View on GitHub
+                            </a>
+                            <button class="btn btn--primary btn--sm copy-install" data-version="1.2.0">
+                                Copy Install Command
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="release-highlights">
+                        <div class="highlight-card">
+                            <h3>🎯 Enhanced Evaluator Agent</h3>
+                            <p>New scoring algorithms and quality metrics for better evaluation of agent outputs.</p>
+                        </div>
+                        <div class="highlight-card">
+                            <h3>📈 Performance Metrics</h3>
+                            <p>Built-in performance tracking and analytics for monitoring agent effectiveness.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="release-changes">
+                        <div class="change-category">
+                            <h3 class="change-header features">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                                New Features
+                            </h3>
+                            <ul class="change-list">
+                                <li class="change-item">
+                                    <strong>Advanced Evaluation Metrics:</strong> New scoring system with customizable quality metrics
+                                    <span class="change-pr">#225</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Agent Performance Dashboard:</strong> Real-time monitoring of agent performance and health
+                                    <span class="change-pr">#228</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Batch Processing:</strong> Support for processing multiple requests in parallel
+                                    <span class="change-pr">#230</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="change-category">
+                            <h3 class="change-header improvements">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                </svg>
+                                Improvements
+                            </h3>
+                            <ul class="change-list">
+                                <li class="change-item">
+                                    <strong>Logging System:</strong> Enhanced logging with structured output and log levels
+                                    <span class="change-pr">#226</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Configuration Validation:</strong> Improved configuration validation with detailed error messages
+                                    <span class="change-pr">#229</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="change-category">
+                            <h3 class="change-header fixes">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"/>
+                                    <line x1="15" y1="9" x2="9" y2="15"/>
+                                    <line x1="9" y1="9" x2="15" y2="15"/>
+                                </svg>
+                                Bug Fixes
+                            </h3>
+                            <ul class="change-list">
+                                <li class="change-item">
+                                    <strong>Context Window Management:</strong> Fixed context window overflow in long conversations
+                                    <span class="change-pr">#227</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Agent Communication:</strong> Resolved intermittent communication failures between agents
+                                    <span class="change-pr">#231</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Version 1.1.0 -->
+                <div class="release-item" data-version="1.1.0">
+                    <div class="release-header">
+                        <div class="release-info">
+                            <div class="release-version">
+                                <h2>v1.1.0</h2>
+                                <span class="release-tag minor">Minor</span>
+                            </div>
+                            <div class="release-meta">
+                                <span class="release-date">December 20, 2024</span>
+                                <span class="release-size">15 commits</span>
+                            </div>
+                        </div>
+                        <div class="release-actions">
+                            <a href="https://github.com/DamionR/ai-triad-model/releases/tag/v1.1.0" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">
+                                View on GitHub
+                            </a>
+                            <button class="btn btn--primary btn--sm copy-install" data-version="1.1.0">
+                                Copy Install Command
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="release-changes">
+                        <div class="change-category">
+                            <h3 class="change-header features">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                                New Features
+                            </h3>
+                            <ul class="change-list">
+                                <li class="change-item">
+                                    <strong>Multi-Model Support:</strong> Support for multiple AI model providers (OpenAI, Anthropic, Cohere)
+                                    <span class="change-pr">#210</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Agent Plugins:</strong> Extensible plugin system for custom agent behaviors
+                                    <span class="change-pr">#215</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Conversation History:</strong> Persistent conversation history with search capabilities
+                                    <span class="change-pr">#218</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="change-category">
+                            <h3 class="change-header improvements">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z"/>
+                                </svg>
+                                Improvements
+                            </h3>
+                            <ul class="change-list">
+                                <li class="change-item">
+                                    <strong>CLI Interface:</strong> Enhanced command-line interface with better help and error messages
+                                    <span class="change-pr">#212</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Type Safety:</strong> Improved type hints and runtime type checking
+                                    <span class="change-pr">#216</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Version 1.0.0 -->
+                <div class="release-item" data-version="1.0.0">
+                    <div class="release-header">
+                        <div class="release-info">
+                            <div class="release-version">
+                                <h2>v1.0.0</h2>
+                                <span class="release-tag major">Major</span>
+                            </div>
+                            <div class="release-meta">
+                                <span class="release-date">December 1, 2024</span>
+                                <span class="release-size">25 commits</span>
+                            </div>
+                        </div>
+                        <div class="release-actions">
+                            <a href="https://github.com/DamionR/ai-triad-model/releases/tag/v1.0.0" target="_blank" rel="noopener" class="btn btn--secondary btn--sm">
+                                View on GitHub
+                            </a>
+                            <button class="btn btn--primary btn--sm copy-install" data-version="1.0.0">
+                                Copy Install Command
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="release-highlights">
+                        <div class="highlight-card milestone">
+                            <h3>🎉 First Stable Release</h3>
+                            <p>The first stable release of AI Triad Model with complete four-agent architecture and production-ready features.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="release-changes">
+                        <div class="change-category">
+                            <h3 class="change-header features">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"/>
+                                </svg>
+                                Core Features
+                            </h3>
+                            <ul class="change-list">
+                                <li class="change-item">
+                                    <strong>Four-Agent Architecture:</strong> Complete implementation of Planner, Executor, Evaluator, and Overwatch agents
+                                    <span class="change-pr">#180</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Structured Coordination:</strong> Agent coordination system with role-based responsibilities
+                                    <span class="change-pr">#185</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Quality Assurance:</strong> Built-in evaluation and oversight mechanisms
+                                    <span class="change-pr">#190</span>
+                                </li>
+                                <li class="change-item">
+                                    <strong>Comprehensive Documentation:</strong> Complete API documentation and user guides
+                                    <span class="change-pr">#195</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscription Section -->
+            <section class="changelog-subscription">
+                <div class="subscription-card">
+                    <h2>Stay Updated</h2>
+                    <p>Get notified about new releases, security updates, and important announcements.</p>
+                    <div class="subscription-options">
+                        <a href="https://github.com/DamionR/ai-triad-model/releases.atom" target="_blank" rel="noopener" class="btn btn--secondary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 11C4 11 4 15 8 15S12 11 12 11"/>
+                                <path d="M4 4C4 4 4 12 12 12S20 4 20 4"/>
+                                <circle cx="5" cy="19" r="1"/>
+                            </svg>
+                            <span>RSS Feed</span>
+                        </a>
+                        <a href="https://github.com/DamionR/ai-triad-model/subscription" target="_blank" rel="noopener" class="btn btn--primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.477 2 2 6.484 2 12.017C2 16.624 5.865 20.426 10.839 21.447C11.339 21.527 11.521 21.235 11.521 20.982C11.521 20.756 11.514 20.127 11.51 19.304C7.78 20.005 7.166 17.957 7.166 17.957C6.708 16.781 6.032 16.49 6.032 16.49C5.12 15.767 6.1 15.78 6.1 15.78C7.108 15.847 7.663 16.896 7.663 16.896C8.544 18.444 9.999 18.018 10.543 17.772C10.621 17.107 10.892 16.681 11.189 16.444C8.905 16.203 6.504 15.354 6.504 11.732C6.504 10.618 6.896 9.707 7.686 8.999C7.596 8.759 7.243 7.759 7.776 6.369C7.776 6.369 8.612 6.115 11.5 8.153C12.31 7.948 13.16 7.845 14.01 7.843C14.86 7.845 15.71 7.948 16.52 8.153C19.408 6.115 20.244 6.369 20.244 6.369C20.777 7.759 20.424 8.759 20.334 8.999C21.124 9.707 21.516 10.618 21.516 11.732C21.516 15.363 19.112 16.2 16.82 16.437C17.2 16.759 17.505 17.4 17.505 18.378C17.505 19.791 17.492 20.931 17.492 21.282C17.492 21.537 17.674 21.832 18.184 21.746C23.157 20.724 27.02 16.923 27.02 12.017C27.02 6.484 22.545 2 17.02 2H12Z"/>
+                            </svg>
+                            <span>Watch on GitHub</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <a href="index.html" class="footer-logo">
+                            <svg class="footer-logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="20" cy="20" r="18" stroke="currentColor" stroke-width="2"/>
+                                <path d="M14 16L20 10L26 16M20 12V28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="20" cy="30" r="2" fill="currentColor"/>
+                            </svg>
+                            <span>AI Triad Model</span>
+                        </a>
+                        <p class="footer-description">
+                            Four-Agent AI Framework with structured coordination, 
+                            systematic accountability, and transparent decision-making.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <ul>
+                            <li><a href="docs.html">Documentation</a></li>
+                            <li><a href="api.html">API Reference</a></li>
+                            <li><a href="examples.html">Examples</a></li>
+                            <li><a href="guides.html">Guides</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="community.html">Community</a></li>
+                            <li><a href="support.html">Support</a></li>
+                            <li><a href="changelog.html">Changelog</a></li>
+                            <li><a href="https://github.com/DamionR/ai-triad-model">GitHub</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Legal</h4>
+                        <ul>
+                            <li><a href="privacy.html">Privacy Policy</a></li>
+                            <li><a href="terms.html">Terms of Service</a></li>
+                            <li><a href="security.html">Security</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-legal">
+                    <p>&copy; 2025 AI Triad Model Team. Licensed under MIT License.</p>
+                </div>
+                <div class="footer-badge">
+                    <span class="badge badge--outline">⚡ Four-Agent AI Framework</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
